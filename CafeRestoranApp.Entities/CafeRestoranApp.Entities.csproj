@@ -96,14 +96,13 @@
     <Compile Include="Models\Urun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\EntityRepositoryBase.cs" />
+    <Compile Include="Validations\IstifadeciHereketleriVALIDATOR.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Validations\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202411281240076_CreateDatabase.resx">
       <DependentUpon>202411281240076_CreateDatabase.cs</DependentUpon>
