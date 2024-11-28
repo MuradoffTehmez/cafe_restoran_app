@@ -14,9 +14,25 @@ namespace CafeRestoranApp.Entities.Models
             
         }
 
-        public DbSet<Menu>Menu { get; set; }
+        public DbSet<Menu> Menu { get; set; }
 
         public DbSet<Urun> Urun { get; set; }
+
+        public DbSet<Istifadeciler> Istifadeciler { get; set; }
+
+        public DbSet<IstifadeciHereketleri> IstifadeciHereketleri { get; set; }
+
+        public DbSet<Satislar> Satislar { get; set; }
+
+        public DbSet<Modlar> Modlar { get; set; }
+
+        public DbSet<Masalar> Masalar { get; set; }
+
+        public DbSet<MasaHaraketleri> MasaHaraketleri { get; set; }
+
+        public DbSet<OdenisTarixcesi> OdenisTarixcesi { get; set; }
+
+
 
 
     }
