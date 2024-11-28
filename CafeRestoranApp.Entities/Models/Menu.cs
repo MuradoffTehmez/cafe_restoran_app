@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.Models
 {
-    [Table("Meyu")]
+    //[Table("Meyu")]
     public class Menu
     {
-        [Key]
+        //[Key]
         public int Id { get; set; }
-        [Column(TypeName ="varchar")]
-        [StringLength(50)]
+        //[Column(TypeName ="varchar")]
+        //[StringLength(50)]
         public string MenuAdi { get; set; }
 
-        [Column(TypeName = "varchar")]
-        [StringLength(50)]
+        //[Column(TypeName = "varchar")]
+        //[StringLength(50)]
         public string Aciklama { get; set; }
 
         public virtual ICollection<Urun> Urun { get; set; }

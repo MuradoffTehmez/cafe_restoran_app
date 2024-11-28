@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.Models
 {
-    [Table("Modlar")]
+    //[Table("Modlar")]
     public class Modlar
     {
         public int Id { get; set; }

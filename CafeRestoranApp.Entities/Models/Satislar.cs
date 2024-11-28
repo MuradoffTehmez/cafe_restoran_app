@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Core.Mapping;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.Models
 {
-    [Table("Satislar")]
+    //[Table("Satislar")]
     public class Satislar
     {
       
@@ -26,5 +27,7 @@ namespace CafeRestoranApp.Entities.Models
         //public DateTime ElaveOlmaTarixi { get; set; }
 
         public DateTime SonIslemTarixi { get; set; }
+
+        
     }
 }

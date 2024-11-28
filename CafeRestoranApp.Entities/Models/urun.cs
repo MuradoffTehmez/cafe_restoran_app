@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.Models
 {
-    [Table("Urun")]
+    //[Table("Urun")]
     public class Urun
     {
 
-        [Key]
+        //[Key]
         public int Id { get; set; }
 
-        [ForeignKey("Menu")]
+        //[ForeignKey("Menu")]
         public int MeynuID { get; set; }
 
-        [Column(TypeName = "varchar")]
-        [StringLength(50)]
+        //[Column(TypeName = "varchar")]
+        //[StringLength(50)]
         public string UrunKodu { get; set; }
 
         public string Uruni { get; set; }
