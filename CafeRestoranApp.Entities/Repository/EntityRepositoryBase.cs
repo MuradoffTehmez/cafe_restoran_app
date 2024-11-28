@@ -9,19 +9,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using FluentValidation;
+using CafeRestoranApp.Entities.Tools;
+using System.ComponentModel.DataAnnotations;
 
 namespace CafeRestoranApp.Entities.Repository
 {
     public class EntityRepositoryBase<TContext, TEntity, Tvalidator> : IEntityRepository<TContext, TEntity>
         // Hesablama mexanizmi: 50% elm, 50% sehir, 100% şans
         where TContext : DbContext, new()
-        where TEntity : class, new()
+        where TEntity : class,IEntity, new()
         where Tvalidator: IValidator, new()
     {
-        public void AddorUpdate(TContext context, TEntity entity)
+        public bool AddorUpdate(TContext context, TEntity entity)
         {
+            Tvalidator validator = new Tvalidator();
+            bool validationResult = ValidatorTools.Validates(validator, entity);
+            if (validationResult)
+            {
+                context.Set<TEntity>().AddOrUpdate(entity);
+            }
+            return validationResult;
+
+
+
+            //context.Set<TEntity>().AddOrUpdate(entity);
             //throw new NotImplementedException();
-            context.Set<TEntity>().AddOrUpdate(entity);
         }
 
         public void Delete(TContext context, Expression<Func<TEntity, bool>> filter)
@@ -50,5 +62,10 @@ namespace CafeRestoranApp.Entities.Repository
             //throw new NotImplementedException();
             context.SaveChanges();
         }
+
+        //void IEntityRepository<TContext, TEntity>.AddorUpdate(TContext context, TEntity entity)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

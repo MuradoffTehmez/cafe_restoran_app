@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CafeRestoranApp.Entities.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace CafeRestoranApp.Entities.Models
 {
     //[Table("Urun")]
-    public class Urun
+    public class Urun : IEntity
     {
 
         public int Id { get; set; }

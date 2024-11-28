@@ -52,6 +52,7 @@
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.6.0\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,6 +70,7 @@
     <Compile Include="DAL\OdenisTarixcesiDAL.cs" />
     <Compile Include="DAL\SatislarDAL.cs" />
     <Compile Include="DAL\UrunDAL.cs" />
+    <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="Interfaces\IEntityRepository.cs" />
     <Compile Include="Mapping\IstifadeciHereketleriMap.cs" />
     <Compile Include="Mapping\IstifadecilerMap.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="Models\Urun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\EntityRepositoryBase.cs" />
+    <Compile Include="Tools\ValidatorTools.cs" />
     <Compile Include="Validations\IstifadeciHereketleriVALIDATOR.cs" />
     <Compile Include="Validations\IstifadecilerVALIDATOR.cs" />
     <Compile Include="Validations\MasaHaraketleriVALIDATOR.cs" />
