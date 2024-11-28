@@ -1,5 +1,6 @@
 ﻿using CafeRestoranApp.Entities.Models;
 using CafeRestoranApp.Entities.Repository;
+using CafeRestoranApp.Entities.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.DAL
 {
-    public class OdenisTarixcesiDAL : EntityRepositoryBase<CafeContext, OdenisTarixcesi>
+    public class OdenisTarixcesiDAL : EntityRepositoryBase<CafeContext, OdenisTarixcesi,OdenisTarixcesiVALIDATOR>
     {
 
     }

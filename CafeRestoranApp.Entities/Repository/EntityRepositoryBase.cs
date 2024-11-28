@@ -8,13 +8,15 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using FluentValidation;
 
 namespace CafeRestoranApp.Entities.Repository
 {
-    public class EntityRepositoryBase<TContext, TEntity> : IEntityRepository<TContext, TEntity>
+    public class EntityRepositoryBase<TContext, TEntity, Tvalidator> : IEntityRepository<TContext, TEntity>
         // Hesablama mexanizmi: 50% elm, 50% sehir, 100% şans
         where TContext : DbContext, new()
         where TEntity : class, new()
+        where Tvalidator: IValidator, new()
     {
         public void AddorUpdate(TContext context, TEntity entity)
         {
