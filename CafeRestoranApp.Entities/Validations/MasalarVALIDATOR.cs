@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.Validations
 {
-    public class IstifadeciHereketleriVALIDATOR : AbstractValidator<IstifadeciHereketleri>
+    internal class MasalarVALIDATOR : AbstractValidator<Masalar>
     {
-        public IstifadeciHereketleriVALIDATOR()
+        public MasalarVALIDATOR()
         {
             
         }
-
     }
 }
