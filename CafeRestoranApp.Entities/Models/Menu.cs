@@ -20,5 +20,8 @@ namespace CafeRestoranApp.Entities.Models
         [Column(TypeName = "varchar")]
         [StringLength(50)]
         public string Aciklama { get; set; }
+
+        public virtual ICollection<Urun> Urun { get; set; }
+
     }
 }

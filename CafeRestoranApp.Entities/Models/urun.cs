@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 namespace CafeRestoranApp.Entities.Models
 {
     [Table("Urun")]
-    internal class urun
+    public class Urun
     {
+
         [Key]
         public int Id { get; set; }
 
@@ -23,10 +24,15 @@ namespace CafeRestoranApp.Entities.Models
 
         public string Uruni { get; set; }
 
-        public decimal qiymet1 { get; set; }
+        public decimal Qiymet1 { get; set; }
 
-        public decimal qiymet2 { get; set; }
+        public decimal Qiymet2 { get; set; }
 
+        public string Aciklama { get; set; }
+
+        public DateTime Tarix { get; set; }
+
+        public virtual Menu Menu { get; set; }  
 
     }
 }
