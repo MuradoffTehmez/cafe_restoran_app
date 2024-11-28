@@ -13,7 +13,7 @@ namespace CafeRestoranApp.Entities.Models
       
         public int Id { get; set; }
 
-        public string SatisKodu { get; set; } 
+        public string SatisKodu { get; set; }
 
         public decimal Tutar { get; set; }
 
@@ -21,7 +21,10 @@ namespace CafeRestoranApp.Entities.Models
 
         public decimal Qalan { get; set; }
 
+        public string Aciklama { get; set; }
 
+        //public DateTime ElaveOlmaTarixi { get; set; }
 
+        public DateTime SonIslemTarixi { get; set; }
     }
 }
