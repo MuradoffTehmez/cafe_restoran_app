@@ -38,7 +38,6 @@ namespace CafeRestoranApp.Entities.Mapping
             this.Property(p => p.Qiymet2)
                 .HasPrecision(28, 2);
 
-
             this.HasRequired(x => x.Menu)
                 .WithMany(x => x.Urun)
                 .HasForeignKey(x => x.MeynuID);

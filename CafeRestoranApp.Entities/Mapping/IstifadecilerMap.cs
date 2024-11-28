@@ -15,6 +15,7 @@ namespace CafeRestoranApp.Entities.Mapping
         public IstifadecilerMap()
         {
             this.ToTable("Istifadeciler");
+            
             this.HasKey(p => p.Id);
             
             this.Property(p => p.Id)
