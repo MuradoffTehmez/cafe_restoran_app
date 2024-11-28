@@ -12,14 +12,10 @@ namespace CafeRestoranApp.Entities.Models
     public class Urun
     {
 
-        //[Key]
         public int Id { get; set; }
 
-        //[ForeignKey("Menu")]
         public int MeynuID { get; set; }
 
-        //[Column(TypeName = "varchar")]
-        //[StringLength(50)]
         public string UrunKodu { get; set; }
 
         public string UrunAdi { get; set; }
@@ -34,8 +30,16 @@ namespace CafeRestoranApp.Entities.Models
 
         public Menu Menu { get; set; }
 
+       
+        
+        
+        
+        //[Key]
+        //[ForeignKey("Menu")]
+        //[Column(TypeName = "varchar")]
+        //[StringLength(50)]
+
 
         //public virtual Menu Menu { get; set; }  
-
     }
 }

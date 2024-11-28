@@ -24,8 +24,6 @@ namespace CafeRestoranApp.Entities.Models
 
         public string Aciklama { get; set; }
 
-        //public DateTime ElaveOlmaTarixi { get; set; }
-
         public DateTime SonIslemTarixi { get; set; }
 
         
