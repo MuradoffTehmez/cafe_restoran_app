@@ -16,8 +16,15 @@ namespace CafeRestoranApp.Entities.Mapping
         public IstifadeciHereketleriMap()
         {
             this.ToTable("IstifadeciHereketleri");
+            
             this.HasKey(p => p.Id);
+            
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            
+            this.Property(p => p.Aciklama)
+                .HasColumnType("varchar")
+                .HasMaxLength(300);
+
         }
     }
 }

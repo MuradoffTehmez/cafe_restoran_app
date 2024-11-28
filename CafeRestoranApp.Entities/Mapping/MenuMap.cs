@@ -15,10 +15,19 @@ namespace CafeRestoranApp.Entities.Mapping
         public MenuMap()
         {
             this.ToTable("Meynu");
+            
             this.HasKey(p => p.Id);
-            this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.MenuAdi).HasColumnType("varchar").HasMaxLength(60);
-            this.Property(p => p.Aciklama).HasColumnType("varchar").HasMaxLength(500);
+            
+            this.Property(p => p.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            
+            this.Property(p => p.MenuAdi)
+                .HasColumnType("varchar")
+                .HasMaxLength(60);
+            
+            this.Property(p => p.Aciklama)
+                .HasColumnType("varchar")
+                .HasMaxLength(500);
 
 
             //this.Property(p => p.Aciklama).HasColumnName("Melumat");   // Adini deyismek ucun
