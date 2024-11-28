@@ -12,7 +12,7 @@ namespace CafeRestoranApp.Entities.Mapping
     {
         public ModlarMap()
         {
-            
+            this.ToTable("Modlar");
         }
     }
 }

@@ -12,7 +12,7 @@ namespace CafeRestoranApp.Entities.Mapping
     {
         public OdenisTarixcesiMap()
         {
-            
+            this.ToTable("OdenisTarixcesi");
         }
     }
 }

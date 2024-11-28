@@ -12,7 +12,7 @@ namespace CafeRestoranApp.Entities.Mapping
     {
         public UrunMap()
         {
-            
+            this.ToTable("Urun");
         }
     }
 }

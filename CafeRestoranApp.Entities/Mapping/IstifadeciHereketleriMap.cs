@@ -13,7 +13,7 @@ namespace CafeRestoranApp.Entities.Mapping
     {
         public IstifadeciHereketleriMap()
         {
-            
+            this.ToTable("IstifadeciHereketleri");
         }
     }
 }
