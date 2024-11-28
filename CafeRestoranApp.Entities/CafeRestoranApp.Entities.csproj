@@ -58,7 +58,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CafeContext.cs" />
-    <Compile Include="Models\masalar.cs" />
+    <Compile Include="Models\Masalar.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\Satislar.cs" />
     <Compile Include="Models\Urun.cs" />
