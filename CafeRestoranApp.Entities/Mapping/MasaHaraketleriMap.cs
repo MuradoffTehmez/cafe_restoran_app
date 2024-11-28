@@ -15,8 +15,19 @@ namespace CafeRestoranApp.Entities.Mapping
         public MasaHaraketleriMap()
         {
             this.ToTable("MasaHaraketleri");
+
             this.HasKey(p => p.Id);
-            this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            
+            this.Property(p => p.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            
+            this.Property(p => p.SatisKodu)
+                .HasColumnType("varchar")
+                .HasMaxLength(50);
+           
+            this.Property(p => p.Aciklama)
+                .HasColumnType("varchar")
+                .HasMaxLength(300);
         }
     }
 }

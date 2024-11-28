@@ -10,6 +10,7 @@ namespace CafeRestoranApp.Entities.Models
 {
     public class CafeContext:DbContext
     {
+        // Connection string - sistemin ürək döyüntüsü
         public CafeContext(): base("name =connection")
         {
             

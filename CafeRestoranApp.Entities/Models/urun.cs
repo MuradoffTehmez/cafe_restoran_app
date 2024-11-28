@@ -22,7 +22,7 @@ namespace CafeRestoranApp.Entities.Models
         //[StringLength(50)]
         public string UrunKodu { get; set; }
 
-        public string Uruni { get; set; }
+        public string UrunAdi { get; set; }
 
         public decimal Qiymet1 { get; set; }
 

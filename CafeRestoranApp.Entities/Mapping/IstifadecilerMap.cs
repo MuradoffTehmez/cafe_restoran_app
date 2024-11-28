@@ -15,8 +15,52 @@ namespace CafeRestoranApp.Entities.Mapping
         public IstifadecilerMap()
         {
             this.ToTable("Istifadeciler");
+            // Bu id ya işləyəcək, ya da bütün sistemimiz partlayacaq sjjsj
             this.HasKey(p => p.Id);
-            this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            
+            this.Property(p => p.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            
+            this.Property(p => p.AdSoyad)
+                .HasColumnType("varchar")
+                .HasMaxLength(50);
+            
+            this.Property(p => p.Telefon)
+                .HasColumnType("varchar")
+                .HasMaxLength(50);
+            
+            this.Property(p => p.Adress)
+                .HasColumnType("varchar")
+                .HasMaxLength(150);
+            
+            this.Property(p => p.Email)
+                .HasColumnType("varchar")
+                .HasMaxLength(150);
+            
+            this.Property(p => p.Vezifesi)
+                .HasColumnType("varchar")
+                .HasMaxLength(50);
+            
+            this.Property(p => p.IstifadeciAdi)
+                .HasColumnType("varchar")
+                .HasMaxLength(50);
+            
+            this.Property(p => p.Parol)
+                .HasColumnType("varchar")
+                .HasMaxLength(50);
+            
+            this.Property(p => p.HatirlamaSuali)
+                .HasColumnType("varchar")
+                .HasMaxLength(150);
+            
+            this.Property(p => p.Cavab)
+                .HasColumnType("varchar")
+                .HasMaxLength(150);
+            
+            this.Property(p => p.Aciklama)
+                .HasColumnType("varchar")
+                .HasMaxLength(300);
+           
         }
     }
 }
