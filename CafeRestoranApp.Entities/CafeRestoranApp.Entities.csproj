@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IEntityRepository.cs" />
+    <Compile Include="Mapping\MenuMap.cs" />
     <Compile Include="Migrations\202411281240076_CreateDatabase.cs" />
     <Compile Include="Migrations\202411281240076_CreateDatabase.Designer.cs">
       <DependentUpon>202411281240076_CreateDatabase.cs</DependentUpon>
@@ -76,7 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\" />
-    <Folder Include="Mapping\" />
     <Folder Include="Validations\" />
   </ItemGroup>
   <ItemGroup>

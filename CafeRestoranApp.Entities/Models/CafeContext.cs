@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CafeRestoranApp.Entities.Mapping;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -33,7 +34,11 @@ namespace CafeRestoranApp.Entities.Models
         public DbSet<OdenisTarixcesi> OdenisTarixcesi { get; set; }
 
 
-
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new MenuMap());
+            //base.OnModelCreating(modelBuilder);
+        }
 
     }
 }

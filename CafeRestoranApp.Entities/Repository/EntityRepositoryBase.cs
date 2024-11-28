@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 namespace CafeRestoranApp.Entities.Repository
 {
     public class EntityRepositoryBase<TContext, TEntity> : IEntityRepository<TContext, TEntity>
+        // Hesablama mexanizmi: 50% elm, 50% sehir, 100% şans
         where TContext : DbContext, new()
         where TEntity : class, new()
     {
