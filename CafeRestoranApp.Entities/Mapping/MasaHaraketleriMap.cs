@@ -28,6 +28,11 @@ namespace CafeRestoranApp.Entities.Mapping
             this.Property(p => p.Aciklama)
                 .HasColumnType("varchar")
                 .HasMaxLength(300);
+
+
+            this.HasRequired(x => x.Masalar)
+                .WithMany(x => x.MasaHaraketleri)
+                .HasForeignKey(x => x.MasaId);
         }
     }
 }

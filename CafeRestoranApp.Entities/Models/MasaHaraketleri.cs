@@ -24,6 +24,8 @@ namespace CafeRestoranApp.Entities.Models
 
         public DateTime Tarix { get; set; }
 
+        public Masalar Masalar { get; set; }
+
 
     }
 }

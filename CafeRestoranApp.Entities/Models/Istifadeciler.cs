@@ -36,6 +36,7 @@ namespace CafeRestoranApp.Entities.Models
 
         public bool IsDurumu { get; set; }
 
+        public ICollection<IstifadeciHereketleri> IstifadeciHereketleri { get; set; }
 
     }
 }

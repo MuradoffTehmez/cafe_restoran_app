@@ -37,7 +37,15 @@ namespace CafeRestoranApp.Entities.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Configurations.Add(new IstifadeciHereketleriMap());
+            modelBuilder.Configurations.Add(new IstifadecilerMap());
+            modelBuilder.Configurations.Add(new MasaHaraketleriMap());
+            modelBuilder.Configurations.Add(new MasalarMap());
             modelBuilder.Configurations.Add(new MenuMap());
+            modelBuilder.Configurations.Add(new ModlarMap());
+            modelBuilder.Configurations.Add(new OdenisTarixcesiMap());
+            modelBuilder.Configurations.Add(new SatislarMap());
+            modelBuilder.Configurations.Add(new UrunMap());
             //base.OnModelCreating(modelBuilder);
         }
 

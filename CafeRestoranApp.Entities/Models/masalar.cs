@@ -24,6 +24,8 @@ namespace CafeRestoranApp.Entities.Models
 
         public DateTime SonIslemTarixi { get; set; }
 
+        public ICollection<MasaHaraketleri> MasaHaraketleri { get; set; }
+
 
     }
 }

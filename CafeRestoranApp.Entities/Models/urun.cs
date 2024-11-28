@@ -32,7 +32,10 @@ namespace CafeRestoranApp.Entities.Models
 
         public DateTime Tarix { get; set; }
 
-        public virtual Menu Menu { get; set; }  
+        public Menu Menu { get; set; }
+
+
+        //public virtual Menu Menu { get; set; }  
 
     }
 }

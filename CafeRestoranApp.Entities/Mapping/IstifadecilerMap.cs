@@ -15,7 +15,6 @@ namespace CafeRestoranApp.Entities.Mapping
         public IstifadecilerMap()
         {
             this.ToTable("Istifadeciler");
-            // Bu id ya işləyəcək, ya da bütün sistemimiz partlayacaq sjjsj
             this.HasKey(p => p.Id);
             
             this.Property(p => p.Id)

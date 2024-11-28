@@ -17,8 +17,10 @@ namespace CafeRestoranApp.Entities.Models
 
         public string Aciklama { get; set; }
 
-        public virtual ICollection<Urun> Urun { get; set; }
 
+        public ICollection<Urun> Urun { get; set; }
+
+        //public virtual ICollection<Urun> Urun { get; set; }
 
         /*
         [Key]
