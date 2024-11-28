@@ -52,7 +52,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IEntityRepository.cs" />
+    <Compile Include="Mapping\IstifadeciHereketleriMap.cs" />
+    <Compile Include="Mapping\IstifadecilerMap.cs" />
+    <Compile Include="Mapping\MasaHaraketleriMap.cs" />
+    <Compile Include="Mapping\MasalarMap.cs" />
     <Compile Include="Mapping\MenuMap.cs" />
+    <Compile Include="Mapping\ModlarMap.cs" />
+    <Compile Include="Mapping\OdenisTarixcesiMap.cs" />
+    <Compile Include="Mapping\SatislarMap.cs" />
+    <Compile Include="Mapping\UrunMap.cs" />
     <Compile Include="Migrations\202411281240076_CreateDatabase.cs" />
     <Compile Include="Migrations\202411281240076_CreateDatabase.Designer.cs">
       <DependentUpon>202411281240076_CreateDatabase.cs</DependentUpon>

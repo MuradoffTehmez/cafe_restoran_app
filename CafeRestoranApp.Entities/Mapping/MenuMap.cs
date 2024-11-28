@@ -21,7 +21,7 @@ namespace CafeRestoranApp.Entities.Mapping
             this.Property(p => p.Aciklama).HasColumnType("varchar").HasMaxLength(500);
 
 
-            this.Property(p => p.Aciklama).HasColumnName("Melumat");   // Adini deyismek ucun
+            //this.Property(p => p.Aciklama).HasColumnName("Melumat");   // Adini deyismek ucun
 
         }
     }
