@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Urunler));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -38,6 +39,17 @@
             this.brn_Elave_Et = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMeynuID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUrunKodu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUrunAdi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQiymet1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQiymet2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQiymet3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTarix = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSekil = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMenu = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -154,8 +166,102 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId,
+            this.colMeynuID,
+            this.colUrunKodu,
+            this.colUrunAdi,
+            this.colQiymet1,
+            this.colQiymet2,
+            this.colQiymet3,
+            this.colAciklama,
+            this.colTarix,
+            this.colSekil,
+            this.colMenu});
+            this.gridView1.CustomizationFormBounds = new System.Drawing.Rectangle(1304, 647, 259, 272);
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            // 
+            // colId
+            // 
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            this.colId.Visible = true;
+            this.colId.VisibleIndex = 0;
+            this.colId.Width = 69;
+            // 
+            // colMeynuID
+            // 
+            this.colMeynuID.FieldName = "MeynuID";
+            this.colMeynuID.Name = "colMeynuID";
+            this.colMeynuID.Visible = true;
+            this.colMeynuID.VisibleIndex = 1;
+            // 
+            // colUrunKodu
+            // 
+            this.colUrunKodu.FieldName = "UrunKodu";
+            this.colUrunKodu.Name = "colUrunKodu";
+            this.colUrunKodu.Visible = true;
+            this.colUrunKodu.VisibleIndex = 2;
+            this.colUrunKodu.Width = 101;
+            // 
+            // colUrunAdi
+            // 
+            this.colUrunAdi.FieldName = "UrunAdi";
+            this.colUrunAdi.Name = "colUrunAdi";
+            this.colUrunAdi.Visible = true;
+            this.colUrunAdi.VisibleIndex = 3;
+            this.colUrunAdi.Width = 119;
+            // 
+            // colQiymet1
+            // 
+            this.colQiymet1.FieldName = "Qiymet1";
+            this.colQiymet1.Name = "colQiymet1";
+            this.colQiymet1.Visible = true;
+            this.colQiymet1.VisibleIndex = 4;
+            this.colQiymet1.Width = 95;
+            // 
+            // colQiymet2
+            // 
+            this.colQiymet2.FieldName = "Qiymet2";
+            this.colQiymet2.Name = "colQiymet2";
+            this.colQiymet2.Visible = true;
+            this.colQiymet2.VisibleIndex = 5;
+            this.colQiymet2.Width = 99;
+            // 
+            // colQiymet3
+            // 
+            this.colQiymet3.FieldName = "Qiymet3";
+            this.colQiymet3.Name = "colQiymet3";
+            this.colQiymet3.Visible = true;
+            this.colQiymet3.VisibleIndex = 6;
+            this.colQiymet3.Width = 103;
+            // 
+            // colAciklama
+            // 
+            this.colAciklama.FieldName = "Aciklama";
+            this.colAciklama.Name = "colAciklama";
+            this.colAciklama.Visible = true;
+            this.colAciklama.VisibleIndex = 7;
+            this.colAciklama.Width = 501;
+            // 
+            // colTarix
+            // 
+            this.colTarix.FieldName = "Tarix";
+            this.colTarix.Name = "colTarix";
+            this.colTarix.Visible = true;
+            this.colTarix.VisibleIndex = 8;
+            this.colTarix.Width = 204;
+            // 
+            // colSekil
+            // 
+            this.colSekil.FieldName = "Sekil";
+            this.colSekil.Name = "colSekil";
+            // 
+            // colMenu
+            // 
+            this.colMenu.FieldName = "Menu";
+            this.colMenu.Name = "colMenu";
             // 
             // frm_Urunler
             // 
@@ -187,5 +293,16 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn colMeynuID;
+        private DevExpress.XtraGrid.Columns.GridColumn colUrunKodu;
+        private DevExpress.XtraGrid.Columns.GridColumn colUrunAdi;
+        private DevExpress.XtraGrid.Columns.GridColumn colQiymet1;
+        private DevExpress.XtraGrid.Columns.GridColumn colQiymet2;
+        private DevExpress.XtraGrid.Columns.GridColumn colQiymet3;
+        private DevExpress.XtraGrid.Columns.GridColumn colAciklama;
+        private DevExpress.XtraGrid.Columns.GridColumn colTarix;
+        private DevExpress.XtraGrid.Columns.GridColumn colSekil;
+        private DevExpress.XtraGrid.Columns.GridColumn colMenu;
     }
 }
