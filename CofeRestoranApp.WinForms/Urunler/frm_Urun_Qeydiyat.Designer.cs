@@ -41,27 +41,27 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_Urun_kodu = new DevExpress.XtraEditors.TextEdit();
+            this.txt_Urun_Adi = new DevExpress.XtraEditors.TextEdit();
             this.Cal_Qiymet_1 = new DevExpress.XtraEditors.CalcEdit();
             this.Cal_Qiymet_2 = new DevExpress.XtraEditors.CalcEdit();
             this.Cal_Qiymet_3 = new DevExpress.XtraEditors.CalcEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.Date_Edit_Tarix = new DevExpress.XtraEditors.DateEdit();
+            this.txtR_Aciklama = new DevExpress.XtraEditors.MemoEdit();
+            this.Foto_Resim_elave_et = new DevExpress.XtraEditors.PictureEdit();
+            this.Combo_Meynu_Secimi = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Urun_kodu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Urun_Adi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cal_Qiymet_1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cal_Qiymet_2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cal_Qiymet_3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Date_Edit_Tarix.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Date_Edit_Tarix.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtR_Aciklama.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto_Resim_elave_et.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Combo_Meynu_Secimi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -286,23 +286,23 @@
             this.labelControl9.TabIndex = 11;
             this.labelControl9.Text = "Tatix  ";
             // 
-            // textEdit1
+            // txt_Urun_kodu
             // 
-            this.textEdit1.Location = new System.Drawing.Point(194, 108);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(213, 32);
-            this.textEdit1.TabIndex = 14;
+            this.txt_Urun_kodu.Location = new System.Drawing.Point(194, 108);
+            this.txt_Urun_kodu.Name = "txt_Urun_kodu";
+            this.txt_Urun_kodu.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Urun_kodu.Properties.Appearance.Options.UseFont = true;
+            this.txt_Urun_kodu.Size = new System.Drawing.Size(213, 32);
+            this.txt_Urun_kodu.TabIndex = 14;
             // 
-            // textEdit2
+            // txt_Urun_Adi
             // 
-            this.textEdit2.Location = new System.Drawing.Point(194, 152);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(213, 32);
-            this.textEdit2.TabIndex = 15;
+            this.txt_Urun_Adi.Location = new System.Drawing.Point(194, 152);
+            this.txt_Urun_Adi.Name = "txt_Urun_Adi";
+            this.txt_Urun_Adi.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Urun_Adi.Properties.Appearance.Options.UseFont = true;
+            this.txt_Urun_Adi.Size = new System.Drawing.Size(213, 32);
+            this.txt_Urun_Adi.TabIndex = 15;
             // 
             // Cal_Qiymet_1
             // 
@@ -343,44 +343,53 @@
             this.Cal_Qiymet_3.Size = new System.Drawing.Size(213, 32);
             this.Cal_Qiymet_3.TabIndex = 23;
             // 
-            // dateEdit1
+            // Date_Edit_Tarix
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(194, 444);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateEdit1.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.Date_Edit_Tarix.EditValue = null;
+            this.Date_Edit_Tarix.Location = new System.Drawing.Point(194, 444);
+            this.Date_Edit_Tarix.Name = "Date_Edit_Tarix";
+            this.Date_Edit_Tarix.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_Edit_Tarix.Properties.Appearance.Options.UseFont = true;
+            this.Date_Edit_Tarix.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.Date_Edit_Tarix.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(523, 32);
-            this.dateEdit1.TabIndex = 24;
+            this.Date_Edit_Tarix.Size = new System.Drawing.Size(523, 32);
+            this.Date_Edit_Tarix.TabIndex = 24;
             // 
-            // memoEdit1
+            // txtR_Aciklama
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(194, 322);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(523, 111);
-            this.memoEdit1.TabIndex = 25;
+            this.txtR_Aciklama.Location = new System.Drawing.Point(194, 322);
+            this.txtR_Aciklama.Name = "txtR_Aciklama";
+            this.txtR_Aciklama.Size = new System.Drawing.Size(523, 111);
+            this.txtR_Aciklama.TabIndex = 25;
             // 
-            // pictureEdit1
+            // Foto_Resim_elave_et
             // 
-            this.pictureEdit1.Location = new System.Drawing.Point(413, 58);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.NullText = "Şəkil əlavə Edin";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(304, 256);
-            this.pictureEdit1.TabIndex = 26;
+            this.Foto_Resim_elave_et.Location = new System.Drawing.Point(413, 58);
+            this.Foto_Resim_elave_et.Name = "Foto_Resim_elave_et";
+            this.Foto_Resim_elave_et.Properties.NullText = "Şəkil əlavə Edin";
+            this.Foto_Resim_elave_et.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.Foto_Resim_elave_et.Size = new System.Drawing.Size(304, 256);
+            this.Foto_Resim_elave_et.TabIndex = 26;
             // 
-            // lookUpEdit1
+            // Combo_Meynu_Secimi
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(194, 76);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.Combo_Meynu_Secimi.Location = new System.Drawing.Point(194, 66);
+            this.Combo_Meynu_Secimi.Name = "Combo_Meynu_Secimi";
+            this.Combo_Meynu_Secimi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Combo_Meynu_Secimi.Properties.Appearance.Options.UseFont = true;
+            this.Combo_Meynu_Secimi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Size = new System.Drawing.Size(213, 20);
-            this.lookUpEdit1.TabIndex = 27;
+            this.Combo_Meynu_Secimi.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MenuAdi", "Menu")});
+            this.Combo_Meynu_Secimi.Properties.DisplayMember = "MenuAdi";
+            this.Combo_Meynu_Secimi.Properties.NullText = "Meynu Seçin";
+            this.Combo_Meynu_Secimi.Properties.NullValuePrompt = "Meynu Seçin";
+            this.Combo_Meynu_Secimi.Properties.ValueMember = "ID";
+            this.Combo_Meynu_Secimi.Size = new System.Drawing.Size(213, 30);
+            this.Combo_Meynu_Secimi.TabIndex = 27;
             // 
             // frm_Urun_Qeydiyat
             // 
@@ -391,15 +400,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(726, 637);
-            this.Controls.Add(this.lookUpEdit1);
-            this.Controls.Add(this.pictureEdit1);
-            this.Controls.Add(this.memoEdit1);
-            this.Controls.Add(this.dateEdit1);
+            this.Controls.Add(this.Combo_Meynu_Secimi);
+            this.Controls.Add(this.Foto_Resim_elave_et);
+            this.Controls.Add(this.txtR_Aciklama);
+            this.Controls.Add(this.Date_Edit_Tarix);
             this.Controls.Add(this.Cal_Qiymet_3);
             this.Controls.Add(this.Cal_Qiymet_2);
             this.Controls.Add(this.Cal_Qiymet_1);
-            this.Controls.Add(this.textEdit2);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.txt_Urun_Adi);
+            this.Controls.Add(this.txt_Urun_kodu);
             this.Controls.Add(this.labelControl9);
             this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.labelControl7);
@@ -416,16 +425,16 @@
             this.Load += new System.EventHandler(this.frm_Urun_Qeydiyat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Urun_kodu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Urun_Adi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cal_Qiymet_1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cal_Qiymet_2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cal_Qiymet_3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Date_Edit_Tarix.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Date_Edit_Tarix.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtR_Aciklama.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto_Resim_elave_et.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Combo_Meynu_Secimi.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,14 +453,14 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txt_Urun_kodu;
+        private DevExpress.XtraEditors.TextEdit txt_Urun_Adi;
         private DevExpress.XtraEditors.CalcEdit Cal_Qiymet_1;
         private DevExpress.XtraEditors.CalcEdit Cal_Qiymet_2;
         private DevExpress.XtraEditors.CalcEdit Cal_Qiymet_3;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
+        private DevExpress.XtraEditors.DateEdit Date_Edit_Tarix;
+        private DevExpress.XtraEditors.MemoEdit txtR_Aciklama;
+        private DevExpress.XtraEditors.PictureEdit Foto_Resim_elave_et;
+        private DevExpress.XtraEditors.LookUpEdit Combo_Meynu_Secimi;
     }
 }

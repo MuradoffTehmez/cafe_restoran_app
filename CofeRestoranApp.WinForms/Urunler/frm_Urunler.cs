@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
+using DevExpress.Office.Utils;
 
 namespace CofeRestoranApp.WinForms.Urunler
 {
@@ -45,7 +46,8 @@ namespace CofeRestoranApp.WinForms.Urunler
 
         private void brn_Elave_Et_Click(object sender, EventArgs e)
         {
-
+            frm_Urun_Qeydiyat frm = new frm_Urun_Qeydiyat();
+            frm.ShowDialog();
         }
     }
 }

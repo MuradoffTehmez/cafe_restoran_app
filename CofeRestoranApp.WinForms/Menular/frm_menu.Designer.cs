@@ -101,7 +101,7 @@
             this.btn_Deyis.Size = new System.Drawing.Size(166, 103);
             this.btn_Deyis.TabIndex = 2;
             this.btn_Deyis.Text = "Dəyişdir";
-            this.btn_Deyis.Click += new System.EventHandler(this.simpleButton3_Click);
+           // this.btn_Deyis.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // btn_Sil
             // 
