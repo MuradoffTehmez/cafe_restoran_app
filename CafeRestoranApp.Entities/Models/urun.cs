@@ -25,6 +25,8 @@ namespace CafeRestoranApp.Entities.Models
 
         public decimal Qiymet2 { get; set; }
 
+        public decimal Qiymet3 { get; set; }
+
         public string Aciklama { get; set; }
 
         public DateTime Tarix { get; set; }

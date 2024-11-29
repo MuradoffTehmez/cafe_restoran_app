@@ -8,14 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CafeRestoranApp.Entities.Models;
 
 namespace CofeRestoranApp.WinForms.Urunler
 {
     public partial class frm_Urunler : DevExpress.XtraEditors.XtraForm
     {
+        private CafeContext context = new CafeContext();
         public frm_Urunler()
         {
             InitializeComponent();
+        }
+
+        private void brn_Elave_Et_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
