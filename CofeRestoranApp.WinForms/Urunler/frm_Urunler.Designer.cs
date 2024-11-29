@@ -96,6 +96,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(166, 103);
             this.simpleButton1.TabIndex = 4;
             this.simpleButton1.Text = "Güncəllə \r\nvə \r\nListələ";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btn_cisix_et
             // 
@@ -123,6 +124,7 @@
             this.btn_Duzenle.Size = new System.Drawing.Size(166, 103);
             this.btn_Duzenle.TabIndex = 2;
             this.btn_Duzenle.Text = "Dəyişdir";
+            this.btn_Duzenle.Click += new System.EventHandler(this.btn_Duzenle_Click);
             // 
             // btn_Sil
             // 

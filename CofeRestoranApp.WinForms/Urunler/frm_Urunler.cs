@@ -19,13 +19,17 @@ namespace CofeRestoranApp.WinForms.Urunler
         private CafeContext context = new CafeContext();
         private UrunDAL urunDal = new UrunDAL();
         private BindingSource bindingSource1 = new BindingSource();
+       
+
 
 
         // private UrunDAL urunDal = new UrunDAL();
         public frm_Urunler()
         {
             InitializeComponent();
-            gridControl1.DataSource = urunDal.UrunListele(context);
+            Listele();
+
+            
             /*
             var urunListesi = urunDal.UrunListele(context);
 
@@ -43,11 +47,36 @@ namespace CofeRestoranApp.WinForms.Urunler
             //    bindingSource1.DataSource = urunDal.GetAll(context);
             //    gridControl1.DataSource = bindingSource1;
         }
-
+        void Listele()
+        {
+            gridControl1.DataSource = urunDal.UrunListele(context);
+        }
         private void brn_Elave_Et_Click(object sender, EventArgs e)
         {
-            frm_Urun_Qeydiyat frm = new frm_Urun_Qeydiyat();
+            frm_Urun_Qeydiyat frm = new frm_Urun_Qeydiyat(new Urun());
             frm.ShowDialog();
+            if (frm.Qeydet)
+            {
+                Listele();
+            }
+           
+        }
+
+        private void btn_Duzenle_Click(object sender, EventArgs e)
+        {
+            int seciliid = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+            frm_Urun_Qeydiyat frm = new frm_Urun_Qeydiyat(urunDal.GetByFilter(context, u => u.Id == seciliid));
+            frm.ShowDialog();
+
+            if (frm.Qeydet)
+            {
+                Listele();
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Listele();
         }
     }
 }
