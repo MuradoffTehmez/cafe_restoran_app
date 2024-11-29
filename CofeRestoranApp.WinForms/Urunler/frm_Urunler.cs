@@ -15,14 +15,32 @@ namespace CofeRestoranApp.WinForms.Urunler
 {
     public partial class frm_Urunler : DevExpress.XtraEditors.XtraForm
     {
-        private CafeContext context1 = new CafeContext();
-        private UrunDAL urunDal1 = new UrunDAL();
+        private CafeContext context = new CafeContext();
+        private UrunDAL urunDal = new UrunDAL();
         private BindingSource bindingSource1 = new BindingSource();
+
+
+        // private UrunDAL urunDal = new UrunDAL();
         public frm_Urunler()
         {
             InitializeComponent();
-            bindingSource1.DataSource = urunDal1.GetAll(context1);
-            gridControl1.DataSource = bindingSource1;
+            gridControl1.DataSource = urunDal.UrunListele(context);
+            /*
+            var urunListesi = urunDal.UrunListele(context);
+
+            if (urunListesi != null && urunListesi.Count > 0)
+            {
+                bindingSource1.DataSource = urunListesi;
+                gridControl1.DataSource = bindingSource1;
+            }
+            else
+            {
+                MessageBox.Show("Bazada melumat yoxdu");
+            }
+              */
+
+            //    bindingSource1.DataSource = urunDal.GetAll(context);
+            //    gridControl1.DataSource = bindingSource1;
         }
 
         private void brn_Elave_Et_Click(object sender, EventArgs e)

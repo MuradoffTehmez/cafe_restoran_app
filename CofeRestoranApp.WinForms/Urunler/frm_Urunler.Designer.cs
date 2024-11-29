@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Urunler));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -192,7 +191,8 @@
             // 
             // colMeynuID
             // 
-            this.colMeynuID.FieldName = "MeynuID";
+            this.colMeynuID.Caption = "Meynu";
+            this.colMeynuID.FieldName = "Menu";
             this.colMeynuID.Name = "colMeynuID";
             this.colMeynuID.Visible = true;
             this.colMeynuID.VisibleIndex = 1;
