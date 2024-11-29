@@ -29,6 +29,8 @@ namespace CafeRestoranApp.Entities.Models
 
         public DateTime Tarix { get; set; }
 
+        public string Sekil { get; set; }
+
         public Menu Menu { get; set; }
 
        
