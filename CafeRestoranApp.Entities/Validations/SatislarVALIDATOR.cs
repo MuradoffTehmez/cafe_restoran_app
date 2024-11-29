@@ -13,8 +13,8 @@ namespace CafeRestoranApp.Entities.Validations
         public SatislarVALIDATOR()
         {
             // Id
-            RuleFor(x => x.Id)
-                .GreaterThan(0).WithMessage("ID sıfırdan böyük olmalıdır.");
+           // RuleFor(x => x.Id)
+             //   .GreaterThan(0).WithMessage("ID sıfırdan böyük olmalıdır.");
 
             // SatisKodu
             RuleFor(x => x.SatisKodu)

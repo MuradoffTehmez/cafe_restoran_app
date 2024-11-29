@@ -33,15 +33,14 @@ namespace CofeRestoranApp.WinForms.Urunler
             }
             else
             {
-                
-                txt_Urun_Adi.Enabled = false;
+               // txt_Urun_Adi.Enabled = false;
                 txt_Urun_kodu.Enabled = false;
-                Cal_Qiymet_1.Enabled = false;
-                Cal_Qiymet_2.Enabled = false;
-                Cal_Qiymet_3.Enabled = false;
-                txtR_Aciklama.Enabled = false;
-                Date_Edit_Tarix.Enabled = false;
-                Combo_Meynu_Secimi.Enabled = false;
+              //  Cal_Qiymet_1.Enabled = false;
+              //  Cal_Qiymet_2.Enabled = false;
+              //  Cal_Qiymet_3.Enabled = false;
+              //  txtR_Aciklama.Enabled = false;
+             //   Date_Edit_Tarix.Enabled = false;
+              //  Combo_Meynu_Secimi.Enabled = false;
 
                 
             }

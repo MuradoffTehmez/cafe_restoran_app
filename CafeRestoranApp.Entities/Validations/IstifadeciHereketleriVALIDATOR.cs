@@ -13,9 +13,9 @@ namespace CafeRestoranApp.Entities.Validations
         public IstifadeciHereketleriVALIDATOR()
         {
             // IstifadeciID
-            RuleFor(x => x.IstifadeciID)
-                .NotEmpty().WithMessage("İstifadəçi ID boş ola bilməz.")
-                .GreaterThan(0).WithMessage("İstifadəçi ID sıfırdan böyük olmalıdır.");
+            //RuleFor(x => x.IstifadeciID)
+              //  .NotEmpty().WithMessage("İstifadəçi ID boş ola bilməz.")
+              //  .GreaterThan(0).WithMessage("İstifadəçi ID sıfırdan böyük olmalıdır.");
 
             // Aciklama
             RuleFor(x => x.Aciklama)

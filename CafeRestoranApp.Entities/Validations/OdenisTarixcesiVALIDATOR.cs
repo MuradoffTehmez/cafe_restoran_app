@@ -13,8 +13,8 @@ namespace CafeRestoranApp.Entities.Validations
         public OdenisTarixcesiVALIDATOR()
         {
             // Id
-            RuleFor(x => x.Id)
-                .GreaterThanOrEqualTo(0).WithMessage("ID sıfırdan kiçik ola bilməz.");
+            //RuleFor(x => x.Id)
+           //.GreaterThanOrEqualTo(0).WithMessage("ID sıfırdan kiçik ola bilməz.");
 
             // SatisKodu
             RuleFor(x => x.SatisKodu)

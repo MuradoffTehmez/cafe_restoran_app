@@ -13,8 +13,8 @@ namespace CafeRestoranApp.Entities.Validations
         public UrunVALIDATOR()
         {
             // Id
-            RuleFor(x => x.Id)
-                .GreaterThan(0).WithMessage("ID sıfırdan böyük olmalıdır.");
+            //RuleFor(x => x.Id)
+              //  .GreaterThan(0).WithMessage("ID sıfırdan böyük olmalıdır.");
 
             // UrunKodu
             RuleFor(x => x.UrunKodu)
