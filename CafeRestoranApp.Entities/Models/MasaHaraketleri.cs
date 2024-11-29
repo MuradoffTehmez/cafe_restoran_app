@@ -17,9 +17,15 @@ namespace CafeRestoranApp.Entities.Models
 
         public int MasaId { get; set; }
 
+        public int MenuId { get; set; }
+
+        public int UrunId { get; set; }
+
         public int Miqdari { get; set; }
 
         public decimal Qiymeti { get; set; }
+
+        public string Sekil {  get; set; }
 
         public string Aciklama { get; set; }
 

@@ -85,6 +85,10 @@
     <Compile Include="Migrations\202411281240076_CreateDatabase.Designer.cs">
       <DependentUpon>202411281240076_CreateDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202411290033252_UpdateColumnOrder.cs" />
+    <Compile Include="Migrations\202411290033252_UpdateColumnOrder.Designer.cs">
+      <DependentUpon>202411290033252_UpdateColumnOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CafeContext.cs" />
     <Compile Include="Models\IstifadeciHereketleri.cs" />
@@ -117,6 +121,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202411281240076_CreateDatabase.resx">
       <DependentUpon>202411281240076_CreateDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411290033252_UpdateColumnOrder.resx">
+      <DependentUpon>202411290033252_UpdateColumnOrder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -14,7 +14,7 @@ namespace CafeRestoranApp.Entities.Mapping
     {
         public MenuMap()
         {
-            this.ToTable("Meynu");
+            this.ToTable("Menu");
             
             this.HasKey(p => p.Id);
             

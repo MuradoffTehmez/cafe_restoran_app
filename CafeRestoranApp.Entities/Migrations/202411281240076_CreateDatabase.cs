@@ -8,7 +8,7 @@
         public override void Up()
         {
             CreateTable(
-                "dbo.Meyu",
+                "dbo.Menu",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -22,7 +22,7 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        MeynuID = c.Int(nullable: false),
+                        MennuID = c.Int(nullable: false),
                         UrunKodu = c.String(maxLength: 50, unicode: false),
                         Uruni = c.String(),
                         Qiymet1 = c.Decimal(nullable: false, precision: 18, scale: 2),
@@ -30,17 +30,17 @@
                         Tarix = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Meyu", t => t.MeynuID, cascadeDelete: true)
-                .Index(t => t.MeynuID);
+                .ForeignKey("dbo.Menu", t => t.MennuID, cascadeDelete: true)
+                .Index(t => t.MennuID);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Urun", "MeynuID", "dbo.Meyu");
-            DropIndex("dbo.Urun", new[] { "MeynuID" });
+            DropForeignKey("dbo.Urun", "MennuID", "dbo.Menu");
+            DropIndex("dbo.Urun", new[] { "MennuID" });
             DropTable("dbo.Urun");
-            DropTable("dbo.Meyu");
+            DropTable("dbo.Menu");
         }
     }
 }
