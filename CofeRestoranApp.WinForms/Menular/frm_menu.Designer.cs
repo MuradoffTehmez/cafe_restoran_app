@@ -31,12 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Menu));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btn_cisix_et = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_Sil = new DevExpress.XtraEditors.SimpleButton();
+            this.brn_Qeyd_et = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMenuAdi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -54,65 +57,37 @@
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(934, 43);
+            this.labelControl1.Size = new System.Drawing.Size(1099, 43);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Meynu";
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.simpleButton4);
+            this.groupControl1.Controls.Add(this.btn_cisix_et);
             this.groupControl1.Controls.Add(this.simpleButton3);
-            this.groupControl1.Controls.Add(this.simpleButton2);
-            this.groupControl1.Controls.Add(this.simpleButton1);
+            this.groupControl1.Controls.Add(this.btn_Sil);
+            this.groupControl1.Controls.Add(this.brn_Qeyd_et);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 352);
+            this.groupControl1.Location = new System.Drawing.Point(0, 416);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(934, 149);
+            this.groupControl1.Size = new System.Drawing.Size(1099, 149);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Əməliyyatlar";
             // 
-            // gridControl1
+            // btn_cisix_et
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 43);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(934, 309);
-            this.gridControl1.TabIndex = 2;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseTextOptions = true;
-            this.simpleButton1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(12, 34);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(166, 103);
-            this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "Qeyd Et";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Appearance.Options.UseTextOptions = true;
-            this.simpleButton2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(194, 34);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(166, 103);
-            this.simpleButton2.TabIndex = 1;
-            this.simpleButton2.Text = "Sil";
+            this.btn_cisix_et.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_cisix_et.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cisix_et.Appearance.Options.UseFont = true;
+            this.btn_cisix_et.Appearance.Options.UseTextOptions = true;
+            this.btn_cisix_et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.btn_cisix_et.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
+            this.btn_cisix_et.Location = new System.Drawing.Point(968, 34);
+            this.btn_cisix_et.Name = "btn_cisix_et";
+            this.btn_cisix_et.Size = new System.Drawing.Size(119, 103);
+            this.btn_cisix_et.TabIndex = 3;
+            this.btn_cisix_et.Text = "Çıxış";
+            this.btn_cisix_et.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // simpleButton3
             // 
@@ -126,26 +101,86 @@
             this.simpleButton3.Size = new System.Drawing.Size(166, 103);
             this.simpleButton3.TabIndex = 2;
             this.simpleButton3.Text = "Dəyişdir";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
-            // simpleButton4
+            // btn_Sil
             // 
-            this.simpleButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.Appearance.Options.UseTextOptions = true;
-            this.simpleButton4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
-            this.simpleButton4.Location = new System.Drawing.Point(803, 34);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(119, 103);
-            this.simpleButton4.TabIndex = 3;
-            this.simpleButton4.Text = "Çıxış";
+            this.btn_Sil.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sil.Appearance.Options.UseFont = true;
+            this.btn_Sil.Appearance.Options.UseTextOptions = true;
+            this.btn_Sil.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.btn_Sil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btn_Sil.Location = new System.Drawing.Point(194, 34);
+            this.btn_Sil.Name = "btn_Sil";
+            this.btn_Sil.Size = new System.Drawing.Size(166, 103);
+            this.btn_Sil.TabIndex = 1;
+            this.btn_Sil.Text = "Sil";
+            this.btn_Sil.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // brn_Qeyd_et
+            // 
+            this.brn_Qeyd_et.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brn_Qeyd_et.Appearance.Options.UseFont = true;
+            this.brn_Qeyd_et.Appearance.Options.UseTextOptions = true;
+            this.brn_Qeyd_et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.brn_Qeyd_et.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.brn_Qeyd_et.Location = new System.Drawing.Point(12, 34);
+            this.brn_Qeyd_et.Name = "brn_Qeyd_et";
+            this.brn_Qeyd_et.Size = new System.Drawing.Size(166, 103);
+            this.brn_Qeyd_et.TabIndex = 0;
+            this.brn_Qeyd_et.Text = "Qeyd Et";
+            this.brn_Qeyd_et.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 43);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(1099, 373);
+            this.gridControl1.TabIndex = 2;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId,
+            this.colMenuAdi,
+            this.colAciklama});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            // 
+            // colId
+            // 
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            this.colId.Visible = true;
+            this.colId.VisibleIndex = 0;
+            this.colId.Width = 136;
+            // 
+            // colMenuAdi
+            // 
+            this.colMenuAdi.FieldName = "MenuAdi";
+            this.colMenuAdi.Name = "colMenuAdi";
+            this.colMenuAdi.Visible = true;
+            this.colMenuAdi.VisibleIndex = 1;
+            this.colMenuAdi.Width = 267;
+            // 
+            // colAciklama
+            // 
+            this.colAciklama.FieldName = "Aciklama";
+            this.colAciklama.Name = "colAciklama";
+            this.colAciklama.Visible = true;
+            this.colAciklama.VisibleIndex = 2;
+            this.colAciklama.Width = 671;
             // 
             // frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 501);
+            this.ClientSize = new System.Drawing.Size(1099, 565);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.labelControl1);
@@ -170,9 +205,12 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton btn_cisix_et;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btn_Sil;
+        private DevExpress.XtraEditors.SimpleButton brn_Qeyd_et;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn colMenuAdi;
+        private DevExpress.XtraGrid.Columns.GridColumn colAciklama;
     }
 }

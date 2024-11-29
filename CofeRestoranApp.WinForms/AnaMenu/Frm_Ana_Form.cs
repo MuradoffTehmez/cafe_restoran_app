@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CofeRestoranApp.WinForms.Menular;
 using CofeRestoranApp.WinForms.Urunler;
 using DevExpress.XtraEditors;
 
@@ -42,7 +43,8 @@ namespace CofeRestoranApp.WinForms.AnaMenu
 
         private void btn_Meynular_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            frm_Menu frm = new frm_Menu();
+            frm.ShowDialog();
         }
 
         private void btn_Urunler_ItemClick(object sender, ItemClickEventArgs e)
