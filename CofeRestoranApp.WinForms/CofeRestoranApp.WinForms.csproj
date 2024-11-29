@@ -236,6 +236,9 @@
     <EmbeddedResource Include="AnaMenu\Frm_Ana_Form.resx">
       <DependentUpon>Frm_Ana_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AnaMenu\Frm_Ana_Form.tr-TR.resx">
+      <DependentUpon>Frm_Ana_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
