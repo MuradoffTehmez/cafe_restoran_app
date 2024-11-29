@@ -1,16 +1,6 @@
-﻿using AngleSharp.Dom;
-using CafeRestoranApp.Entities.DAL;
+﻿using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
-using DevExpress.XtraEditors;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CofeRestoranApp.WinForms.Urunler
@@ -27,6 +17,35 @@ namespace CofeRestoranApp.WinForms.Urunler
         {
             InitializeComponent();
             _entity = entity;
+
+            if (_entity.Id == 0)
+            {
+              
+                txt_Urun_Adi.Enabled = true;
+                txt_Urun_kodu.Enabled = true;
+                Cal_Qiymet_1.Enabled = true;
+                Cal_Qiymet_2.Enabled = true;
+                Cal_Qiymet_3.Enabled = true;
+                txtR_Aciklama.Enabled = true;
+                Date_Edit_Tarix.Enabled = true;
+                Combo_Meynu_Secimi.Enabled = true;
+
+            }
+            else
+            {
+                
+                txt_Urun_Adi.Enabled = false;
+                txt_Urun_kodu.Enabled = false;
+                Cal_Qiymet_1.Enabled = false;
+                Cal_Qiymet_2.Enabled = false;
+                Cal_Qiymet_3.Enabled = false;
+                txtR_Aciklama.Enabled = false;
+                Date_Edit_Tarix.Enabled = false;
+                Combo_Meynu_Secimi.Enabled = false;
+
+                
+            }
+
             Combo_Meynu_Secimi.Properties.DataSource = menuDAL.GetAll(Context);
             Combo_Meynu_Secimi.DataBindings.Add("EditValue", _entity, "MeynuID");
             txt_Urun_Adi.DataBindings.Add("Text", _entity, "UrunAdi");
@@ -52,11 +71,18 @@ namespace CofeRestoranApp.WinForms.Urunler
             {
                 try
                 {
-                    if (urunDAL.AddorUpdate(Context, _entity))
+                    
+                    if (_entity.Id == 0)
                     {
+                       
+                        urunDAL.AddorUpdate(Context, _entity);
                         urunDAL.Save(Context);
                         Qeydet = true;
                         MessageBox.Show("Məhsul uğurla saxlanıldı!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Məhsul artıq mövcuddur.");
                     }
                 }
                 catch (Exception ex)

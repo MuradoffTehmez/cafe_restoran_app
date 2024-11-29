@@ -11,14 +11,14 @@ namespace CafeRestoranApp.Entities.DAL
 {
     public class UrunDAL : EntityRepositoryBase<CafeContext, Urun,UrunVALIDATOR>
     {
-        public object UrunListele(CafeContext context)
+        public IEnumerable<dynamic> UrunListele(CafeContext context)
         {
             var liste = (from u in context.Urun
                 select new
                 {
                     u.Id,
                     u.MeynuID,
-                    Menu =u.Menu.MenuAdi,
+                    Menu = u.Menu.MenuAdi,
                     u.UrunKodu,
                     u.UrunAdi,
                     u.Qiymet1,
@@ -27,10 +27,9 @@ namespace CafeRestoranApp.Entities.DAL
                     u.Aciklama,
                     u.Sekil,
                     u.Tarix
-
-
                 }).ToList();
-            return liste;
+
+            return liste; // Listeyi geri döndürüyoruz
         }
 
         /*

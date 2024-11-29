@@ -19,55 +19,30 @@ namespace CofeRestoranApp.WinForms.Urunler
         private CafeContext context = new CafeContext();
         private UrunDAL urunDal = new UrunDAL();
         private BindingSource bindingSource1 = new BindingSource();
-       
-
-
-
-        // private UrunDAL urunDal = new UrunDAL();
+        
         public frm_Urunler()
         {
             InitializeComponent();
             Listele();
-
-            
-            /*
-            var urunListesi = urunDal.UrunListele(context);
-
-            if (urunListesi != null && urunListesi.Count > 0)
-            {
-                bindingSource1.DataSource = urunListesi;
-                gridControl1.DataSource = bindingSource1;
-            }
-            else
-            {
-                MessageBox.Show("Bazada melumat yoxdu");
-            }
-              */
-
-            //    bindingSource1.DataSource = urunDal.GetAll(context);
-            //    gridControl1.DataSource = bindingSource1;
         }
         void Listele()
         {
             try
             {
-               
-                var urunListesi = urunDal.UrunListele(context) as IEnumerable<Urun>; 
+                var urunListesi = urunDal.UrunListele(context);
 
-                
-                if (urunListesi != null && urunListesi.Any())
+                if (urunListesi != null && urunListesi.Any()) 
                 {
                     bindingSource1.DataSource = urunListesi;  
-                    gridControl1.DataSource = bindingSource1;  
+                    gridControl1.DataSource = bindingSource1; 
                 }
                 else
                 {
-                    MessageBox.Show("Bazada məlumat tapılmadı."); 
+                    MessageBox.Show("Bazada məlumat tapılmadı.");  
                 }
             }
             catch (Exception ex)
             {
-                
                 MessageBox.Show("Məhsul siyahısı yüklənərkən xəta baş verdi: " + ex.Message);
             }
         }
@@ -78,9 +53,10 @@ namespace CofeRestoranApp.WinForms.Urunler
             {
                 frm_Urun_Qeydiyat frm = new frm_Urun_Qeydiyat(new Urun());
                 frm.ShowDialog();
-                if (frm.Qeydet)
+
+                if (frm.Qeydet) 
                 {
-                    Listele(); // Yeni məhsul əlavə edildikdən sonra siyahını yenilə
+                    Listele(); 
                 }
             }
             catch (Exception ex)
@@ -95,14 +71,15 @@ namespace CofeRestoranApp.WinForms.Urunler
             try
             {
                 int seciliid = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
-                if (seciliid > 0)
+
+                if (seciliid > 1) 
                 {
                     frm_Urun_Qeydiyat frm = new frm_Urun_Qeydiyat(urunDal.GetByFilter(context, u => u.Id == seciliid));
                     frm.ShowDialog();
 
-                    if (frm.Qeydet)
+                    if (frm.Qeydet)  
                     {
-                        Listele(); // Redaktə edildikdən sonra siyahını yenilə
+                        Listele();  
                     }
                 }
                 else

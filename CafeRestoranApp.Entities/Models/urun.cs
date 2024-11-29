@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.Models
 {
-    //[Table("Urun")]
     public class Urun : IEntity
     {
 
@@ -35,16 +34,5 @@ namespace CafeRestoranApp.Entities.Models
 
         public Menu Menu { get; set; }
 
-       
-        
-        
-        
-        //[Key]
-        //[ForeignKey("Menu")]
-        //[Column(TypeName = "varchar")]
-        //[StringLength(50)]
-
-
-        //public virtual Menu Menu { get; set; }  
     }
 }
