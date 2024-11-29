@@ -77,3 +77,16 @@
 ---
 
 Bu README faylı layihənin əsas məqsədini və necə istifadə olunacağını izah edir. Layihə restoran və kafe idarəçiliyi üçün tam funksional bir həll təqdim edir.
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Этот проект лицензирован по MIT лицензии — см. файл [LICENSE](LICENSE) для подробностей.
+
+---
+
+Этот проект распространяется под лицензией MIT — см. файл [LICENSE](LICENSE) для подробностей.
