@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ribbon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ribbonPageGroup1.Text" xml:space="preserve">
+    <value>ribbonPageGroup1</value>
+  </data>
+  <data name="ribbonPage1.Text" xml:space="preserve">
+    <value>ribbonPage1</value>
+  </data>
+  <data name="ribbon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 158</value>
+  </data>
+  <data name="ribbonStatusBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 717</value>
+  </data>
+  <data name="ribbonStatusBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 24</value>
+  </data>
+  <data name="&gt;&gt;ribbonStatusBar.Name" xml:space="preserve">
+    <value>ribbonStatusBar</value>
+  </data>
+  <data name="&gt;&gt;ribbonStatusBar.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonStatusBar, DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonStatusBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ribbonStatusBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ribbon.Name" xml:space="preserve">
+    <value>ribbon</value>
+  </data>
+  <data name="&gt;&gt;ribbon.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbon.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ribbon.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>tr-TR</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 741</value>
+  </data>
+  <data name="Frm_Ana_Form.IconOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        knoiHf8HzqV10iUGROYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Frm_Ana_Form</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage1.Name" xml:space="preserve">
+    <value>ribbonPage1</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup1.Name" xml:space="preserve">
+    <value>ribbonPageGroup1</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Frm_Ana_Form</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonForm, DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+</root>

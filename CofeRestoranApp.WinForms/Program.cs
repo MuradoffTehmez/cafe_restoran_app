@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CofeRestoranApp.WinForms.AnaMenu;
 
 namespace CofeRestoranApp.WinForms
 {
@@ -16,7 +17,7 @@ namespace CofeRestoranApp.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Frm_Ana_Form());
         }
     }
 }
