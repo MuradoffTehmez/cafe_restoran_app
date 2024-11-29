@@ -271,6 +271,7 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.labelControl1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "frm_Urunler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Urunler";
