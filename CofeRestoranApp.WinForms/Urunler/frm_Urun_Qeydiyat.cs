@@ -78,6 +78,7 @@ namespace CofeRestoranApp.WinForms.Urunler
                         urunDAL.Save(Context);
                         Qeydet = true;
                         MessageBox.Show("Məhsul uğurla saxlanıldı!");
+                        this.Hide();
                     }
                     else
                     {

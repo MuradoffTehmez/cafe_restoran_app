@@ -56,7 +56,8 @@ namespace CofeRestoranApp.WinForms.Urunler
 
                 if (frm.Qeydet) 
                 {
-                    Listele(); 
+                    Listele();
+                    
                 }
             }
             catch (Exception ex)
@@ -79,7 +80,8 @@ namespace CofeRestoranApp.WinForms.Urunler
 
                     if (frm.Qeydet)  
                     {
-                        Listele();  
+                        Listele();
+                        this.Hide();
                     }
                 }
                 else
