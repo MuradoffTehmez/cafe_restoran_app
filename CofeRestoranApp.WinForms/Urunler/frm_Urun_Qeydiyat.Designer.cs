@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Urun_Qeydiyat));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -50,6 +51,7 @@
             this.txtR_Aciklama = new DevExpress.XtraEditors.MemoEdit();
             this.Foto_Resim_elave_et = new DevExpress.XtraEditors.PictureEdit();
             this.Combo_Meynu_Secimi = new DevExpress.XtraEditors.LookUpEdit();
+            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Urun_kodu.Properties)).BeginInit();
@@ -62,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtR_Aciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_Resim_elave_et.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Combo_Meynu_Secimi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -303,6 +306,7 @@
             this.txt_Urun_Adi.Properties.Appearance.Options.UseFont = true;
             this.txt_Urun_Adi.Size = new System.Drawing.Size(213, 32);
             this.txt_Urun_Adi.TabIndex = 15;
+            this.txt_Urun_Adi.EditValueChanged += new System.EventHandler(this.txt_Urun_Adi_EditValueChanged);
             // 
             // Cal_Qiymet_1
             // 
@@ -382,14 +386,19 @@
             this.Combo_Meynu_Secimi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.Combo_Meynu_Secimi.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "ID"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MenuAdi", "Menu")});
+            this.Combo_Meynu_Secimi.Properties.DataSource = this.menuBindingSource;
             this.Combo_Meynu_Secimi.Properties.DisplayMember = "MenuAdi";
             this.Combo_Meynu_Secimi.Properties.NullText = "Meynu Seçin";
             this.Combo_Meynu_Secimi.Properties.NullValuePrompt = "Meynu Seçin";
-            this.Combo_Meynu_Secimi.Properties.ValueMember = "ID";
+            this.Combo_Meynu_Secimi.Properties.ValueMember = "Id";
             this.Combo_Meynu_Secimi.Size = new System.Drawing.Size(213, 30);
             this.Combo_Meynu_Secimi.TabIndex = 27;
+            // 
+            // menuBindingSource
+            // 
+            this.menuBindingSource.DataSource = typeof(CafeRestoranApp.Entities.Models.Menu);
             // 
             // frm_Urun_Qeydiyat
             // 
@@ -435,6 +444,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtR_Aciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_Resim_elave_et.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Combo_Meynu_Secimi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -462,5 +472,6 @@
         private DevExpress.XtraEditors.MemoEdit txtR_Aciklama;
         private DevExpress.XtraEditors.PictureEdit Foto_Resim_elave_et;
         private DevExpress.XtraEditors.LookUpEdit Combo_Meynu_Secimi;
+        private System.Windows.Forms.BindingSource menuBindingSource;
     }
 }

@@ -49,28 +49,70 @@ namespace CofeRestoranApp.WinForms.Urunler
         }
         void Listele()
         {
-            gridControl1.DataSource = urunDal.UrunListele(context);
+            try
+            {
+               
+                var urunListesi = urunDal.UrunListele(context) as IEnumerable<Urun>; 
+
+                
+                if (urunListesi != null && urunListesi.Any())
+                {
+                    bindingSource1.DataSource = urunListesi;  
+                    gridControl1.DataSource = bindingSource1;  
+                }
+                else
+                {
+                    MessageBox.Show("Bazada məlumat tapılmadı."); 
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show("Məhsul siyahısı yüklənərkən xəta baş verdi: " + ex.Message);
+            }
         }
+
         private void brn_Elave_Et_Click(object sender, EventArgs e)
         {
-            frm_Urun_Qeydiyat frm = new frm_Urun_Qeydiyat(new Urun());
-            frm.ShowDialog();
-            if (frm.Qeydet)
+            try
             {
-                Listele();
+                frm_Urun_Qeydiyat frm = new frm_Urun_Qeydiyat(new Urun());
+                frm.ShowDialog();
+                if (frm.Qeydet)
+                {
+                    Listele(); // Yeni məhsul əlavə edildikdən sonra siyahını yenilə
+                }
             }
-           
+            catch (Exception ex)
+            {
+                MessageBox.Show("Məhsul əlavə edilərkən xəta baş verdi: " + ex.Message);
+            }
+
         }
 
         private void btn_Duzenle_Click(object sender, EventArgs e)
         {
-            int seciliid = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
-            frm_Urun_Qeydiyat frm = new frm_Urun_Qeydiyat(urunDal.GetByFilter(context, u => u.Id == seciliid));
-            frm.ShowDialog();
-
-            if (frm.Qeydet)
+            try
             {
-                Listele();
+                int seciliid = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+                if (seciliid > 0)
+                {
+                    frm_Urun_Qeydiyat frm = new frm_Urun_Qeydiyat(urunDal.GetByFilter(context, u => u.Id == seciliid));
+                    frm.ShowDialog();
+
+                    if (frm.Qeydet)
+                    {
+                        Listele(); // Redaktə edildikdən sonra siyahını yenilə
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Zəhmət olmasa redaktə etmək üçün bir məhsul seçin.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Məhsul redaktə edilərkən xəta baş verdi: " + ex.Message);
             }
         }
 

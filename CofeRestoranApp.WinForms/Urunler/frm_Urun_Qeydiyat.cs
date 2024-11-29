@@ -31,9 +31,9 @@ namespace CofeRestoranApp.WinForms.Urunler
             Combo_Meynu_Secimi.DataBindings.Add("EditValue", _entity, "MeynuID");
             txt_Urun_Adi.DataBindings.Add("Text", _entity, "UrunAdi");
             txt_Urun_kodu.DataBindings.Add("Text", _entity, "UrunKodu");
-            Cal_Qiymet_1.DataBindings.Add("Text", _entity, "Qiymet1");
-            Cal_Qiymet_2.DataBindings.Add("Text", _entity, "Qiymet2");
-            Cal_Qiymet_3.DataBindings.Add("Text", _entity, "Qiymet3");
+            Cal_Qiymet_1.DataBindings.Add("Text", _entity, "Qiymet1",true);
+            Cal_Qiymet_2.DataBindings.Add("Text", _entity, "Qiymet2",true);
+            Cal_Qiymet_3.DataBindings.Add("Text", _entity, "Qiymet3", true);
             txtR_Aciklama.DataBindings.Add("Text", _entity, "Aciklama");
             Date_Edit_Tarix.DataBindings.Add("Text", _entity, "Tarix");
 
@@ -48,11 +48,45 @@ namespace CofeRestoranApp.WinForms.Urunler
 
         private void brn_Mehsul_Elave_Et_Click(object sender, EventArgs e)
         {
-            if (urunDAL.AddorUpdate(Context,_entity))
+            if (IsValid())
             {
-                urunDAL.Save(Context);
-                Qeydet = true;
+                try
+                {
+                    if (urunDAL.AddorUpdate(Context, _entity))
+                    {
+                        urunDAL.Save(Context);
+                        Qeydet = true;
+                        MessageBox.Show("Məhsul uğurla saxlanıldı!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Məhsul saxlanarkən xəta baş verdi: " + ex.Message);
+                }
             }
+            else
+            {
+                MessageBox.Show("Zəhmət olmasa bütün tələb olunan sahələri doldurun.");
+            }
+        }
+        private bool IsValid()
+        { 
+
+                   return
+
+                   !string.IsNullOrWhiteSpace(txt_Urun_Adi.Text) &&
+                   !string.IsNullOrWhiteSpace(txt_Urun_kodu.Text) &&
+                   Combo_Meynu_Secimi.EditValue != null &&
+                   !string.IsNullOrWhiteSpace(Cal_Qiymet_1.Text) &&
+                   !string.IsNullOrWhiteSpace(Cal_Qiymet_2.Text) &&
+                   !string.IsNullOrWhiteSpace(Cal_Qiymet_3.Text) &&
+                   !string.IsNullOrWhiteSpace(txtR_Aciklama.Text) &&
+                   !string.IsNullOrWhiteSpace(Date_Edit_Tarix.Text);
+        }
+
+        private void txt_Urun_Adi_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
