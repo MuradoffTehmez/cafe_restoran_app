@@ -17,5 +17,15 @@ namespace CofeRestoranApp.WinForms.Menular
         {
             InitializeComponent();
         }
+
+        private void frm_Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -47,10 +47,14 @@
     </Reference>
     <Reference Include="DevExpress.Data.Desktop.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Drawing.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v24.1.Core, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DurableTask.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=d53979610a6e89dd, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Azure.DurableTask.Core.3.0.0\lib\netstandard2.0\DurableTask.Core.dll</HintPath>
     </Reference>
@@ -271,6 +275,15 @@
       <DependentUpon>frm_Urunler.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.IstifadeciHereketleri.datasource" />
+    <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.Istifadeciler.datasource" />
+    <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.MasaHaraketleri.datasource" />
+    <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.Masalar.datasource" />
+    <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.Menu.datasource" />
+    <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.Modlar.datasource" />
+    <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.OdenisTarixcesi.datasource" />
+    <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.Satislar.datasource" />
+    <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.Urun.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
