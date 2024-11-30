@@ -95,6 +95,7 @@
             this.btn_Guncelle.Size = new System.Drawing.Size(166, 103);
             this.btn_Guncelle.TabIndex = 4;
             this.btn_Guncelle.Text = "Güncəllə \r\nvə \r\nListələ";
+            this.btn_Guncelle.Click += new System.EventHandler(this.btn_Guncelle_Click);
             // 
             // btn_cisix_et
             // 
@@ -122,6 +123,7 @@
             this.btn_Duzenle.Size = new System.Drawing.Size(166, 103);
             this.btn_Duzenle.TabIndex = 2;
             this.btn_Duzenle.Text = "Dəyişdir";
+            this.btn_Duzenle.Click += new System.EventHandler(this.btn_Duzenle_Click);
             // 
             // btn_Sil
             // 
