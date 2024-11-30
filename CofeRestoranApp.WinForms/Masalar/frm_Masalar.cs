@@ -12,6 +12,7 @@ using CafeRestoranApp;
 using CafeRestoranApp.Entities;
 using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
+using CafeRestoranApp.Entities.Mapping;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -68,6 +69,33 @@ namespace CofeRestoranApp.WinForms.Masalar
         private void btn_Guncelle_Click(object sender, EventArgs e)
         {
             Listele();
+        }
+
+        private void btn_Sil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                object focusedRow = gridView1.GetFocusedRowCellValue(colId);
+                if (focusedRow == null)
+                {
+                    MessageBox.Show("Zəhmət olmasa silmək üçün bir məhsul seçin.", "Diqqət", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int seciliid = Convert.ToInt32(focusedRow);
+
+                if (MessageBox.Show("Məlumat bazadan silinəcək! Razısınız?", "Diqqət!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    masalarDal.Delete(context, m => m.Id == seciliid);
+                    masalarDal.Save(context);
+                    Listele();
+                    MessageBox.Show("Məhsul uğurla silindi.", "Məlumat", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Məhsul silinərkən xəta baş verdi: " + ex.Message, "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

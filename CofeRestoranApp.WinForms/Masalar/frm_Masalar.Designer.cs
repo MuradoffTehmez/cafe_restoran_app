@@ -48,6 +48,8 @@
             this.colIslem = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKullaniciId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMasaHaraketleri = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btn_Durum = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_Rezev = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -65,62 +67,64 @@
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1528, 43);
+            this.labelControl1.Size = new System.Drawing.Size(1552, 43);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Masalar";
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.btn_Guncelle);
-            this.groupControl1.Controls.Add(this.btn_cisix_et);
             this.groupControl1.Controls.Add(this.btn_Duzenle);
-            this.groupControl1.Controls.Add(this.btn_Sil);
             this.groupControl1.Controls.Add(this.brn_Elave_Et);
+            this.groupControl1.Controls.Add(this.btn_Rezev);
+            this.groupControl1.Controls.Add(this.btn_Durum);
+            this.groupControl1.Controls.Add(this.btn_cisix_et);
+            this.groupControl1.Controls.Add(this.btn_Sil);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 611);
+            this.groupControl1.Location = new System.Drawing.Point(0, 506);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1528, 149);
+            this.groupControl1.Size = new System.Drawing.Size(1552, 111);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Əməliyyatlar";
             // 
             // btn_Guncelle
             // 
-            this.btn_Guncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Guncelle.Appearance.Options.UseFont = true;
             this.btn_Guncelle.Appearance.Options.UseTextOptions = true;
             this.btn_Guncelle.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btn_Guncelle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Guncelle.ImageOptions.SvgImage")));
-            this.btn_Guncelle.Location = new System.Drawing.Point(356, 34);
+            this.btn_Guncelle.Location = new System.Drawing.Point(372, 34);
             this.btn_Guncelle.Name = "btn_Guncelle";
-            this.btn_Guncelle.Size = new System.Drawing.Size(166, 103);
+            this.btn_Guncelle.Size = new System.Drawing.Size(174, 60);
             this.btn_Guncelle.TabIndex = 4;
-            this.btn_Guncelle.Text = "Güncəllə \r\nvə \r\nListələ";
+            this.btn_Guncelle.Text = "Güncəllə";
             this.btn_Guncelle.Click += new System.EventHandler(this.btn_Guncelle_Click);
             // 
             // btn_cisix_et
             // 
             this.btn_cisix_et.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cisix_et.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cisix_et.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cisix_et.Appearance.Options.UseFont = true;
             this.btn_cisix_et.Appearance.Options.UseTextOptions = true;
             this.btn_cisix_et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btn_cisix_et.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_cisix_et.ImageOptions.SvgImage")));
-            this.btn_cisix_et.Location = new System.Drawing.Point(1397, 34);
+            this.btn_cisix_et.Location = new System.Drawing.Point(1415, 34);
             this.btn_cisix_et.Name = "btn_cisix_et";
-            this.btn_cisix_et.Size = new System.Drawing.Size(119, 103);
+            this.btn_cisix_et.Size = new System.Drawing.Size(125, 60);
             this.btn_cisix_et.TabIndex = 3;
             this.btn_cisix_et.Text = "Çıxış";
             // 
             // btn_Duzenle
             // 
-            this.btn_Duzenle.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Duzenle.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Duzenle.Appearance.Options.UseFont = true;
             this.btn_Duzenle.Appearance.Options.UseTextOptions = true;
             this.btn_Duzenle.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btn_Duzenle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Duzenle.ImageOptions.SvgImage")));
-            this.btn_Duzenle.Location = new System.Drawing.Point(184, 34);
+            this.btn_Duzenle.Location = new System.Drawing.Point(192, 34);
             this.btn_Duzenle.Name = "btn_Duzenle";
-            this.btn_Duzenle.Size = new System.Drawing.Size(166, 103);
+            this.btn_Duzenle.Size = new System.Drawing.Size(174, 60);
             this.btn_Duzenle.TabIndex = 2;
             this.btn_Duzenle.Text = "Dəyişdir";
             this.btn_Duzenle.Click += new System.EventHandler(this.btn_Duzenle_Click);
@@ -128,27 +132,28 @@
             // btn_Sil
             // 
             this.btn_Sil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Sil.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sil.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sil.Appearance.Options.UseFont = true;
             this.btn_Sil.Appearance.Options.UseTextOptions = true;
             this.btn_Sil.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btn_Sil.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Sil.ImageOptions.SvgImage")));
-            this.btn_Sil.Location = new System.Drawing.Point(1225, 34);
+            this.btn_Sil.Location = new System.Drawing.Point(1284, 34);
             this.btn_Sil.Name = "btn_Sil";
-            this.btn_Sil.Size = new System.Drawing.Size(166, 103);
+            this.btn_Sil.Size = new System.Drawing.Size(125, 60);
             this.btn_Sil.TabIndex = 1;
             this.btn_Sil.Text = "Sil";
+            this.btn_Sil.Click += new System.EventHandler(this.btn_Sil_Click);
             // 
             // brn_Elave_Et
             // 
-            this.brn_Elave_Et.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brn_Elave_Et.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brn_Elave_Et.Appearance.Options.UseFont = true;
             this.brn_Elave_Et.Appearance.Options.UseTextOptions = true;
             this.brn_Elave_Et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.brn_Elave_Et.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("brn_Elave_Et.ImageOptions.SvgImage")));
             this.brn_Elave_Et.Location = new System.Drawing.Point(12, 34);
             this.brn_Elave_Et.Name = "brn_Elave_Et";
-            this.brn_Elave_Et.Size = new System.Drawing.Size(166, 103);
+            this.brn_Elave_Et.Size = new System.Drawing.Size(174, 60);
             this.brn_Elave_Et.TabIndex = 0;
             this.brn_Elave_Et.Text = "Əlavə et";
             this.brn_Elave_Et.Click += new System.EventHandler(this.brn_Elave_Et_Click);
@@ -159,7 +164,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 43);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1528, 568);
+            this.gridControl1.Size = new System.Drawing.Size(1552, 463);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -261,11 +266,39 @@
             this.colMasaHaraketleri.FieldName = "MasaHaraketleri";
             this.colMasaHaraketleri.Name = "colMasaHaraketleri";
             // 
+            // btn_Durum
+            // 
+            this.btn_Durum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Durum.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Durum.Appearance.Options.UseFont = true;
+            this.btn_Durum.Appearance.Options.UseTextOptions = true;
+            this.btn_Durum.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.btn_Durum.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.btn_Durum.Location = new System.Drawing.Point(1022, 34);
+            this.btn_Durum.Name = "btn_Durum";
+            this.btn_Durum.Size = new System.Drawing.Size(125, 60);
+            this.btn_Durum.TabIndex = 5;
+            this.btn_Durum.Text = "Durum\r\nDəyişdir\r\n";
+            // 
+            // btn_Rezev
+            // 
+            this.btn_Rezev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Rezev.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Rezev.Appearance.Options.UseFont = true;
+            this.btn_Rezev.Appearance.Options.UseTextOptions = true;
+            this.btn_Rezev.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.btn_Rezev.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.btn_Rezev.Location = new System.Drawing.Point(1153, 34);
+            this.btn_Rezev.Name = "btn_Rezev";
+            this.btn_Rezev.Size = new System.Drawing.Size(125, 60);
+            this.btn_Rezev.TabIndex = 6;
+            this.btn_Rezev.Text = "Rezervasiya\r\nEt";
+            // 
             // frm_Masalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1528, 760);
+            this.ClientSize = new System.Drawing.Size(1552, 617);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.labelControl1);
@@ -302,5 +335,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colIslem;
         private DevExpress.XtraGrid.Columns.GridColumn colKullaniciId;
         private DevExpress.XtraGrid.Columns.GridColumn colMasaHaraketleri;
+        private DevExpress.XtraEditors.SimpleButton btn_Rezev;
+        private DevExpress.XtraEditors.SimpleButton btn_Durum;
     }
 }
