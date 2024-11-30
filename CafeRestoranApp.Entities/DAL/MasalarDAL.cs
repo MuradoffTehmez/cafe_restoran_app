@@ -4,6 +4,7 @@ using CafeRestoranApp.Entities.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +15,9 @@ namespace CafeRestoranApp.Entities.DAL
         public object MasaListele(CafeContext context)
         {
             var model = (from masa in context.Masalar
-                join kullanici in context.Istifadeciler.DefaultIfEmpty() on masa.KullaniciId equals kullanici.Id
+                join kullanici in context.Istifadeciler on masa.KullaniciId equals kullanici.Id 
+                    into iftideci  from 
+                    KullaniciMasa in iftideci.DefaultIfEmpty()
                 select new
                 {
                     masa.Id,
@@ -25,7 +28,7 @@ namespace CafeRestoranApp.Entities.DAL
                     masa.Rezervasiya,
                     masa.ElaveOlmaTarixi,
                     masa.SonIslemTarixi,
-                    kullanici = kullanici.IstifadeciAdi
+                    kullanici = KullaniciMasa.IstifadeciAdi
                 }).ToList();
             return model;
             /*var model = (from masa in context.Masalar

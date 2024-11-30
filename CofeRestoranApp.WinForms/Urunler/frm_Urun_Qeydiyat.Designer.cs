@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Urun_Qeydiyat));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -110,6 +109,7 @@
             this.btn_cisix_et.Size = new System.Drawing.Size(106, 103);
             this.btn_cisix_et.TabIndex = 3;
             this.btn_cisix_et.Text = "Çıxış";
+            this.btn_cisix_et.Click += new System.EventHandler(this.btn_cisix_et_Click);
             // 
             // brn_Mehsul_Elave_Et
             // 
@@ -304,7 +304,6 @@
             this.txt_Urun_Adi.Properties.Appearance.Options.UseFont = true;
             this.txt_Urun_Adi.Size = new System.Drawing.Size(213, 32);
             this.txt_Urun_Adi.TabIndex = 15;
-//          this.txt_Urun_Adi.EditValueChanged += new System.EventHandler(this.txt_Urun_Adi_EditValueChanged);
             // 
             // Cal_Qiymet_1
             // 

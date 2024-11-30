@@ -171,5 +171,10 @@ namespace CofeRestoranApp.WinForms.Urunler
 
             return isValid;
         }
+
+        private void btn_cisix_et_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
