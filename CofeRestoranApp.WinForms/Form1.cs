@@ -44,7 +44,7 @@ namespace CofeRestoranApp.WinForms
 
         private void Btn_Meynu_Click(object sender, EventArgs e)
         {
-            if (MenuDAL.AddorUpdate(Context, Entity))
+            if (MenuDAL.AddOrUpdate(Context, Entity))
             {
                 MenuDAL.Save(Context);
 
