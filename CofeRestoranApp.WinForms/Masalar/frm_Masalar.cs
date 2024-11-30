@@ -29,5 +29,10 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
 
         }
+
+        private void brn_Elave_Et_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

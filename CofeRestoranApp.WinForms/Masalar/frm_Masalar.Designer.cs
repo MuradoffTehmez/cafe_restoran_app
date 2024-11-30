@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Masalar));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -150,6 +149,7 @@
             this.brn_Elave_Et.Size = new System.Drawing.Size(166, 103);
             this.brn_Elave_Et.TabIndex = 0;
             this.brn_Elave_Et.Text = "Əlavə et";
+            this.brn_Elave_Et.Click += new System.EventHandler(this.brn_Elave_Et_Click);
             // 
             // gridControl1
             // 
