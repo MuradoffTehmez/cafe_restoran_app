@@ -13,7 +13,8 @@ namespace CafeRestoranApp.Entities.DAL
     {
         public object MasaListele(CafeContext context)
         {
-            var model = (from masa in context.Masalar join K in context.Istifadeciler.DefaultIfEmpty() on masa.KullaniciId equals K.Id
+            var model = (from masa in context.Masalar join K in context
+                    .Istifadeciler.DefaultIfEmpty() on masa.KullaniciId equals K.Id
                 
                 select new
                 {
