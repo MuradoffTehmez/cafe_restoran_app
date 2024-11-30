@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeRestoranApp.Entities.Models;
 using System.Runtime.Remoting.Contexts;
+using System.IO;
 
 namespace CofeRestoranApp.WinForms.Menular
 {
@@ -58,7 +59,24 @@ namespace CofeRestoranApp.WinForms.Menular
             }
             catch (Exception ex)
             {
-                XtraMessageBox.Show($"Xəta baş verdi: {ex.Message}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string logDirectory = @"C:\Users\murad\LogFiles";
+                string logFilePath = Path.Combine(logDirectory, "error_log.txt");
+                try
+                {
+                    // Qovluq mövcud deyilsə, yarat
+                    if (!Directory.Exists(logDirectory))
+                    {
+                        Directory.CreateDirectory(logDirectory);
+                    }
+
+                    string logMesaj = $"Tarix: {DateTime.Now}\nXəta mesajı: {ex.Message}\nSətir məlumatı:\n{ex.StackTrace}\n\n";
+                    File.AppendAllText(logFilePath, logMesaj);
+                }
+                catch (Exception logEx)
+                {
+                    MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 

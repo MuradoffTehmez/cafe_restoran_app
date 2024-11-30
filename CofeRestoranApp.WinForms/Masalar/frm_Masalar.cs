@@ -13,6 +13,7 @@ using CafeRestoranApp.Entities;
 using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
 using CafeRestoranApp.Entities.Mapping;
+using System.IO;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -40,29 +41,85 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void brn_Elave_Et_Click(object sender, EventArgs e)
         {
-            var yeniMasa = new CafeRestoranApp.Entities.Models.Masalar();
-            frm_Masa_Qeyd_Et frm = new frm_Masa_Qeyd_Et(yeniMasa);
-            frm.ShowDialog();
-            if (frm.Qeydet)
+            try
             {
-                masalarDal.AddOrUpdate(context, yeniMasa);
-                masalarDal.Save(context);
+                var yeniMasa = new CafeRestoranApp.Entities.Models.Masalar();
+                frm_Masa_Qeyd_Et frm = new frm_Masa_Qeyd_Et(yeniMasa);
+                frm.ShowDialog();
+                if (frm.Qeydet)
+                {
+                    masalarDal.AddOrUpdate(context, yeniMasa);
+                    masalarDal.Save(context);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string logDirectory = @"C:\Users\murad\LogFiles";
+                string logFilePath = Path.Combine(logDirectory, "error_log.txt");
+                try
+                {
+                    // Qovluq mövcud deyilsə, yarat
+                    if (!Directory.Exists(logDirectory))
+                    {
+                        Directory.CreateDirectory(logDirectory);
+                    }
+
+                    string logMesaj = $"Tarix: {DateTime.Now}\nXəta mesajı: {ex.Message}\nSətir məlumatı:\n{ex.StackTrace}\n\n";
+                    File.AppendAllText(logFilePath, logMesaj);
+                }
+                catch (Exception logEx)
+                {
+                    MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            finally
+            {
                 Listele();
             }
         }
 
         private void btn_Duzenle_Click(object sender, EventArgs e)
         {
-            if (gridView1.GetFocusedRowCellValue("Id") is int seciliId)
+            try
             {
-                var seciliMasa = masalarDal.GetByFilter(context, m => m.Id == seciliId);
-                frm_Masa_Qeyd_Et frm = new frm_Masa_Qeyd_Et(seciliMasa);
-                frm.ShowDialog();
-                if (frm.Qeydet)
+                if (gridView1.GetFocusedRowCellValue("Id") is int seciliId)
                 {
-                    masalarDal.Save(context);
-                    Listele();
+                    var seciliMasa = masalarDal.GetByFilter(context, m => m.Id == seciliId);
+                    frm_Masa_Qeyd_Et frm = new frm_Masa_Qeyd_Et(seciliMasa);
+                    frm.ShowDialog();
+                    if (frm.Qeydet)
+                    {
+                        masalarDal.Save(context);
+                        Listele();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string logDirectory = @"C:\Users\murad\LogFiles";
+                string logFilePath = Path.Combine(logDirectory, "error_log.txt");
+                try
+                {
+                    // Qovluq mövcud deyilsə, yarat
+                    if (!Directory.Exists(logDirectory))
+                    {
+                        Directory.CreateDirectory(logDirectory);
+                    }
+
+                    string logMesaj = $"Tarix: {DateTime.Now}\nXəta mesajı: {ex.Message}\nSətir məlumatı:\n{ex.StackTrace}\n\n";
+                    File.AppendAllText(logFilePath, logMesaj);
+                }
+                catch (Exception logEx)
+                {
+                    MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            finally
+            {
+                Listele();
             }
         }
 
@@ -94,8 +151,128 @@ namespace CofeRestoranApp.WinForms.Masalar
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Məhsul silinərkən xəta baş verdi: " + ex.Message, "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string logDirectory = @"C:\Users\murad\LogFiles";
+                string logFilePath = Path.Combine(logDirectory, "error_log.txt");
+                try
+                {
+                    // Qovluq mövcud deyilsə, yarat
+                    if (!Directory.Exists(logDirectory))
+                    {
+                        Directory.CreateDirectory(logDirectory);
+                    }
+
+                    string logMesaj = $"Tarix: {DateTime.Now}\nXəta mesajı: {ex.Message}\nSətir məlumatı:\n{ex.StackTrace}\n\n";
+                    File.AppendAllText(logFilePath, logMesaj);
+                }
+                catch (Exception logEx)
+                {
+                    MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
+            finally
+            {
+                Listele();
+            }
+        }
+
+        private void btn_Durum_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (gridView1.SelectedRowsCount > 0)
+                {
+                    int seciliId = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+                    var seciliMasa = masalarDal.GetByFilter(context, m => m.Id == seciliId);
+                    if (seciliMasa.Durumu)
+                    {
+                        seciliMasa.Durumu = false;
+                    }
+                    else if (!seciliMasa.Durumu)
+                    {
+                        seciliMasa.Durumu = true;
+                    }
+                    masalarDal.Save(context);
+                    Listele();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string logDirectory = @"C:\Users\murad\LogFiles";
+                string logFilePath = Path.Combine(logDirectory, "error_log.txt");
+                try
+                {
+                    // Qovluq mövcud deyilsə, yarat
+                    if (!Directory.Exists(logDirectory))
+                    {
+                        Directory.CreateDirectory(logDirectory);
+                    }
+
+                    string logMesaj = $"Tarix: {DateTime.Now}\nXəta mesajı: {ex.Message}\nSətir məlumatı:\n{ex.StackTrace}\n\n";
+                    File.AppendAllText(logFilePath, logMesaj);
+                }
+                catch (Exception logEx)
+                {
+                    MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            finally
+            {
+                Listele();
+            }
+        }
+
+        private void btn_Rezev_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (gridView1.SelectedRowsCount > 0)
+                {
+                    int seciliId = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+                    var seciliMasa = masalarDal.GetByFilter(context, m => m.Id == seciliId);
+                    if (seciliMasa.Rezervasiya)
+                    {
+                        seciliMasa.Rezervasiya = false;
+                    }
+                    else if (!seciliMasa.Rezervasiya)
+                    {
+                        seciliMasa.Rezervasiya = true;
+                    }
+                    masalarDal.Save(context);
+                    Listele();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string logDirectory = @"C:\Users\murad\LogFiles";
+                string logFilePath = Path.Combine(logDirectory, "error_log.txt");
+                try
+                {
+                    // Qovluq mövcud deyilsə, yarat
+                    if (!Directory.Exists(logDirectory))
+                    {
+                        Directory.CreateDirectory(logDirectory);
+                    }
+
+                    string logMesaj = $"Tarix: {DateTime.Now}\nXəta mesajı: {ex.Message}\nSətir məlumatı:\n{ex.StackTrace}\n\n";
+                    File.AppendAllText(logFilePath, logMesaj);
+                }
+                catch (Exception logEx)
+                {
+                    MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            finally
+            {
+                Listele();
+            }
+        }
+
+        private void btn_cisix_et_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

@@ -114,6 +114,7 @@
             this.btn_cisix_et.Size = new System.Drawing.Size(125, 60);
             this.btn_cisix_et.TabIndex = 3;
             this.btn_cisix_et.Text = "Çıxış";
+            this.btn_cisix_et.Click += new System.EventHandler(this.btn_cisix_et_Click);
             // 
             // btn_Duzenle
             // 
@@ -279,6 +280,7 @@
             this.btn_Durum.Size = new System.Drawing.Size(125, 60);
             this.btn_Durum.TabIndex = 5;
             this.btn_Durum.Text = "Durum\r\nDəyişdir\r\n";
+            this.btn_Durum.Click += new System.EventHandler(this.btn_Durum_Click);
             // 
             // btn_Rezev
             // 
@@ -293,6 +295,7 @@
             this.btn_Rezev.Size = new System.Drawing.Size(125, 60);
             this.btn_Rezev.TabIndex = 6;
             this.btn_Rezev.Text = "Rezervasiya\r\nEt";
+            this.btn_Rezev.Click += new System.EventHandler(this.btn_Rezev_Click);
             // 
             // frm_Masalar
             // 
