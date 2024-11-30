@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Urunler));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
             this.btn_cisix_et = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Duzenle = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Sil = new DevExpress.XtraEditors.SimpleButton();
@@ -72,7 +72,7 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.simpleButton1);
+            this.groupControl1.Controls.Add(this.btn_Guncelle);
             this.groupControl1.Controls.Add(this.btn_cisix_et);
             this.groupControl1.Controls.Add(this.btn_Duzenle);
             this.groupControl1.Controls.Add(this.btn_Sil);
@@ -84,19 +84,19 @@
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Əməliyyatlar";
             // 
-            // simpleButton1
+            // btn_Guncelle
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseTextOptions = true;
-            this.simpleButton1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(356, 34);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(166, 103);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "Güncəllə \r\nvə \r\nListələ";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btn_Guncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guncelle.Appearance.Options.UseFont = true;
+            this.btn_Guncelle.Appearance.Options.UseTextOptions = true;
+            this.btn_Guncelle.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.btn_Guncelle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.btn_Guncelle.Location = new System.Drawing.Point(356, 34);
+            this.btn_Guncelle.Name = "btn_Guncelle";
+            this.btn_Guncelle.Size = new System.Drawing.Size(166, 103);
+            this.btn_Guncelle.TabIndex = 4;
+            this.btn_Guncelle.Text = "Güncəllə \r\nvə \r\nListələ";
+            this.btn_Guncelle.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btn_cisix_et
             // 
@@ -297,7 +297,7 @@
         private DevExpress.XtraEditors.SimpleButton btn_Duzenle;
         private DevExpress.XtraEditors.SimpleButton btn_Sil;
         private DevExpress.XtraEditors.SimpleButton brn_Elave_Et;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btn_Guncelle;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colId;

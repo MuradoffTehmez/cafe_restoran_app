@@ -51,7 +51,6 @@
             this.txtR_Aciklama = new DevExpress.XtraEditors.MemoEdit();
             this.Foto_Resim_elave_et = new DevExpress.XtraEditors.PictureEdit();
             this.Combo_Meynu_Secimi = new DevExpress.XtraEditors.LookUpEdit();
-            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Urun_kodu.Properties)).BeginInit();
@@ -64,7 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtR_Aciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_Resim_elave_et.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Combo_Meynu_Secimi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -81,7 +79,7 @@
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(726, 43);
+            this.labelControl1.Size = new System.Drawing.Size(741, 43);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Məhsul Əlavə Et";
             // 
@@ -93,7 +91,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(0, 492);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(726, 145);
+            this.groupControl1.Size = new System.Drawing.Size(741, 145);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Əməliyyatlar";
             // 
@@ -107,7 +105,7 @@
             this.btn_cisix_et.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cisix_et.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftTop;
             this.btn_cisix_et.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_cisix_et.ImageOptions.SvgImage")));
-            this.btn_cisix_et.Location = new System.Drawing.Point(608, 34);
+            this.btn_cisix_et.Location = new System.Drawing.Point(623, 34);
             this.btn_cisix_et.Name = "btn_cisix_et";
             this.btn_cisix_et.Size = new System.Drawing.Size(106, 103);
             this.btn_cisix_et.TabIndex = 3;
@@ -365,6 +363,8 @@
             // 
             this.txtR_Aciklama.Location = new System.Drawing.Point(194, 322);
             this.txtR_Aciklama.Name = "txtR_Aciklama";
+            this.txtR_Aciklama.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtR_Aciklama.Properties.Appearance.Options.UseFont = true;
             this.txtR_Aciklama.Size = new System.Drawing.Size(523, 111);
             this.txtR_Aciklama.TabIndex = 25;
             // 
@@ -374,6 +374,7 @@
             this.Foto_Resim_elave_et.Name = "Foto_Resim_elave_et";
             this.Foto_Resim_elave_et.Properties.NullText = "Şəkil əlavə Edin";
             this.Foto_Resim_elave_et.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.Foto_Resim_elave_et.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.Foto_Resim_elave_et.Size = new System.Drawing.Size(304, 256);
             this.Foto_Resim_elave_et.TabIndex = 26;
             // 
@@ -388,17 +389,12 @@
             this.Combo_Meynu_Secimi.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "ID"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MenuAdi", "Menu")});
-            this.Combo_Meynu_Secimi.Properties.DataSource = this.menuBindingSource;
             this.Combo_Meynu_Secimi.Properties.DisplayMember = "MenuAdi";
             this.Combo_Meynu_Secimi.Properties.NullText = "Meynu Seçin";
             this.Combo_Meynu_Secimi.Properties.NullValuePrompt = "Meynu Seçin";
             this.Combo_Meynu_Secimi.Properties.ValueMember = "Id";
             this.Combo_Meynu_Secimi.Size = new System.Drawing.Size(213, 30);
             this.Combo_Meynu_Secimi.TabIndex = 27;
-            // 
-            // menuBindingSource
-            // 
-            this.menuBindingSource.DataSource = typeof(CafeRestoranApp.Entities.Models.Menu);
             // 
             // frm_Urun_Qeydiyat
             // 
@@ -408,7 +404,7 @@
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 637);
+            this.ClientSize = new System.Drawing.Size(741, 637);
             this.Controls.Add(this.Combo_Meynu_Secimi);
             this.Controls.Add(this.Foto_Resim_elave_et);
             this.Controls.Add(this.txtR_Aciklama);
@@ -444,7 +440,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtR_Aciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_Resim_elave_et.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Combo_Meynu_Secimi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,6 +467,5 @@
         private DevExpress.XtraEditors.MemoEdit txtR_Aciklama;
         private DevExpress.XtraEditors.PictureEdit Foto_Resim_elave_et;
         private DevExpress.XtraEditors.LookUpEdit Combo_Meynu_Secimi;
-        private System.Windows.Forms.BindingSource menuBindingSource;
     }
 }
