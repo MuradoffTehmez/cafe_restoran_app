@@ -319,6 +319,7 @@
     <Content Include="obj\Debug\CofeRestoranApp.WinForms.csproj.FileListAbsolute.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Debug\Image\" />
     <Folder Include="Istifadeciler\" />
     <Folder Include="Masalar\" />
   </ItemGroup>

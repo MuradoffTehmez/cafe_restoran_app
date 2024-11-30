@@ -66,7 +66,7 @@
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1316, 43);
+            this.labelControl1.Size = new System.Drawing.Size(1471, 43);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Məhsullar";
             // 
@@ -80,7 +80,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(0, 598);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1316, 149);
+            this.groupControl1.Size = new System.Drawing.Size(1471, 149);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Əməliyyatlar";
             // 
@@ -106,7 +106,7 @@
             this.btn_cisix_et.Appearance.Options.UseTextOptions = true;
             this.btn_cisix_et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btn_cisix_et.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_cisix_et.ImageOptions.SvgImage")));
-            this.btn_cisix_et.Location = new System.Drawing.Point(1185, 34);
+            this.btn_cisix_et.Location = new System.Drawing.Point(1340, 34);
             this.btn_cisix_et.Name = "btn_cisix_et";
             this.btn_cisix_et.Size = new System.Drawing.Size(119, 103);
             this.btn_cisix_et.TabIndex = 3;
@@ -134,7 +134,7 @@
             this.btn_Sil.Appearance.Options.UseTextOptions = true;
             this.btn_Sil.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btn_Sil.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Sil.ImageOptions.SvgImage")));
-            this.btn_Sil.Location = new System.Drawing.Point(1013, 34);
+            this.btn_Sil.Location = new System.Drawing.Point(1168, 34);
             this.btn_Sil.Name = "btn_Sil";
             this.btn_Sil.Size = new System.Drawing.Size(166, 103);
             this.btn_Sil.TabIndex = 1;
@@ -160,7 +160,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 43);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1316, 555);
+            this.gridControl1.Size = new System.Drawing.Size(1471, 555);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -189,7 +189,7 @@
             this.colId.Name = "colId";
             this.colId.Visible = true;
             this.colId.VisibleIndex = 0;
-            this.colId.Width = 69;
+            this.colId.Width = 61;
             // 
             // colMeynuID
             // 
@@ -198,6 +198,7 @@
             this.colMeynuID.Name = "colMeynuID";
             this.colMeynuID.Visible = true;
             this.colMeynuID.VisibleIndex = 1;
+            this.colMeynuID.Width = 67;
             // 
             // colUrunKodu
             // 
@@ -205,7 +206,7 @@
             this.colUrunKodu.Name = "colUrunKodu";
             this.colUrunKodu.Visible = true;
             this.colUrunKodu.VisibleIndex = 2;
-            this.colUrunKodu.Width = 101;
+            this.colUrunKodu.Width = 90;
             // 
             // colUrunAdi
             // 
@@ -213,7 +214,7 @@
             this.colUrunAdi.Name = "colUrunAdi";
             this.colUrunAdi.Visible = true;
             this.colUrunAdi.VisibleIndex = 3;
-            this.colUrunAdi.Width = 119;
+            this.colUrunAdi.Width = 106;
             // 
             // colQiymet1
             // 
@@ -221,7 +222,7 @@
             this.colQiymet1.Name = "colQiymet1";
             this.colQiymet1.Visible = true;
             this.colQiymet1.VisibleIndex = 4;
-            this.colQiymet1.Width = 95;
+            this.colQiymet1.Width = 85;
             // 
             // colQiymet2
             // 
@@ -229,7 +230,7 @@
             this.colQiymet2.Name = "colQiymet2";
             this.colQiymet2.Visible = true;
             this.colQiymet2.VisibleIndex = 5;
-            this.colQiymet2.Width = 99;
+            this.colQiymet2.Width = 88;
             // 
             // colQiymet3
             // 
@@ -237,7 +238,7 @@
             this.colQiymet3.Name = "colQiymet3";
             this.colQiymet3.Visible = true;
             this.colQiymet3.VisibleIndex = 6;
-            this.colQiymet3.Width = 103;
+            this.colQiymet3.Width = 92;
             // 
             // colAciklama
             // 
@@ -245,7 +246,7 @@
             this.colAciklama.Name = "colAciklama";
             this.colAciklama.Visible = true;
             this.colAciklama.VisibleIndex = 7;
-            this.colAciklama.Width = 501;
+            this.colAciklama.Width = 181;
             // 
             // colTarix
             // 
@@ -253,12 +254,15 @@
             this.colTarix.Name = "colTarix";
             this.colTarix.Visible = true;
             this.colTarix.VisibleIndex = 8;
-            this.colTarix.Width = 204;
+            this.colTarix.Width = 179;
             // 
             // colSekil
             // 
             this.colSekil.FieldName = "Sekil";
             this.colSekil.Name = "colSekil";
+            this.colSekil.Visible = true;
+            this.colSekil.VisibleIndex = 9;
+            this.colSekil.Width = 342;
             // 
             // colMenu
             // 
@@ -269,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1316, 747);
+            this.ClientSize = new System.Drawing.Size(1471, 747);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.labelControl1);

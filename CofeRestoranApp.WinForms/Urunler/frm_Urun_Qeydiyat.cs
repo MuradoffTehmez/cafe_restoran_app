@@ -1,6 +1,8 @@
 ﻿using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
 using System;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace CofeRestoranApp.WinForms.Urunler
@@ -18,9 +20,13 @@ namespace CofeRestoranApp.WinForms.Urunler
             InitializeComponent();
             _entity = entity;
 
-            if (_entity.Id == 0)
+            if (_entity.Id!= 0)
             {
-              
+                if (_entity.Sekil != "")
+                {
+                    Foto_Resim_elave_et.Image = Image.FromFile(_entity.Sekil);
+                }
+
                 txt_Urun_Adi.Enabled = true;
                 txt_Urun_kodu.Enabled = true;
                 Cal_Qiymet_1.Enabled = true;
@@ -31,19 +37,6 @@ namespace CofeRestoranApp.WinForms.Urunler
                 Combo_Meynu_Secimi.Enabled = true;
 
             }
-            else
-            {
-               // txt_Urun_Adi.Enabled = false;
-                txt_Urun_kodu.Enabled = false;
-              //  Cal_Qiymet_1.Enabled = false;
-              //  Cal_Qiymet_2.Enabled = false;
-              //  Cal_Qiymet_3.Enabled = false;
-              //  txtR_Aciklama.Enabled = false;
-             //   Date_Edit_Tarix.Enabled = false;
-              //  Combo_Meynu_Secimi.Enabled = false;
-
-                
-            }
 
             Combo_Meynu_Secimi.Properties.DataSource = menuDAL.GetAll(Context);
             Combo_Meynu_Secimi.DataBindings.Add("EditValue", _entity, "MeynuID");
@@ -53,30 +46,58 @@ namespace CofeRestoranApp.WinForms.Urunler
             Cal_Qiymet_2.DataBindings.Add("Text", _entity, "Qiymet2",true);
             Cal_Qiymet_3.DataBindings.Add("Text", _entity, "Qiymet3", true);
             txtR_Aciklama.DataBindings.Add("Text", _entity, "Aciklama");
-            Date_Edit_Tarix.DataBindings.Add("Text", _entity, "Tarix");
-
-
-
+            Date_Edit_Tarix.DataBindings.Add("Text", _entity, "Tarix", true);
         }
 
         private void frm_Urun_Qeydiyat_Load(object sender, EventArgs e)
         {
-
         }
 
         private void brn_Mehsul_Elave_Et_Click(object sender, EventArgs e)
         {
+
             if (IsValid())
             {
                 try
                 {
-                    
+                    // Şəkil qovluğunu yoxla və mövcud deyilsə yarat
+                    string imagePath = $"{Application.StartupPath}\\Image";
+                    if (!Directory.Exists(imagePath))
+                    {
+                        Directory.CreateDirectory(imagePath);
+                    }
+
+                    // Şəkil faylını saxlamaq üçün yol təyin edilir
+                    string hedefyol = $"{imagePath}\\{txt_Urun_Adi.Text}-{txt_Urun_kodu.Text}.png";
+
+                    // Şəkil seçilib-seçilmədiyini yoxla
+                    if (string.IsNullOrEmpty(Foto_Resim_elave_et.GetLoadedImageLocation()))
+                    {
+                        MessageBox.Show("Zəhmət olmasa şəkil seçin.");
+                        return;
+                    }
+
+                    // Fayl artıq mövcuddursa, istifadəçiyə xəbərdarlıq göstər
+                    if (File.Exists(hedefyol))
+                    {
+                        MessageBox.Show("Bu fayl artıq mövcuddur.");
+                        return;
+                    }
+
+                    // Məhsul artıq mövcud deyilsə
                     if (_entity.Id == 0)
                     {
-                       
+                        // Şəkil faylını köçürmək
+                        File.Copy(Foto_Resim_elave_et.GetLoadedImageLocation(), hedefyol);
+
+                        // Şəkil yolunu `Sekil` sahəsinə əlavə etmək
+                        _entity.Sekil = $"Image\\{txt_Urun_Adi.Text}-{txt_Urun_kodu.Text}.png";
+
+                        // Məhsul əlavə olunur
                         urunDAL.AddorUpdate(Context, _entity);
                         urunDAL.Save(Context);
                         Qeydet = true;
+
                         MessageBox.Show("Məhsul uğurla saxlanıldı!");
                         this.Hide();
                     }
@@ -96,19 +117,26 @@ namespace CofeRestoranApp.WinForms.Urunler
             }
         }
         private bool IsValid()
-        { 
+        {
+            // Formdakı bütün tələb olunan sahələrin yoxlanması
+            bool isValid =
+                !string.IsNullOrWhiteSpace(txt_Urun_Adi.Text) &&
+                !string.IsNullOrWhiteSpace(txt_Urun_kodu.Text) &&
+                Combo_Meynu_Secimi.EditValue != null &&
+                !string.IsNullOrWhiteSpace(Cal_Qiymet_1.Text) &&
+                !string.IsNullOrWhiteSpace(Cal_Qiymet_2.Text) &&
+                !string.IsNullOrWhiteSpace(Cal_Qiymet_3.Text) &&
+                !string.IsNullOrWhiteSpace(txtR_Aciklama.Text) &&
+                !string.IsNullOrWhiteSpace(Date_Edit_Tarix.Text);
 
-                   return
+            if (!isValid)
+            {
+                MessageBox.Show("Zəhmət olmasa bütün tələb olunan sahələri doldurun.");
+            }
 
-                   !string.IsNullOrWhiteSpace(txt_Urun_Adi.Text) &&
-                   !string.IsNullOrWhiteSpace(txt_Urun_kodu.Text) &&
-                   Combo_Meynu_Secimi.EditValue != null &&
-                   !string.IsNullOrWhiteSpace(Cal_Qiymet_1.Text) &&
-                   !string.IsNullOrWhiteSpace(Cal_Qiymet_2.Text) &&
-                   !string.IsNullOrWhiteSpace(Cal_Qiymet_3.Text) &&
-                   !string.IsNullOrWhiteSpace(txtR_Aciklama.Text) &&
-                   !string.IsNullOrWhiteSpace(Date_Edit_Tarix.Text);
+            return isValid;
         }
+
 
         private void txt_Urun_Adi_EditValueChanged(object sender, EventArgs e)
         {
