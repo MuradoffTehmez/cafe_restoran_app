@@ -235,6 +235,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Masalar\frm_Masalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masalar\frm_Masalar.Designer.cs">
+      <DependentUpon>frm_Masalar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menular\frm_menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masalar\frm_Masalar.resx">
+      <DependentUpon>frm_Masalar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menular\frm_menu.resx">
       <DependentUpon>frm_menu.cs</DependentUpon>
@@ -321,7 +330,6 @@
   <ItemGroup>
     <Folder Include="bin\Debug\Image\" />
     <Folder Include="Istifadeciler\" />
-    <Folder Include="Masalar\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

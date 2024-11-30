@@ -96,7 +96,7 @@
             this.btn_Masalar.Id = 1;
             this.btn_Masalar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_Masalar.ImageOptions.LargeImage")));
             this.btn_Masalar.Name = "btn_Masalar";
-//            this.btn_Masalar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Masalar_ItemClick);
+            this.btn_Masalar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Masalar_ItemClick);
             // 
             // btn_Masa_Haraketleri
             // 
@@ -104,7 +104,6 @@
             this.btn_Masa_Haraketleri.Id = 2;
             this.btn_Masa_Haraketleri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Masa_Haraketleri.ImageOptions.SvgImage")));
             this.btn_Masa_Haraketleri.Name = "btn_Masa_Haraketleri";
-//            this.btn_Masa_Haraketleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // btn_Meynular
             // 
