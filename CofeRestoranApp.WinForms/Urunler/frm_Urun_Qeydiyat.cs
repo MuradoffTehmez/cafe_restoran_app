@@ -130,7 +130,7 @@ namespace CofeRestoranApp.WinForms.Urunler
                     {
                         File.Copy(Foto_Resim_elave_et.GetLoadedImageLocation(), hedefyol);
                         _entity.Sekil = $"Image\\{txt_Urun_Adi.Text}-{txt_Urun_kodu.Text}.png";
-                        urunDAL.AddorUpdate(Context, _entity);
+                        urunDAL.AddOrUpdate(Context, _entity);
                         urunDAL.Save(Context);
                         Qeydet = true;
                         MessageBox.Show("Məhsul uğurla saxlanıldı!");

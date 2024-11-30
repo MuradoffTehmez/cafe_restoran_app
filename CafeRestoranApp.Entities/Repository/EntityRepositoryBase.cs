@@ -2,70 +2,149 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
 using FluentValidation;
 using CafeRestoranApp.Entities.Tools;
-using System.ComponentModel.DataAnnotations;
 
 namespace CafeRestoranApp.Entities.Repository
 {
-    public class EntityRepositoryBase<TContext, TEntity, Tvalidator> : IEntityRepository<TContext, TEntity>
-        // Hesablama mexanizmi: 50% elm, 50% sehir, 100% şans
+    public class EntityRepositoryBase<TContext, TEntity, TValidator> : IEntityRepository<TContext, TEntity>
         where TContext : DbContext, new()
-        where TEntity : class,IEntity, new()
-        where Tvalidator: IValidator, new()
+        where TEntity : class, IEntity, new()
+        where TValidator : IValidator, new()
     {
-        public bool AddorUpdate(TContext context, TEntity entity)
+        public bool Add(TContext context, TEntity entity)
         {
-            Tvalidator validator = new Tvalidator();
+            TValidator validator = new TValidator();
             bool validationResult = ValidatorTools.Validates(validator, entity);
             if (validationResult)
             {
-                context.Set<TEntity>().AddOrUpdate(entity);
+                context.Set<TEntity>().Add(entity);
             }
             return validationResult;
+        }
 
+        public bool Update(TContext context, TEntity entity)
+        {
+            TValidator validator = new TValidator();
+            bool validationResult = ValidatorTools.Validates(validator, entity);
+            if (validationResult)
+            {
+                context.Entry(entity).State = EntityState.Modified;
+            }
+            return validationResult;
+        }
 
-
-            //context.Set<TEntity>().AddOrUpdate(entity);
-            //throw new NotImplementedException();
+        public bool AddOrUpdate(TContext context, TEntity entity)
+        {
+            TValidator validator = new TValidator();
+            bool validationResult = ValidatorTools.Validates(validator, entity);
+            if (validationResult)
+            {
+                if (entity is IEntity identifiableEntity && identifiableEntity.Id > 0)
+                {
+                    context.Entry(entity).State = EntityState.Modified;
+                }
+                else
+                {
+                    context.Set<TEntity>().Add(entity);
+                }
+            }
+            return validationResult;
         }
 
         public void Delete(TContext context, Expression<Func<TEntity, bool>> filter)
         {
-            //throw new NotImplementedException();
-            context.Set<TEntity>().Remove(context.Set<TEntity>().FirstOrDefault(filter)); //tek silme
-            //context.Set<TEntity>().RemoveRange(context.Set<TEntity>().Where(filter));   //coxlu silme
+            var entityToDelete = context.Set<TEntity>().FirstOrDefault(filter);
+            if (entityToDelete != null)
+            {
+                context.Set<TEntity>().Remove(entityToDelete);
+            }
         }
 
         public List<TEntity> GetAll(TContext context, Expression<Func<TEntity, bool>> filter = null)
         {
-            //throw new NotImplementedException();
             return filter == null ? context.Set<TEntity>().ToList() : context.Set<TEntity>().Where(filter).ToList();
-
         }
 
         public TEntity GetByFilter(TContext context, Expression<Func<TEntity, bool>> filter)
         {
-            //throw new NotImplementedException();
             return context.Set<TEntity>().FirstOrDefault(filter);
-
         }
 
         public void Save(TContext context)
         {
-            //throw new NotImplementedException();
             context.SaveChanges();
         }
 
-        //void IEntityRepository<TContext, TEntity>.AddorUpdate(TContext context, TEntity entity)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public TEntity FindById(TContext context, int id)
+        {
+            return context.Set<TEntity>().Find(id);
+        }
+
+        public bool Exists(TContext context, Expression<Func<TEntity, bool>> filter)
+        {
+            return context.Set<TEntity>().Any(filter);
+        }
+
+        public int Count(TContext context, Expression<Func<TEntity, bool>> filter)
+        {
+            return context.Set<TEntity>().Count(filter);
+        }
+
+        public List<TEntity> GetPaged(TContext context, int pageNumber, int pageSize, Expression<Func<TEntity, bool>> filter = null)
+        {
+            return filter == null
+                ? context.Set<TEntity>().Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList()
+                : context.Set<TEntity>().Where(filter).Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+        }
+
+        public void SaveWithTransaction(TContext context)
+        {
+            using (var transaction = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.SaveChanges();
+                    transaction.Commit();
+                }
+                catch (Exception)
+                {
+                    transaction.Rollback();
+                    throw;
+                }
+            }
+        }
+
+        public List<TEntity> ExecuteRawSql(TContext context, string sqlQuery, params object[] parameters)
+        {
+            return context.Set<TEntity>().SqlQuery(sqlQuery, parameters).ToList();
+        }
+
+        List<TEntity> IEntityRepository<TContext, TEntity>.GetAll(TContext context, Expression<Func<TEntity, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        TEntity IEntityRepository<TContext, TEntity>.GetByFilter(TContext context, Expression<Func<TEntity, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IEntityRepository<TContext, TEntity>.AddorUpdate(TContext context, TEntity entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IEntityRepository<TContext, TEntity>.Delete(TContext context, Expression<Func<TEntity, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IEntityRepository<TContext, TEntity>.Save(TContext context)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

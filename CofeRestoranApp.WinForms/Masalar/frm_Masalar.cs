@@ -39,23 +39,29 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void brn_Elave_Et_Click(object sender, EventArgs e)
         {
-            frm_Masa_Qeyd_Et frm = new frm_Masa_Qeyd_Et(new CafeRestoranApp.Entities.Models.Masalar());
+            var yeniMasa = new CafeRestoranApp.Entities.Models.Masalar();
+            frm_Masa_Qeyd_Et frm = new frm_Masa_Qeyd_Et(yeniMasa);
             frm.ShowDialog();
             if (frm.Qeydet)
             {
+                masalarDal.AddOrUpdate(context, yeniMasa);
+                masalarDal.Save(context);
                 Listele();
             }
         }
 
         private void btn_Duzenle_Click(object sender, EventArgs e)
         {
-            int seciliID = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
-            var masalar = masalarDal.GetByFilter(context, m => m.Id == seciliID); 
-            frm_Masa_Qeyd_Et frm = new frm_Masa_Qeyd_Et(masalar);
-            frm.ShowDialog();
-            if (frm.Qeydet)
+            if (gridView1.GetFocusedRowCellValue("Id") is int seciliId)
             {
-                Listele();
+                var seciliMasa = masalarDal.GetByFilter(context, m => m.Id == seciliId);
+                frm_Masa_Qeyd_Et frm = new frm_Masa_Qeyd_Et(seciliMasa);
+                frm.ShowDialog();
+                if (frm.Qeydet)
+                {
+                    masalarDal.Save(context);
+                    Listele();
+                }
             }
         }
 

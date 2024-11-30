@@ -21,7 +21,7 @@ namespace CofeRestoranApp.WinForms.Masalar
         private CafeContext context = new CafeContext();
         private MasalarDAL masalarDal = new MasalarDAL();
         private CafeRestoranApp.Entities.Models.Masalar _entity;
-        public bool Qeydet = false;
+        public bool Qeydet { get; private set; }
 
         public frm_Masa_Qeyd_Et(CafeRestoranApp.Entities.Models.Masalar entity) 
         {
@@ -38,17 +38,29 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void brn_Qeyd_Er_Click(object sender, EventArgs e)
         {
-            if (masalarDal.AddorUpdate(context,_entity))
+            _entity.Durumu = false;
+            _entity.Rezervasiya = false;
+            _entity.SonIslemTarixi = DateTime.Now;
+            _entity.ElaveOlmaTarixi = DateTime.Now;
+
+            if (_entity.Id == 0) // Yeni kayıt
             {
-                masalarDal.Save(context);
-                Qeydet = true;
-                this.Hide();
+                masalarDal.AddOrUpdate(context, _entity);
             }
+            else // Güncelleme
+            {
+                masalarDal.Update(context, _entity);
+            }
+
+            masalarDal.AddOrUpdate(context, _entity);
+            Qeydet = true;
+            this.Close();
         }
 
         private void btn_cisix_et_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Qeydet = false;
+            this.Close();
         }
     }
 }

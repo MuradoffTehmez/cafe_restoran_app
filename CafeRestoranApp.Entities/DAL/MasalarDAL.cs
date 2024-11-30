@@ -13,24 +13,41 @@ namespace CafeRestoranApp.Entities.DAL
     {
         public object MasaListele(CafeContext context)
         {
-            var model = (from masa in context.Masalar join K in context
-                    .Istifadeciler.DefaultIfEmpty() on masa.KullaniciId equals K.Id
-                
+            var model = (from masa in context.Masalar
+                join kullanici in context.Istifadeciler.DefaultIfEmpty() on masa.KullaniciId equals kullanici.Id
                 select new
                 {
+                    masa.Id,
+                    masa.MasaAdi,
                     masa.Aciklama,
                     masa.Durumu,
-                    masa.ElaveOlmaTarixi,
-                    masa.Id,
                     masa.Islem,
-                    masa.KullaniciId,
-                    masa.MasaAdi,
                     masa.Rezervasiya,
+                    masa.ElaveOlmaTarixi,
                     masa.SonIslemTarixi,
-                    kullanici = K.IstifadeciAdi
-
+                    kullanici = kullanici.IstifadeciAdi
                 }).ToList();
             return model;
+            /*var model = (from masa in context.Masalar
+                         join K in context
+                    .Istifadeciler.DefaultIfEmpty() on masa.KullaniciId equals K.Id
+
+                         select new
+                         {
+                     +        masa.Aciklama,
+                     +        masa.Durumu,
+                     +        masa.ElaveOlmaTarixi,
+                    +         masa.Id,
+                     -        masa.Islem,
+                     -        masa.KullaniciId,
+                    +         masa.MasaAdi,
+                    +        masa.Rezervasiya,
+                     +        masa.SonIslemTarixi,
+                             kullanici = K.IstifadeciAdi
+
+                         }).ToList();
+            return model;
+            */
         }
     }
 }
