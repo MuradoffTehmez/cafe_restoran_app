@@ -31,16 +31,6 @@ namespace CofeRestoranApp.WinForms.AnaMenu
 
         }
 
-        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
-        private void btn_Masalar_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
         private void btn_Meynular_ItemClick(object sender, ItemClickEventArgs e)
         {
             frm_Menu frm = new frm_Menu();

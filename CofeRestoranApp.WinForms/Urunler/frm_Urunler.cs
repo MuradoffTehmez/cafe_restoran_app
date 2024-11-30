@@ -99,5 +99,68 @@ namespace CofeRestoranApp.WinForms.Urunler
         {
             Listele();
         }
+
+        private void btn_Sil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                object focusedRow = gridView1.GetFocusedRowCellValue(colId);
+                if (focusedRow == null)
+                {
+                    MessageBox.Show("Zəhmət olmasa silmək üçün bir məhsul seçin.", "Diqqət", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int seciliid = Convert.ToInt32(focusedRow);
+
+                if (MessageBox.Show("Məlumat bazadan silinəcək! Razısınız?", "Diqqət!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    urunDal.Delete(context, u => u.Id == seciliid);
+                    urunDal.Save(context);
+                    Listele();
+                    MessageBox.Show("Məhsul uğurla silindi.", "Məlumat", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Məhsul silinərkən xəta baş verdi: " + ex.Message, "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        private void btn_cisix_et_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Tətbiqdən çıxmaq istəyirsiniz?", "Təsdiq", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (result == DialogResult.No)
+            {
+                this.Hide();
+            }
+        }
+
+        private void frm_Urunler_Load(object sender, EventArgs e)
+        {
+            /*
+            DialogResult result = MessageBox.Show("Tətbiqdən çıxmaq istəyirsiniz?", "Təsdiq", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+                this.Hide();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+
+            */
+        }
     }
 }

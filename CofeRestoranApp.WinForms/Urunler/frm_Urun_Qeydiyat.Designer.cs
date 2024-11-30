@@ -304,7 +304,7 @@
             this.txt_Urun_Adi.Properties.Appearance.Options.UseFont = true;
             this.txt_Urun_Adi.Size = new System.Drawing.Size(213, 32);
             this.txt_Urun_Adi.TabIndex = 15;
-            this.txt_Urun_Adi.EditValueChanged += new System.EventHandler(this.txt_Urun_Adi_EditValueChanged);
+//          this.txt_Urun_Adi.EditValueChanged += new System.EventHandler(this.txt_Urun_Adi_EditValueChanged);
             // 
             // Cal_Qiymet_1
             // 

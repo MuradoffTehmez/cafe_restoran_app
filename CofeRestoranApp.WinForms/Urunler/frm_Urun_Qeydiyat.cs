@@ -22,7 +22,7 @@ namespace CofeRestoranApp.WinForms.Urunler
 
             if (_entity.Id!= 0)
             {
-                if (_entity.Sekil != "")
+                if (_entity.Sekil != null)
                 {
                     Foto_Resim_elave_et.Image = Image.FromFile(_entity.Sekil);
                 }
@@ -135,12 +135,6 @@ namespace CofeRestoranApp.WinForms.Urunler
             }
 
             return isValid;
-        }
-
-
-        private void txt_Urun_Adi_EditValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

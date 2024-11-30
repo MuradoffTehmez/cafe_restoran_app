@@ -90,7 +90,7 @@
             this.btn_Guncelle.Appearance.Options.UseFont = true;
             this.btn_Guncelle.Appearance.Options.UseTextOptions = true;
             this.btn_Guncelle.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.btn_Guncelle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.btn_Guncelle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Guncelle.ImageOptions.SvgImage")));
             this.btn_Guncelle.Location = new System.Drawing.Point(356, 34);
             this.btn_Guncelle.Name = "btn_Guncelle";
             this.btn_Guncelle.Size = new System.Drawing.Size(166, 103);
@@ -111,6 +111,7 @@
             this.btn_cisix_et.Size = new System.Drawing.Size(119, 103);
             this.btn_cisix_et.TabIndex = 3;
             this.btn_cisix_et.Text = "Çıxış";
+            this.btn_cisix_et.Click += new System.EventHandler(this.btn_cisix_et_Click);
             // 
             // btn_Duzenle
             // 
@@ -139,6 +140,7 @@
             this.btn_Sil.Size = new System.Drawing.Size(166, 103);
             this.btn_Sil.TabIndex = 1;
             this.btn_Sil.Text = "Sil";
+            this.btn_Sil.Click += new System.EventHandler(this.btn_Sil_Click);
             // 
             // brn_Elave_Et
             // 
@@ -281,6 +283,7 @@
             this.Name = "frm_Urunler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Urunler";
+            this.Load += new System.EventHandler(this.frm_Urunler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
