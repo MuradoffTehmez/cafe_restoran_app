@@ -143,24 +143,7 @@ namespace CofeRestoranApp.WinForms.Urunler
 
         private void frm_Urunler_Load(object sender, EventArgs e)
         {
-            /*
-            DialogResult result = MessageBox.Show("Tətbiqdən çıxmaq istəyirsiniz?", "Təsdiq", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            else if (result == DialogResult.No)
-            {
-                e.Cancel = true;
-                this.Hide();
-            }
-            else
-            {
-                e.Cancel = true;
-            }
-
-            */
+           
         }
     }
 }

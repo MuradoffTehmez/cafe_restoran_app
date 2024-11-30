@@ -87,6 +87,9 @@ namespace CofeRestoranApp.WinForms.Menular
             base.OnFormClosed(e);
         }
 
-       
+        private void btn_Deyis_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

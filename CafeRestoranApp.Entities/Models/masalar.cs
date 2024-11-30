@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.Models
 {
-    //[Table("Masalar")]
     public class Masalar : IEntity
     {
         public int Id { get; set; }
@@ -24,6 +23,11 @@ namespace CafeRestoranApp.Entities.Models
         public DateTime ElaveOlmaTarixi { get; set; }
 
         public DateTime SonIslemTarixi { get; set; }
+
+        public string Islem { get; set; }
+
+        public int? KullaniciId { get; set; }
+
 
         public ICollection<MasaHaraketleri> MasaHaraketleri { get; set; }
 

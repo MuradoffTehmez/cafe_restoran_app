@@ -18,13 +18,26 @@ namespace CofeRestoranApp.WinForms.Urunler
         public frm_Urun_Qeydiyat(Urun entity)
         {
             InitializeComponent();
+
+            if (entity == null)
+            {
+                throw new ArgumentNullException(nameof(entity), "Entity nesnesi boş olamaz.");
+            }
+
             _entity = entity;
 
-            if (_entity.Id!= 0)
+            if (_entity.Id != 0)
             {
                 if (_entity.Sekil != null)
                 {
-                    Foto_Resim_elave_et.Image = Image.FromFile(_entity.Sekil);
+                    try
+                    {
+                        Foto_Resim_elave_et.Image = Image.FromFile(_entity.Sekil);
+                    }
+                    catch (FileNotFoundException)
+                    {
+                        MessageBox.Show("Sekil faylı tapılmadı.", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
 
                 txt_Urun_Adi.Enabled = true;
@@ -35,22 +48,27 @@ namespace CofeRestoranApp.WinForms.Urunler
                 txtR_Aciklama.Enabled = true;
                 Date_Edit_Tarix.Enabled = true;
                 Combo_Meynu_Secimi.Enabled = true;
-
             }
 
             Combo_Meynu_Secimi.Properties.DataSource = menuDAL.GetAll(Context);
             Combo_Meynu_Secimi.DataBindings.Add("EditValue", _entity, "MeynuID");
             txt_Urun_Adi.DataBindings.Add("Text", _entity, "UrunAdi");
             txt_Urun_kodu.DataBindings.Add("Text", _entity, "UrunKodu");
-            Cal_Qiymet_1.DataBindings.Add("Text", _entity, "Qiymet1",true);
-            Cal_Qiymet_2.DataBindings.Add("Text", _entity, "Qiymet2",true);
+            Cal_Qiymet_1.DataBindings.Add("Text", _entity, "Qiymet1", true);
+            Cal_Qiymet_2.DataBindings.Add("Text", _entity, "Qiymet2", true);
             Cal_Qiymet_3.DataBindings.Add("Text", _entity, "Qiymet3", true);
             txtR_Aciklama.DataBindings.Add("Text", _entity, "Aciklama");
-            Date_Edit_Tarix.DataBindings.Add("Text", _entity, "Tarix", true);
+
+            Date_Edit_Tarix.Properties.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss"; 
+            Date_Edit_Tarix.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+
+           
+            Date_Edit_Tarix.DataBindings.Add("EditValue", _entity, "Tarix", true, DataSourceUpdateMode.OnPropertyChanged);
         }
 
         private void frm_Urun_Qeydiyat_Load(object sender, EventArgs e)
         {
+            Date_Edit_Tarix.EditValue = DateTime.Now;
         }
 
         private void brn_Mehsul_Elave_Et_Click(object sender, EventArgs e)
@@ -60,44 +78,61 @@ namespace CofeRestoranApp.WinForms.Urunler
             {
                 try
                 {
-                    // Şəkil qovluğunu yoxla və mövcud deyilsə yarat
                     string imagePath = $"{Application.StartupPath}\\Image";
                     if (!Directory.Exists(imagePath))
                     {
                         Directory.CreateDirectory(imagePath);
                     }
-
-                    // Şəkil faylını saxlamaq üçün yol təyin edilir
                     string hedefyol = $"{imagePath}\\{txt_Urun_Adi.Text}-{txt_Urun_kodu.Text}.png";
 
-                    // Şəkil seçilib-seçilmədiyini yoxla
                     if (string.IsNullOrEmpty(Foto_Resim_elave_et.GetLoadedImageLocation()))
                     {
                         MessageBox.Show("Zəhmət olmasa şəkil seçin.");
                         return;
                     }
+                    string fileExtension = Path.GetExtension(Foto_Resim_elave_et.GetLoadedImageLocation()).ToLower();
+                    if (fileExtension != ".jpg" && fileExtension != ".png" && fileExtension != ".jpeg")
+                    {
+                        MessageBox.Show("Yalnız JPG, PNG və JPEG şəkil formatları dəstəklənir.");
+                        return;
+                    }
 
-                    // Fayl artıq mövcuddursa, istifadəçiyə xəbərdarlıq göstər
+                    var image = Image.FromFile(Foto_Resim_elave_et.GetLoadedImageLocation());
+                    if (image.Width > 2000 || image.Height > 2000)
+                    {
+                        MessageBox.Show("Şəkilin ölçüsü çox böyükdür. Zəhmət olmasa daha kiçik ölçülü şəkil seçin.");
+                        return;
+                    }
+
+                    var existingProduct = urunDAL.GetByProductCode(Context, _entity.UrunKodu);
+                    if (existingProduct != null && _entity.Id == 0)
+                    {
+                        MessageBox.Show("Bu məhsul artıq mövcuddur.");
+                        return;
+                    }
+
+                    if (_entity.Id != 0 && !string.IsNullOrEmpty(_entity.Sekil))
+                    {
+                        string eskiSekilYolu = Path.Combine(Application.StartupPath, _entity.Sekil);
+                        if (File.Exists(eskiSekilYolu))
+                        {
+                            File.Delete(eskiSekilYolu);
+                        }
+                    }
+
                     if (File.Exists(hedefyol))
                     {
                         MessageBox.Show("Bu fayl artıq mövcuddur.");
                         return;
                     }
 
-                    // Məhsul artıq mövcud deyilsə
                     if (_entity.Id == 0)
                     {
-                        // Şəkil faylını köçürmək
                         File.Copy(Foto_Resim_elave_et.GetLoadedImageLocation(), hedefyol);
-
-                        // Şəkil yolunu `Sekil` sahəsinə əlavə etmək
                         _entity.Sekil = $"Image\\{txt_Urun_Adi.Text}-{txt_Urun_kodu.Text}.png";
-
-                        // Məhsul əlavə olunur
                         urunDAL.AddorUpdate(Context, _entity);
                         urunDAL.Save(Context);
                         Qeydet = true;
-
                         MessageBox.Show("Məhsul uğurla saxlanıldı!");
                         this.Hide();
                     }
@@ -108,7 +143,7 @@ namespace CofeRestoranApp.WinForms.Urunler
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Məhsul saxlanarkən xəta baş verdi: " + ex.Message);
+                    MessageBox.Show("Məhsul saxlanarkən bir xəta baş verdi. Xəta detalı: " + ex.Message, "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -117,9 +152,9 @@ namespace CofeRestoranApp.WinForms.Urunler
             }
         }
         private bool IsValid()
-        {
-            // Formdakı bütün tələb olunan sahələrin yoxlanması
+        { 
             bool isValid =
+
                 !string.IsNullOrWhiteSpace(txt_Urun_Adi.Text) &&
                 !string.IsNullOrWhiteSpace(txt_Urun_kodu.Text) &&
                 Combo_Meynu_Secimi.EditValue != null &&
