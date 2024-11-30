@@ -64,7 +64,7 @@ namespace CofeRestoranApp.WinForms.Menular
                 string logFilePath = Path.Combine(logDirectory, "error_log.txt");
                 try
                 {
-                    // Qovluq mövcud deyilsə, yarat
+                    
                     if (!Directory.Exists(logDirectory))
                     {
                         Directory.CreateDirectory(logDirectory);
