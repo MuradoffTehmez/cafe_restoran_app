@@ -59,7 +59,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             catch (Exception ex)
             {
                 MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.LogXeta(ex);
+                _ = Logger.LogXeta(ex);
             }
             finally
             {
@@ -96,7 +96,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             catch (Exception ex)
             {
                 MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.LogXeta(ex);
+                _ = Logger.LogXeta(ex);
             }
             finally
             {
@@ -127,7 +127,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             catch (Exception ex)
             {
                 MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.LogXeta(ex);
+                _ = Logger.LogXeta(ex);
             }
             finally
             {
@@ -158,7 +158,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             catch (Exception ex)
             {
                 MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.LogXeta(ex);
+                _ = Logger.LogXeta(ex);
             }
             finally
             {

@@ -38,11 +38,17 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         }
 
-        private async Task Brn_Qeyd_Er_ClickAsync(object sender, EventArgs e)
+       private void Btn_cisix_et_Click(object sender, EventArgs e)
+        {
+            Qeydet = false;
+            this.Close();
+        }
+
+        private void brn_Qeyd_Er_Click(object sender, EventArgs e)
         {
             try
             {
-                if (_entity.Id == 0) 
+                if (_entity.Id == 0)
                 {
                     _entity.Durumu = false;
                     _entity.Rezervasiya = false;
@@ -50,7 +56,7 @@ namespace CofeRestoranApp.WinForms.Masalar
                     _entity.SonIslemTarixi = DateTime.Now;
                     _entity.Islem = "Yeni masa əlavə edildi";
                 }
-                else if (_entity.Id != 0) 
+                else if (_entity.Id != 0)
                 {
                     _entity.SonIslemTarixi = DateTime.Now;
                     _entity.Islem = "Masa yeniləndi";
@@ -66,16 +72,9 @@ namespace CofeRestoranApp.WinForms.Masalar
             catch (Exception ex)
             {
                 MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                await Logger.LogXeta(ex);
+                _ = Logger.LogXeta(ex);
             }
 
-
-        }
-
-        private void Btn_cisix_et_Click(object sender, EventArgs e)
-        {
-            Qeydet = false;
-            this.Close();
         }
 
         //public void LogXeta(Exception ex)

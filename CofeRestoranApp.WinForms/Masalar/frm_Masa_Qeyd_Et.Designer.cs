@@ -100,7 +100,7 @@
             this.brn_Qeyd_Er.Size = new System.Drawing.Size(121, 73);
             this.brn_Qeyd_Er.TabIndex = 0;
             this.brn_Qeyd_Er.Text = "Qeyd Et";
-           // this.brn_Qeyd_Er.Click += new System.EventHandler(this.Brn_Qeyd_Er_ClickAsync);
+            this.brn_Qeyd_Er.Click += new System.EventHandler(this.brn_Qeyd_Er_Click);
             // 
             // txtR_Aciklama
             // 
@@ -160,7 +160,7 @@
             this.txt_Urun_Adi.Size = new System.Drawing.Size(325, 32);
             this.txt_Urun_Adi.TabIndex = 30;
             // 
-            // frm_Masa_Qeyd_Et
+            // Frm_Masa_Qeyd_Et
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -174,7 +174,7 @@
             this.Controls.Add(this.labelControl1);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frm_Masa_Qeyd_Et";
+            this.Name = "Frm_Masa_Qeyd_Et";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Masa Qeydiyati";
             this.Load += new System.EventHandler(this.Frm_Masa_Qeyd_Et_Load);

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace CofeRestoranApp.WinForms.Istifadeciler
 {
-    public partial class frm_Istifadeciler : DevExpress.XtraEditors.XtraForm
+    public partial class Frm_Istifadeci_Giris : DevExpress.XtraEditors.XtraForm
     {
-        public frm_Istifadeciler()
+        public Frm_Istifadeci_Giris()
         {
             InitializeComponent();
         }
