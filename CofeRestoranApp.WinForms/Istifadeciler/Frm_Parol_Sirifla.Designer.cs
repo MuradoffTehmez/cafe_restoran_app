@@ -32,7 +32,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btn_cisix_et = new DevExpress.XtraEditors.SimpleButton();
-            this.Btn_Giris = new DevExpress.XtraEditors.SimpleButton();
+            this.Btn_Qeyd_Et = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.Txt_Parol_Tekrar = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -76,7 +76,7 @@
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
             this.groupControl1.Controls.Add(this.btn_cisix_et);
-            this.groupControl1.Controls.Add(this.Btn_Giris);
+            this.groupControl1.Controls.Add(this.Btn_Qeyd_Et);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(0, 261);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
@@ -101,23 +101,24 @@
             this.btn_cisix_et.Size = new System.Drawing.Size(98, 47);
             this.btn_cisix_et.TabIndex = 3;
             this.btn_cisix_et.Text = "Çıxış";
+            this.btn_cisix_et.Click += new System.EventHandler(this.btn_cisix_et_Click);
             // 
-            // Btn_Giris
+            // Btn_Qeyd_Et
             // 
-            this.Btn_Giris.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Giris.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.Btn_Giris.Appearance.Options.UseFont = true;
-            this.Btn_Giris.Appearance.Options.UseForeColor = true;
-            this.Btn_Giris.Appearance.Options.UseTextOptions = true;
-            this.Btn_Giris.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Btn_Giris.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Giris.ImageOptions.Image")));
-            this.Btn_Giris.Location = new System.Drawing.Point(13, 27);
-            this.Btn_Giris.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Giris.Name = "Btn_Giris";
-            this.Btn_Giris.Size = new System.Drawing.Size(120, 47);
-            this.Btn_Giris.TabIndex = 0;
-            this.Btn_Giris.Text = "Qeyd\r\nEt\r\n";
-            this.Btn_Giris.Click += new System.EventHandler(this.Btn_Giris_Click);
+            this.Btn_Qeyd_Et.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Qeyd_Et.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Btn_Qeyd_Et.Appearance.Options.UseFont = true;
+            this.Btn_Qeyd_Et.Appearance.Options.UseForeColor = true;
+            this.Btn_Qeyd_Et.Appearance.Options.UseTextOptions = true;
+            this.Btn_Qeyd_Et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Btn_Qeyd_Et.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Qeyd_Et.ImageOptions.Image")));
+            this.Btn_Qeyd_Et.Location = new System.Drawing.Point(13, 27);
+            this.Btn_Qeyd_Et.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Qeyd_Et.Name = "Btn_Qeyd_Et";
+            this.Btn_Qeyd_Et.Size = new System.Drawing.Size(120, 47);
+            this.Btn_Qeyd_Et.TabIndex = 0;
+            this.Btn_Qeyd_Et.Text = "Qeyd\r\nEt\r\n";
+            this.Btn_Qeyd_Et.Click += new System.EventHandler(this.Btn_Qeyd_Et_Click);
             // 
             // labelControl13
             // 
@@ -225,6 +226,8 @@
             this.Txt_Istifadeci_Adi.Name = "Txt_Istifadeci_Adi";
             this.Txt_Istifadeci_Adi.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Istifadeci_Adi.Properties.Appearance.Options.UseFont = true;
+            this.Txt_Istifadeci_Adi.Properties.NullText = "İstifadəci Adi vəya Email yazın";
+            this.Txt_Istifadeci_Adi.Properties.NullValuePrompt = "İstifadəci Adi vəya Email yazın";
             this.Txt_Istifadeci_Adi.Size = new System.Drawing.Size(445, 32);
             this.Txt_Istifadeci_Adi.TabIndex = 55;
             // 
@@ -269,7 +272,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton btn_cisix_et;
-        private DevExpress.XtraEditors.SimpleButton Btn_Giris;
+        private DevExpress.XtraEditors.SimpleButton Btn_Qeyd_Et;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.TextEdit Txt_Parol_Tekrar;
         private DevExpress.XtraEditors.LabelControl labelControl9;
