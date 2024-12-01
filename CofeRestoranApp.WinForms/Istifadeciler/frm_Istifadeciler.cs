@@ -111,7 +111,7 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
 
         private void hyper_Qeydiyyat_Click(object sender, EventArgs e)
         {
-            Frm_Qeydiyyat frm = new Frm_Qeydiyyat();
+            Frm_Qeydiyyat frm = new Frm_Qeydiyyat(new CafeRestoranApp.Entities.Models.Istifadeciler());
             frm.ShowDialog();
         }
     }
