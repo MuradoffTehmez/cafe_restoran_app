@@ -241,6 +241,18 @@
     <Compile Include="Istifadeciler\frm_Istifadeciler.Designer.cs">
       <DependentUpon>frm_Istifadeciler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Istifadeciler\Frm_Parol_Sirifla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Istifadeciler\Frm_Parol_Sirifla.Designer.cs">
+      <DependentUpon>Frm_Parol_Sirifla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Istifadeciler\Frm_Qeydiyyat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Istifadeciler\Frm_Qeydiyyat.Designer.cs">
+      <DependentUpon>Frm_Qeydiyyat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Masalar\frm_Masalar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +296,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Istifadeciler\frm_Istifadeciler.resx">
       <DependentUpon>frm_Istifadeciler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Istifadeciler\Frm_Parol_Sirifla.resx">
+      <DependentUpon>Frm_Parol_Sirifla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Istifadeciler\Frm_Qeydiyyat.resx">
+      <DependentUpon>Frm_Qeydiyyat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Masalar\frm_Masalar.resx">
       <DependentUpon>frm_Masalar.cs</DependentUpon>

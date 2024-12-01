@@ -110,6 +110,7 @@
             this.Btn_Sifre_Deyis.Size = new System.Drawing.Size(263, 47);
             this.Btn_Sifre_Deyis.TabIndex = 4;
             this.Btn_Sifre_Deyis.Text = "Şifrəni Dəyis";
+            this.Btn_Sifre_Deyis.Click += new System.EventHandler(this.Btn_Sifre_Deyis_Click);
             // 
             // btn_cisix_et
             // 
@@ -169,7 +170,6 @@
             this.Txt_Sifre.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Txt_Sifre.Properties.ContextImageOptions.Image")));
             this.Txt_Sifre.Properties.NullText = "Parol Yazin";
             this.Txt_Sifre.Properties.NullValuePrompt = "Parol  Yazin";
-            this.Txt_Sifre.Properties.UseSystemPasswordChar = true;
             this.Txt_Sifre.Size = new System.Drawing.Size(271, 30);
             this.Txt_Sifre.TabIndex = 7;
             // 
@@ -202,6 +202,7 @@
             this.hyper_Qeydiyyat.Size = new System.Drawing.Size(239, 16);
             this.hyper_Qeydiyyat.TabIndex = 10;
             this.hyper_Qeydiyyat.Text = "Hesabiniz Yoxdursa Qeydiyatdan Keç";
+            this.hyper_Qeydiyyat.Click += new System.EventHandler(this.hyper_Qeydiyyat_Click);
             // 
             // check_Yadda_Saxla
             // 

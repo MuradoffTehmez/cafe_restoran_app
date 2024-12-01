@@ -30,11 +30,13 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
             {
                 Txt_Kullanici_Adi.Text = Properties.Settings.Default.KullaniciAdi;
                 Txt_Sifre.Text = Properties.Settings.Default.Parola;
+                check_Yadda_Saxla.Checked = true;
             }
             else
             {
                 Txt_Kullanici_Adi.Text = null;
                 Txt_Sifre.Text = null;
+                check_Yadda_Saxla.Checked = false;
             }
         }
 
@@ -99,6 +101,18 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
                MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                Logger.LogError(ex.Message, ex);
             }
+        }
+
+        private void Btn_Sifre_Deyis_Click(object sender, EventArgs e)
+        {
+            Frm_Parol_Sirifla frm = new Frm_Parol_Sirifla();
+            frm.ShowDialog();
+        }
+
+        private void hyper_Qeydiyyat_Click(object sender, EventArgs e)
+        {
+            Frm_Qeydiyyat frm = new Frm_Qeydiyyat();
+            frm.ShowDialog();
         }
     }
 }
