@@ -34,7 +34,7 @@ namespace CofeRestoranApp.WinForms.AnaMenu
 
         private void btn_Meynular_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frm_Menu frm = new frm_Menu();
+            Frm_Menu frm = new Frm_Menu();
             frm.ShowDialog();
         }
 

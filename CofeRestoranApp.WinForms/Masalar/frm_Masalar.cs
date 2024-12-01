@@ -14,6 +14,7 @@ using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
 using CafeRestoranApp.Entities.Mapping;
 using System.IO;
+using CafeRestoranApp.Entities.Utilities;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -39,47 +40,6 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         }
 
-        private void Brn_Elave_Et_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var yeniMasa = new CafeRestoranApp.Entities.Models.Masalar();
-                Frm_Masa_Qeyd_Et frm = new Frm_Masa_Qeyd_Et(yeniMasa);
-                frm.ShowDialog();
-                if (frm.Qeydet)
-                {
-                    masalarDal.AddOrUpdate(context, yeniMasa);
-                    masalarDal.Save(context);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                string logDirectory = @"C:\Users\murad\LogFiles";
-                string logFilePath = Path.Combine(logDirectory, "error_log.txt");
-                try
-                {
-                    // Qovluq mövcud deyilsə, yarat
-                    if (!Directory.Exists(logDirectory))
-                    {
-                        Directory.CreateDirectory(logDirectory);
-                    }
-
-                    string logMesaj = $"Tarix: {DateTime.Now}\nXəta mesajı: {ex.Message}\nSətir məlumatı:\n{ex.StackTrace}\n\n";
-                    File.AppendAllText(logFilePath, logMesaj);
-                }
-                catch (Exception logEx)
-                {
-                    MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-
-            finally
-            {
-                Listele();
-            }
-        }
-
         private void Btn_Duzenle_Click(object sender, EventArgs e)
         {
             try
@@ -99,23 +59,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             catch (Exception ex)
             {
                 MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                string logDirectory = @"C:\Users\murad\LogFiles";
-                string logFilePath = Path.Combine(logDirectory, "error_log.txt");
-                try
-                {
-                    // Qovluq mövcud deyilsə, yarat
-                    if (!Directory.Exists(logDirectory))
-                    {
-                        Directory.CreateDirectory(logDirectory);
-                    }
-
-                    string logMesaj = $"Tarix: {DateTime.Now}\nXəta mesajı: {ex.Message}\nSətir məlumatı:\n{ex.StackTrace}\n\n";
-                    File.AppendAllText(logFilePath, logMesaj);
-                }
-                catch (Exception logEx)
-                {
-                    MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                Logger.LogXeta(ex);
             }
             finally
             {
@@ -152,23 +96,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             catch (Exception ex)
             {
                 MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                string logDirectory = @"C:\Users\murad\LogFiles";
-                string logFilePath = Path.Combine(logDirectory, "error_log.txt");
-                try
-                {
-                    // Qovluq mövcud deyilsə, yarat
-                    if (!Directory.Exists(logDirectory))
-                    {
-                        Directory.CreateDirectory(logDirectory);
-                    }
-
-                    string logMesaj = $"Tarix: {DateTime.Now}\nXəta mesajı: {ex.Message}\nSətir məlumatı:\n{ex.StackTrace}\n\n";
-                    File.AppendAllText(logFilePath, logMesaj);
-                }
-                catch (Exception logEx)
-                {
-                    MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                Logger.LogXeta(ex);
             }
             finally
             {
@@ -199,23 +127,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             catch (Exception ex)
             {
                 MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                string logDirectory = @"C:\Users\murad\LogFiles";
-                string logFilePath = Path.Combine(logDirectory, "error_log.txt");
-                try
-                {
-                    // Qovluq mövcud deyilsə, yarat
-                    if (!Directory.Exists(logDirectory))
-                    {
-                        Directory.CreateDirectory(logDirectory);
-                    }
-
-                    string logMesaj = $"Tarix: {DateTime.Now}\nXəta mesajı: {ex.Message}\nSətir məlumatı:\n{ex.StackTrace}\n\n";
-                    File.AppendAllText(logFilePath, logMesaj);
-                }
-                catch (Exception logEx)
-                {
-                    MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                Logger.LogXeta(ex);
             }
             finally
             {
@@ -246,23 +158,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             catch (Exception ex)
             {
                 MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                string logDirectory = @"C:\Users\murad\LogFiles";
-                string logFilePath = Path.Combine(logDirectory, "error_log.txt");
-                try
-                {
-                    // Qovluq mövcud deyilsə, yarat
-                    if (!Directory.Exists(logDirectory))
-                    {
-                        Directory.CreateDirectory(logDirectory);
-                    }
-
-                    string logMesaj = $"Tarix: {DateTime.Now}\nXəta mesajı: {ex.Message}\nSətir məlumatı:\n{ex.StackTrace}\n\n";
-                    File.AppendAllText(logFilePath, logMesaj);
-                }
-                catch (Exception logEx)
-                {
-                    MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                Logger.LogXeta(ex);
             }
             finally
             {
@@ -273,6 +169,31 @@ namespace CofeRestoranApp.WinForms.Masalar
         private void Btn_cisix_et_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void brn_Elave_Et_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var yeniMasa = new CafeRestoranApp.Entities.Models.Masalar();
+                Frm_Masa_Qeyd_Et frm = new Frm_Masa_Qeyd_Et(yeniMasa);
+                frm.ShowDialog();
+                if (frm.Qeydet)
+                {
+                    masalarDal.AddOrUpdate(context, yeniMasa);
+                    masalarDal.Save(context);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _ = Logger.LogXeta(ex);
+            }
+
+            finally
+            {
+                Listele();
+            }
         }
     }
 }

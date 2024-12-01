@@ -14,6 +14,7 @@ using CafeRestoranApp.Entities.Models;
 using DurableTask.Core.Common;
 using CafeRestoranApp;
 using System.IO;
+using CafeRestoranApp.Entities.Utilities;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -37,7 +38,7 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         }
 
-        private void Brn_Qeyd_Er_Click(object sender, EventArgs e)
+        private async Task Brn_Qeyd_Er_ClickAsync(object sender, EventArgs e)
         {
             try
             {
@@ -65,7 +66,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             catch (Exception ex)
             {
                 MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                LogXeta(ex);
+                await Logger.LogXeta(ex);
             }
 
 
@@ -77,31 +78,31 @@ namespace CofeRestoranApp.WinForms.Masalar
             this.Close();
         }
 
-        public void LogXeta(Exception ex)
-        {
-            string logDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFiles");
-            string logFilePath = Path.Combine(logDirectory, "error_log.txt");
+        //public void LogXeta(Exception ex)
+        //{
+        //    string logDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFiles");
+        //    string logFilePath = Path.Combine(logDirectory, "error_log.txt");
 
-            try
-            {
-                if (!Directory.Exists(logDirectory))
-                {
-                    Directory.CreateDirectory(logDirectory);
-                }
+        //    try
+        //    {
+        //        if (!Directory.Exists(logDirectory))
+        //        {
+        //            Directory.CreateDirectory(logDirectory);
+        //        }
 
-                using (StreamWriter sw = new StreamWriter(logFilePath, true))
-                {
-                    sw.WriteLine($"Tarix: {DateTime.Now}");
-                    sw.WriteLine($"Xəta mesajı: {ex.Message}");
-                    sw.WriteLine($"Sətir məlumatı:\n{ex.StackTrace}");
-                    sw.WriteLine("--------------------------------------------------");
-                }
-            }
-            catch (Exception logEx)
-            {
-                MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
+        //        using (StreamWriter sw = new StreamWriter(logFilePath, true))
+        //        {
+        //            sw.WriteLine($"Tarix: {DateTime.Now}");
+        //            sw.WriteLine($"Xəta mesajı: {ex.Message}");
+        //            sw.WriteLine($"Sətir məlumatı:\n{ex.StackTrace}");
+        //            sw.WriteLine("--------------------------------------------------");
+        //        }
+        //    }
+        //    catch (Exception logEx)
+        //    {
+        //        MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //    }
+        //}
 
     }
 }

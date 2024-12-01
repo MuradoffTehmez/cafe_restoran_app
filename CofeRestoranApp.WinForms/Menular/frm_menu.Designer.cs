@@ -1,6 +1,6 @@
 ﻿namespace CofeRestoranApp.WinForms.Menular
 {
-    partial class frm_Menu
+    partial class Frm_Menu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Menu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Menu));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btn_cisix_et = new DevExpress.XtraEditors.SimpleButton();
@@ -87,7 +87,7 @@
             this.btn_cisix_et.Size = new System.Drawing.Size(119, 103);
             this.btn_cisix_et.TabIndex = 3;
             this.btn_cisix_et.Text = "Çıxış";
-            this.btn_cisix_et.Click += new System.EventHandler(this.simpleButton4_Click);
+            this.btn_cisix_et.Click += new System.EventHandler(this.SimpleButton4_Click);
             // 
             // btn_Deyis
             // 
@@ -101,7 +101,7 @@
             this.btn_Deyis.Size = new System.Drawing.Size(166, 103);
             this.btn_Deyis.TabIndex = 2;
             this.btn_Deyis.Text = "Dəyişdir";
-            this.btn_Deyis.Click += new System.EventHandler(this.btn_Deyis_Click);
+            this.btn_Deyis.Click += new System.EventHandler(this.Btn_Deyis_Click);
             // 
             // btn_Sil
             // 
@@ -115,7 +115,7 @@
             this.btn_Sil.Size = new System.Drawing.Size(166, 103);
             this.btn_Sil.TabIndex = 1;
             this.btn_Sil.Text = "Sil";
-            this.btn_Sil.Click += new System.EventHandler(this.simpleButton2_Click);
+            this.btn_Sil.Click += new System.EventHandler(this.SimpleButton2_Click);
             // 
             // brn_Elave_et
             // 
@@ -129,7 +129,7 @@
             this.brn_Elave_et.Size = new System.Drawing.Size(166, 103);
             this.brn_Elave_et.TabIndex = 0;
             this.brn_Elave_et.Text = "Qeyd Et";
-            this.brn_Elave_et.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.brn_Elave_et.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // gridControl1
             // 
@@ -190,7 +190,7 @@
             this.Name = "frm_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menular";
-            this.Load += new System.EventHandler(this.frm_Menu_Load);
+            this.Load += new System.EventHandler(this.Frm_Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

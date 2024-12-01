@@ -12,14 +12,15 @@ using System.Windows.Forms;
 using CafeRestoranApp.Entities.Models;
 using System.Runtime.Remoting.Contexts;
 using System.IO;
+using CafeRestoranApp.Entities.Utilities;
 
 namespace CofeRestoranApp.WinForms.Menular
 {
-    public partial class frm_Menu : DevExpress.XtraEditors.XtraForm
+    public partial class Frm_Menu : DevExpress.XtraEditors.XtraForm
     {
-        private CafeContext context = new CafeContext();
+        private readonly CafeContext context = new CafeContext();
         private readonly CafeContext _context;
-        public frm_Menu()
+        public Frm_Menu()
         {
             InitializeComponent();
             _context = context;
@@ -27,7 +28,7 @@ namespace CofeRestoranApp.WinForms.Menular
             gridControl1.DataSource = _context.Menu.Local.ToBindingList();
         }
 
-        private void frm_Menu_Load(object sender, EventArgs e)
+        private void Frm_Menu_Load(object sender, EventArgs e)
         {
 
         }
@@ -60,23 +61,7 @@ namespace CofeRestoranApp.WinForms.Menular
             catch (Exception ex)
             {
                 MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                string logDirectory = @"C:\Users\murad\LogFiles";
-                string logFilePath = Path.Combine(logDirectory, "error_log.txt");
-                try
-                {
-                    
-                    if (!Directory.Exists(logDirectory))
-                    {
-                        Directory.CreateDirectory(logDirectory);
-                    }
-
-                    string logMesaj = $"Tarix: {DateTime.Now}\nXəta mesajı: {ex.Message}\nSətir məlumatı:\n{ex.StackTrace}\n\n";
-                    File.AppendAllText(logFilePath, logMesaj);
-                }
-                catch (Exception logEx)
-                {
-                    MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                _ = Logger.LogXeta(ex);
             }
         }
 
@@ -85,17 +70,17 @@ namespace CofeRestoranApp.WinForms.Menular
             return XtraMessageBox.Show(message, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void SimpleButton1_Click(object sender, EventArgs e)
         {
             SaveSelectedItem();
         }
 
-        private void simpleButton2_Click(object sender, EventArgs e)
+        private void SimpleButton2_Click(object sender, EventArgs e)
         {
             DeleteSelectedItem();
         }
 
-        private void simpleButton4_Click(object sender, EventArgs e)
+        private void SimpleButton4_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -105,7 +90,7 @@ namespace CofeRestoranApp.WinForms.Menular
             base.OnFormClosed(e);
         }
 
-        private void btn_Deyis_Click(object sender, EventArgs e)
+        private void Btn_Deyis_Click(object sender, EventArgs e)
         {
 
         }

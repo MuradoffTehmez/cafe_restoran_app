@@ -100,7 +100,7 @@
             this.brn_Qeyd_Er.Size = new System.Drawing.Size(121, 73);
             this.brn_Qeyd_Er.TabIndex = 0;
             this.brn_Qeyd_Er.Text = "Qeyd Et";
-            this.brn_Qeyd_Er.Click += new System.EventHandler(this.Brn_Qeyd_Er_Click);
+           // this.brn_Qeyd_Er.Click += new System.EventHandler(this.Brn_Qeyd_Er_ClickAsync);
             // 
             // txtR_Aciklama
             // 
