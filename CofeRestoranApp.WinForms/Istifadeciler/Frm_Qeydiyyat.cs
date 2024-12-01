@@ -19,7 +19,7 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
         private CafeContext context = new CafeContext();
         private IstifadecilerDAL istifadecilerDal = new IstifadecilerDAL();
         private CafeRestoranApp.Entities.Models.Istifadeciler _entity;
-        public bool kaydet = false;
+        //public bool kaydet = false;
 
         public Frm_Qeydiyyat(CafeRestoranApp.Entities.Models.Istifadeciler entity)
         {
@@ -48,7 +48,7 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
                     if (istifadecilerDal.AddOrUpdate(context, _entity))
                     {
                         istifadecilerDal.Save(context);
-                        kaydet = true;
+                        //kaydet = true;
                         this.Close();
                     }
                 }
