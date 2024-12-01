@@ -60,7 +60,9 @@ namespace CafeRestoranApp.Entities.Mapping
             this.Property(p => p.Aciklama)
                 .HasColumnType("varchar")
                 .HasMaxLength(300);
-           
+
+            this.Property(p => p.FailedLoginAttempts)
+                .HasColumnType("int");
         }
     }
 }

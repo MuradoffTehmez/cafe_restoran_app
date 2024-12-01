@@ -52,7 +52,9 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.Appearance.Options.UseTextOptions = true;
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
@@ -81,7 +83,7 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.groupControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
             this.groupControl1.Controls.Add(this.Btn_Sifre_Deyis);
@@ -170,6 +172,7 @@
             this.Txt_Sifre.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Txt_Sifre.Properties.ContextImageOptions.Image")));
             this.Txt_Sifre.Properties.NullText = "Parol Yazin";
             this.Txt_Sifre.Properties.NullValuePrompt = "Parol  Yazin";
+            this.Txt_Sifre.Properties.UseSystemPasswordChar = true;
             this.Txt_Sifre.Size = new System.Drawing.Size(271, 30);
             this.Txt_Sifre.TabIndex = 7;
             // 
@@ -218,6 +221,8 @@
             // 
             // Frm_Istifadeci_Giris
             // 
+            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 321);

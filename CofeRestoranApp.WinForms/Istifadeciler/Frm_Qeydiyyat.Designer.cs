@@ -76,7 +76,9 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.Appearance.Options.UseTextOptions = true;
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
@@ -136,7 +138,7 @@
             this.Btn_Qeydiyyat.Name = "Btn_Qeydiyyat";
             this.Btn_Qeydiyyat.Size = new System.Drawing.Size(90, 43);
             this.Btn_Qeydiyyat.TabIndex = 0;
-            this.Btn_Qeydiyyat.Text = "Giriş";
+            this.Btn_Qeydiyyat.Text = "Qeyd\r\nEt";
             this.Btn_Qeydiyyat.Click += new System.EventHandler(this.Btn_Qeydiyyat_Click);
             // 
             // Txt_Ad_Soyad
@@ -401,6 +403,8 @@
             // 
             // Frm_Qeydiyyat
             // 
+            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

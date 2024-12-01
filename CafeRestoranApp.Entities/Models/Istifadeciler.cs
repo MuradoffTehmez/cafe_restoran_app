@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.Models
 {
-    //[Table("Istifadeciler")]
     public class Istifadeciler : IEntity
     {
         public int Id { get; set; }
@@ -37,7 +36,9 @@ namespace CafeRestoranApp.Entities.Models
 
         public bool IsDurumu { get; set; }
 
-        public ICollection<IstifadeciHereketleri> IstifadeciHereketleri { get; set; }
+        public int FailedLoginAttempts { get; set; }
 
+        public ICollection<IstifadeciHereketleri> IstifadeciHereketleri { get; set; }
+       
     }
 }

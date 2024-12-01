@@ -17,5 +17,15 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
         {
             InitializeComponent();
         }
+
+        private void Frm_Parol_Sirifla_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Giris_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

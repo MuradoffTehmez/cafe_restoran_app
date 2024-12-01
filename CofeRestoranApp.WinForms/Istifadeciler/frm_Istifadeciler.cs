@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeRestoranApp.Entities.Models;
 using CafeRestoranApp.Entities.Utilities;
+using BCrypt.Net;
 
 namespace CofeRestoranApp.WinForms.Istifadeciler
 {

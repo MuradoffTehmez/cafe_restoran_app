@@ -45,7 +45,11 @@ namespace CafeRestoranApp.Entities.Validations
             // Parol
             RuleFor(x => x.Parol)
                 .NotEmpty().WithMessage("Parol sahəsi boş ola bilməz.")
-                .MinimumLength(8).WithMessage("Parol ən az 8 simvol uzunluğunda olmalıdır.");
+                .MinimumLength(8).WithMessage("Parol ən az 8 simvol uzunluğunda olmalıdır.")
+                .Matches(@"[A-Z]").WithMessage("Parol ən az bir böyük hərf içerməlidir.")
+                .Matches(@"[a-z]").WithMessage("Parol ən az bir kiçik hərf içerməlidir.")
+                .Matches(@"[0-9]").WithMessage("Parol ən az bir rəqəm içerməlidir.")
+                .Matches(@"[\W_]").WithMessage("Parol ən az bir xüsusi simvol içerməlidir.");
 
             // HatirlamaSuali
             RuleFor(x => x.HatirlamaSuali)
@@ -65,12 +69,12 @@ namespace CafeRestoranApp.Entities.Validations
             RuleFor(x => x.KaytTarixi)
                 .NotEmpty().WithMessage("Qeydiyyat tarixi boş ola bilməz.");
 
-            //// IsDurumu
-            //RuleFor(x => x.IsDurumu)
-            //    .NotNull().WithMessage("İş durumu boş ola bilməz.");
+            // FailedLoginAttempts
+            RuleFor(x => x.FailedLoginAttempts)
+                .GreaterThanOrEqualTo(0).WithMessage("FailedLoginAttempts dəyəri sıfırdan kiçik ola bilməz.");
+
         }
-    
-    
+        
     }
 }
 
