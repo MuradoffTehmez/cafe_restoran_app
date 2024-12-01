@@ -21,6 +21,39 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
         public Frm_Istifadeci_Giris()
         {
             InitializeComponent();
+            MelumatGetir();
+        }
+
+        void MelumatGetir()
+        {
+            if (Properties.Settings.Default.BeniHatirla)
+            {
+                Txt_Kullanici_Adi.Text = Properties.Settings.Default.KullaniciAdi;
+                Txt_Sifre.Text = Properties.Settings.Default.Parola;
+            }
+            else
+            {
+                Txt_Kullanici_Adi.Text = null;
+                Txt_Sifre.Text = null;
+            }
+        }
+
+        void MelumatQeydEt()
+        {
+            if (check_Yadda_Saxla.Checked)
+            {
+                Properties.Settings.Default.KullaniciAdi = Txt_Kullanici_Adi.Text;
+                Properties.Settings.Default.Parola= Txt_Sifre.Text;
+                Properties.Settings.Default.BeniHatirla = true;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                Properties.Settings.Default.KullaniciAdi = null;
+                Properties.Settings.Default.Parola = null;
+                Properties.Settings.Default.BeniHatirla = false;
+                Properties.Settings.Default.Save();
+            }
         }
 
         private void frm_Istifadeciler_Load(object sender, EventArgs e)
@@ -53,6 +86,7 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
                 if (user != null)
                 {
                     giris = true;  
+                    MelumatQeydEt();
                     this.Hide(); 
                 }
                 else
