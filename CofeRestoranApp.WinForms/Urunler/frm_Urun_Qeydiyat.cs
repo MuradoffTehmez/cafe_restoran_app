@@ -38,7 +38,7 @@ namespace CofeRestoranApp.WinForms.Urunler
                     catch (Exception ex)
                     {
                         MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        _ =Logger.LogXeta(ex);
+                        Logger.LogXeta(ex);
                     }
                 }
 
@@ -146,7 +146,7 @@ namespace CofeRestoranApp.WinForms.Urunler
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    _ = Logger.LogXeta(ex);
+                    Logger.LogXeta(ex);
                 }
             }
             else

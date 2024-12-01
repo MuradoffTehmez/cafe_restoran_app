@@ -48,17 +48,22 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
         {
             try
             {
-                if (context.Istifadeciler.Any(i => i.IstifadeciAdi == Txt_Kullanici_Adi.Text && i.Parol == Txt_Sifre.Text))
+                var user = context.Istifadeciler
+                    .FirstOrDefault(i => i.IstifadeciAdi == Txt_Kullanici_Adi.Text && i.Parol == Txt_Sifre.Text);
+                if (user != null)
                 {
-                    giris = true;
-                    this.Hide();
+                    giris = true;  
+                    this.Hide(); 
                 }
-               
+                else
+                {
+                    MessageBox.Show("İstifadəçi adı və ya şifrə yanlışdır.", "Giriş xətası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                _ = Logger.LogXeta(ex);
+               MessageBox.Show($"Bir xəta baş verdi:\n{ex.Message}\n\nSətir məlumatı:\n{ex.StackTrace}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               Logger.LogError(ex.Message, ex);
             }
         }
     }

@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CafeRestoranApp.Entities.Utilities
@@ -30,13 +29,13 @@ namespace CafeRestoranApp.Entities.Utilities
         }
 
         /// <summary>
-        /// Asynchronously writes log to file and console.
+        /// Writes log to file and console synchronously.
         /// </summary>
         /// <param name="message">Log message.</param>
         /// <param name="level">Log level (Info, Warning, Error, Critical).</param>
         /// <param name="ex">Optional exception object for error and critical log levels.</param>
         /// <param name="callerName">Name of the method where the log is called from.</param>
-        public static async Task LogAsync(string message, LogLevel level = LogLevel.Info, Exception ex = null, [System.Runtime.CompilerServices.CallerMemberName] string callerName = "")
+        public static void Log(string message, LogLevel level = LogLevel.Info, Exception ex = null, [System.Runtime.CompilerServices.CallerMemberName] string callerName = "")
         {
             string logFilePath = Path.Combine(logDirectory, $"Log_{DateTime.Now:yyyy-MM-dd}.txt");
 
@@ -45,8 +44,8 @@ namespace CafeRestoranApp.Entities.Utilities
                 // Prepare log details
                 string logDetails = PrepareLogDetails(message, level, ex, callerName);
 
-                // Write log asynchronously to the file
-                await WriteLogToFileAsync(logFilePath, logDetails);
+                // Write log synchronously to the file
+                WriteLogToFile(logFilePath, logDetails);
 
                 // Also write to console for immediate feedback
                 Console.WriteLine(logDetails);
@@ -94,18 +93,18 @@ APP VERSION: {appVersion}
         }
 
         /// <summary>
-        /// Writes the log asynchronously to the file using StreamWriter.
+        /// Writes the log synchronously to the file using StreamWriter.
         /// </summary>
         /// <param name="logFilePath">The file path to write the log to.</param>
         /// <param name="logDetails">The formatted log details.</param>
-        private static async Task WriteLogToFileAsync(string logFilePath, string logDetails)
+        private static void WriteLogToFile(string logFilePath, string logDetails)
         {
             try
             {
-                // Use StreamWriter to asynchronously write the log to the file
+                // Use StreamWriter to synchronously write the log to the file
                 using (StreamWriter writer = new StreamWriter(logFilePath, append: true, encoding: Encoding.UTF8))
                 {
-                    await writer.WriteLineAsync(logDetails);
+                    writer.WriteLine(logDetails);
                 }
             }
             catch (Exception ex)
@@ -116,27 +115,27 @@ APP VERSION: {appVersion}
         }
 
         // Convenience methods for different log levels
-        public static async Task LogInfo(string message, Exception ex = null, [System.Runtime.CompilerServices.CallerMemberName] string callerName = "")
+        public static void LogInfo(string message, Exception ex = null, [System.Runtime.CompilerServices.CallerMemberName] string callerName = "")
         {
-            await LogAsync(message, LogLevel.Info, ex, callerName);
+            Log(message, LogLevel.Info, ex, callerName);
         }
 
-        public static async Task LogWarning(string message, Exception ex = null, [System.Runtime.CompilerServices.CallerMemberName] string callerName = "")
+        public static void LogWarning(string message, Exception ex = null, [System.Runtime.CompilerServices.CallerMemberName] string callerName = "")
         {
-            await LogAsync(message, LogLevel.Warning, ex, callerName);
+            Log(message, LogLevel.Warning, ex, callerName);
         }
 
-        public static async Task LogError(string message, Exception ex = null, [System.Runtime.CompilerServices.CallerMemberName] string callerName = "")
+        public static void LogError(string message, Exception ex = null, [System.Runtime.CompilerServices.CallerMemberName] string callerName = "")
         {
-            await LogAsync(message, LogLevel.Error, ex, callerName);
+            Log(message, LogLevel.Error, ex, callerName);
         }
 
-        public static async Task LogCritical(string message, Exception ex = null, [System.Runtime.CompilerServices.CallerMemberName] string callerName = "")
+        public static void LogCritical(string message, Exception ex = null, [System.Runtime.CompilerServices.CallerMemberName] string callerName = "")
         {
-            await LogAsync(message, LogLevel.Critical, ex, callerName);
+            Log(message, LogLevel.Critical, ex, callerName);
         }
 
-        public static async Task<object> LogXeta(Exception ex)
+        public static void LogXeta(Exception ex)
         {
             throw new NotImplementedException();
         }

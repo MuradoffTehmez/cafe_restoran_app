@@ -32,9 +32,9 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.Btn_Sifre_Deyis = new DevExpress.XtraEditors.SimpleButton();
             this.btn_cisix_et = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_Giris = new DevExpress.XtraEditors.SimpleButton();
-            this.Btn_Sifre_Deyis = new DevExpress.XtraEditors.SimpleButton();
             this.Txt_Kullanici_Adi = new DevExpress.XtraEditors.TextEdit();
             this.Txt_Sifre = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -95,6 +95,22 @@
             this.groupControl1.TabIndex = 6;
             this.groupControl1.Text = "Əməliyyatlar";
             // 
+            // Btn_Sifre_Deyis
+            // 
+            this.Btn_Sifre_Deyis.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Sifre_Deyis.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Btn_Sifre_Deyis.Appearance.Options.UseFont = true;
+            this.Btn_Sifre_Deyis.Appearance.Options.UseForeColor = true;
+            this.Btn_Sifre_Deyis.Appearance.Options.UseTextOptions = true;
+            this.Btn_Sifre_Deyis.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Btn_Sifre_Deyis.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Btn_Sifre_Deyis.ImageOptions.SvgImage")));
+            this.Btn_Sifre_Deyis.Location = new System.Drawing.Point(7, 79);
+            this.Btn_Sifre_Deyis.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Sifre_Deyis.Name = "Btn_Sifre_Deyis";
+            this.Btn_Sifre_Deyis.Size = new System.Drawing.Size(263, 47);
+            this.Btn_Sifre_Deyis.TabIndex = 4;
+            this.Btn_Sifre_Deyis.Text = "Şifrəni Dəyis";
+            // 
             // btn_cisix_et
             // 
             this.btn_cisix_et.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -121,7 +137,7 @@
             this.Btn_Giris.Appearance.Options.UseForeColor = true;
             this.Btn_Giris.Appearance.Options.UseTextOptions = true;
             this.Btn_Giris.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Btn_Giris.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("brn_Qeyd_Er.ImageOptions.Image")));
+            this.Btn_Giris.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Giris.ImageOptions.Image")));
             this.Btn_Giris.Location = new System.Drawing.Point(7, 27);
             this.Btn_Giris.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Giris.Name = "Btn_Giris";
@@ -129,22 +145,6 @@
             this.Btn_Giris.TabIndex = 0;
             this.Btn_Giris.Text = "Giriş";
             this.Btn_Giris.Click += new System.EventHandler(this.Btn_Giris_Click);
-            // 
-            // Btn_Sifre_Deyis
-            // 
-            this.Btn_Sifre_Deyis.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Sifre_Deyis.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Btn_Sifre_Deyis.Appearance.Options.UseFont = true;
-            this.Btn_Sifre_Deyis.Appearance.Options.UseForeColor = true;
-            this.Btn_Sifre_Deyis.Appearance.Options.UseTextOptions = true;
-            this.Btn_Sifre_Deyis.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Btn_Sifre_Deyis.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.Btn_Sifre_Deyis.Location = new System.Drawing.Point(7, 79);
-            this.Btn_Sifre_Deyis.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Sifre_Deyis.Name = "Btn_Sifre_Deyis";
-            this.Btn_Sifre_Deyis.Size = new System.Drawing.Size(263, 47);
-            this.Btn_Sifre_Deyis.TabIndex = 4;
-            this.Btn_Sifre_Deyis.Text = "Şifrəni Dəyis";
             // 
             // Txt_Kullanici_Adi
             // 
@@ -169,6 +169,7 @@
             this.Txt_Sifre.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Txt_Sifre.Properties.ContextImageOptions.Image")));
             this.Txt_Sifre.Properties.NullText = "Parol Yazin";
             this.Txt_Sifre.Properties.NullValuePrompt = "Parol  Yazin";
+            this.Txt_Sifre.Properties.UseSystemPasswordChar = true;
             this.Txt_Sifre.Size = new System.Drawing.Size(271, 30);
             this.Txt_Sifre.TabIndex = 7;
             // 
