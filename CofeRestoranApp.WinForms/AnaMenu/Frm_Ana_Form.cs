@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CofeRestoranApp.WinForms.Istifadeciler;
 using CofeRestoranApp.WinForms.Masalar;
 using CofeRestoranApp.WinForms.Menular;
 using CofeRestoranApp.WinForms.Urunler;
@@ -25,6 +26,8 @@ namespace CofeRestoranApp.WinForms.AnaMenu
         public Frm_Ana_Form()
         {
             InitializeComponent();
+            Frm_Istifadeci_Giris frm = new Frm_Istifadeci_Giris();
+            frm.ShowDialog();
         }
 
         private void Frm_Ana_Form_Load(object sender, EventArgs e)
