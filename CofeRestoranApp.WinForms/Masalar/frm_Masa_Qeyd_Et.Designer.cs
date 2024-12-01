@@ -1,6 +1,6 @@
 ﻿namespace CofeRestoranApp.WinForms.Masalar
 {
-    partial class frm_Masa_Qeyd_Et
+    partial class Frm_Masa_Qeyd_Et
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Masa_Qeyd_Et));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Masa_Qeyd_Et));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btn_cisix_et = new DevExpress.XtraEditors.SimpleButton();
@@ -85,7 +85,7 @@
             this.btn_cisix_et.Size = new System.Drawing.Size(121, 73);
             this.btn_cisix_et.TabIndex = 3;
             this.btn_cisix_et.Text = "Çıxış";
-            this.btn_cisix_et.Click += new System.EventHandler(this.btn_cisix_et_Click);
+            this.btn_cisix_et.Click += new System.EventHandler(this.Btn_cisix_et_Click);
             // 
             // brn_Qeyd_Er
             // 
@@ -100,7 +100,7 @@
             this.brn_Qeyd_Er.Size = new System.Drawing.Size(121, 73);
             this.brn_Qeyd_Er.TabIndex = 0;
             this.brn_Qeyd_Er.Text = "Qeyd Et";
-            this.brn_Qeyd_Er.Click += new System.EventHandler(this.brn_Qeyd_Er_Click);
+            this.brn_Qeyd_Er.Click += new System.EventHandler(this.Brn_Qeyd_Er_Click);
             // 
             // txtR_Aciklama
             // 
@@ -177,7 +177,7 @@
             this.Name = "frm_Masa_Qeyd_Et";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Masa Qeydiyati";
-            this.Load += new System.EventHandler(this.frm_Masa_Qeyd_Et_Load);
+            this.Load += new System.EventHandler(this.Frm_Masa_Qeyd_Et_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtR_Aciklama.Properties)).EndInit();

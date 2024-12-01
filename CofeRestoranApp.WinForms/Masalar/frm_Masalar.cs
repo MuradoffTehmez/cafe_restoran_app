@@ -17,13 +17,13 @@ using System.IO;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
-    public partial class frm_Masalar : DevExpress.XtraEditors.XtraForm
+    public partial class Frm_Masalar : DevExpress.XtraEditors.XtraForm
     {
-        private CafeContext context = new CafeContext();
-        private MasalarDAL masalarDal = new MasalarDAL();
+        private readonly CafeContext context = new CafeContext();
+        private readonly MasalarDAL masalarDal = new MasalarDAL();
 
 
-        public frm_Masalar()
+        public Frm_Masalar()
         {
             InitializeComponent();
             Listele();
@@ -34,17 +34,17 @@ namespace CofeRestoranApp.WinForms.Masalar
             gridControl1.DataSource = masalarDal.MasaListele(context);
         }
 
-        private void frm_Masalar_Load(object sender, EventArgs e)
+        private void Frm_Masalar_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void brn_Elave_Et_Click(object sender, EventArgs e)
+        private void Brn_Elave_Et_Click(object sender, EventArgs e)
         {
             try
             {
                 var yeniMasa = new CafeRestoranApp.Entities.Models.Masalar();
-                frm_Masa_Qeyd_Et frm = new frm_Masa_Qeyd_Et(yeniMasa);
+                Frm_Masa_Qeyd_Et frm = new Frm_Masa_Qeyd_Et(yeniMasa);
                 frm.ShowDialog();
                 if (frm.Qeydet)
                 {
@@ -80,14 +80,14 @@ namespace CofeRestoranApp.WinForms.Masalar
             }
         }
 
-        private void btn_Duzenle_Click(object sender, EventArgs e)
+        private void Btn_Duzenle_Click(object sender, EventArgs e)
         {
             try
             {
                 if (gridView1.GetFocusedRowCellValue("Id") is int seciliId)
                 {
                     var seciliMasa = masalarDal.GetByFilter(context, m => m.Id == seciliId);
-                    frm_Masa_Qeyd_Et frm = new frm_Masa_Qeyd_Et(seciliMasa);
+                    Frm_Masa_Qeyd_Et frm = new Frm_Masa_Qeyd_Et(seciliMasa);
                     frm.ShowDialog();
                     if (frm.Qeydet)
                     {
@@ -123,12 +123,12 @@ namespace CofeRestoranApp.WinForms.Masalar
             }
         }
 
-        private void btn_Guncelle_Click(object sender, EventArgs e)
+        private void Btn_Guncelle_Click(object sender, EventArgs e)
         {
             Listele();
         }
 
-        private void btn_Sil_Click(object sender, EventArgs e)
+        private void Btn_Sil_Click(object sender, EventArgs e)
         {
             try
             {
@@ -176,7 +176,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             }
         }
 
-        private void btn_Durum_Click(object sender, EventArgs e)
+        private void Btn_Durum_Click(object sender, EventArgs e)
         {
             try
             {
@@ -223,7 +223,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             }
         }
 
-        private void btn_Rezev_Click(object sender, EventArgs e)
+        private void Btn_Rezev_Click(object sender, EventArgs e)
         {
             try
             {
@@ -270,7 +270,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             }
         }
 
-        private void btn_cisix_et_Click(object sender, EventArgs e)
+        private void Btn_cisix_et_Click(object sender, EventArgs e)
         {
             this.Hide();
         }

@@ -103,6 +103,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\EntityRepositoryBase.cs" />
     <Compile Include="Tools\ValidatorTools.cs" />
+    <Compile Include="Utilities\Logger.cs" />
     <Compile Include="Validations\IstifadeciHereketleriVALIDATOR.cs" />
     <Compile Include="Validations\IstifadecilerVALIDATOR.cs" />
     <Compile Include="Validations\MasaHaraketleriVALIDATOR.cs" />

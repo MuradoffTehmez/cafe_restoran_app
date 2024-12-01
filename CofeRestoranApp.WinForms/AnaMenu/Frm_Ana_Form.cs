@@ -46,7 +46,7 @@ namespace CofeRestoranApp.WinForms.AnaMenu
 
         private void btn_Masalar_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frm_Masalar frm = new frm_Masalar();
+            Frm_Masalar frm = new Frm_Masalar();
             FormGetir(frm);
         }
     }

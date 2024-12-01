@@ -1,6 +1,6 @@
 ﻿namespace CofeRestoranApp.WinForms.Masalar
 {
-    partial class frm_Masalar
+    partial class Frm_Masalar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Masalar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Masalar));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
@@ -99,7 +99,7 @@
             this.btn_Guncelle.Size = new System.Drawing.Size(174, 60);
             this.btn_Guncelle.TabIndex = 4;
             this.btn_Guncelle.Text = "Güncəllə";
-            this.btn_Guncelle.Click += new System.EventHandler(this.btn_Guncelle_Click);
+            this.btn_Guncelle.Click += new System.EventHandler(this.Btn_Guncelle_Click);
             // 
             // btn_cisix_et
             // 
@@ -114,7 +114,7 @@
             this.btn_cisix_et.Size = new System.Drawing.Size(125, 60);
             this.btn_cisix_et.TabIndex = 3;
             this.btn_cisix_et.Text = "Çıxış";
-            this.btn_cisix_et.Click += new System.EventHandler(this.btn_cisix_et_Click);
+            this.btn_cisix_et.Click += new System.EventHandler(this.Btn_cisix_et_Click);
             // 
             // btn_Duzenle
             // 
@@ -128,7 +128,7 @@
             this.btn_Duzenle.Size = new System.Drawing.Size(174, 60);
             this.btn_Duzenle.TabIndex = 2;
             this.btn_Duzenle.Text = "Dəyişdir";
-            this.btn_Duzenle.Click += new System.EventHandler(this.btn_Duzenle_Click);
+            this.btn_Duzenle.Click += new System.EventHandler(this.Btn_Duzenle_Click);
             // 
             // btn_Sil
             // 
@@ -143,7 +143,7 @@
             this.btn_Sil.Size = new System.Drawing.Size(125, 60);
             this.btn_Sil.TabIndex = 1;
             this.btn_Sil.Text = "Sil";
-            this.btn_Sil.Click += new System.EventHandler(this.btn_Sil_Click);
+            this.btn_Sil.Click += new System.EventHandler(this.Btn_Sil_Click);
             // 
             // brn_Elave_Et
             // 
@@ -157,7 +157,7 @@
             this.brn_Elave_Et.Size = new System.Drawing.Size(174, 60);
             this.brn_Elave_Et.TabIndex = 0;
             this.brn_Elave_Et.Text = "Əlavə et";
-            this.brn_Elave_Et.Click += new System.EventHandler(this.brn_Elave_Et_Click);
+            this.brn_Elave_Et.Click += new System.EventHandler(this.Brn_Elave_Et_Click);
             // 
             // gridControl1
             // 
@@ -280,7 +280,7 @@
             this.btn_Durum.Size = new System.Drawing.Size(125, 60);
             this.btn_Durum.TabIndex = 5;
             this.btn_Durum.Text = "Durum\r\nDəyişdir\r\n";
-            this.btn_Durum.Click += new System.EventHandler(this.btn_Durum_Click);
+            this.btn_Durum.Click += new System.EventHandler(this.Btn_Durum_Click);
             // 
             // btn_Rezev
             // 
@@ -295,7 +295,7 @@
             this.btn_Rezev.Size = new System.Drawing.Size(125, 60);
             this.btn_Rezev.TabIndex = 6;
             this.btn_Rezev.Text = "Rezervasiya\r\nEt";
-            this.btn_Rezev.Click += new System.EventHandler(this.btn_Rezev_Click);
+            this.btn_Rezev.Click += new System.EventHandler(this.Btn_Rezev_Click);
             // 
             // frm_Masalar
             // 
@@ -308,7 +308,7 @@
             this.Name = "frm_Masalar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Masalar";
-            this.Load += new System.EventHandler(this.frm_Masalar_Load);
+            this.Load += new System.EventHandler(this.Frm_Masalar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

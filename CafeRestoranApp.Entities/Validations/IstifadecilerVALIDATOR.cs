@@ -20,7 +20,7 @@ namespace CafeRestoranApp.Entities.Validations
             // Telefon
             RuleFor(x => x.Telefon)
                 .NotEmpty().WithMessage("Telefon sahəsi boş ola bilməz.")
-                .Matches(@"^\+994(50|51|55|60|70|77|99)\d{7}$").WithMessage("Telefon nömrəsi düzgün deyil. Məsələn: +994501234567");
+                .Matches(@"^\+994(50|51|55|60|70|77|99)\d{7}$").WithMessage("Telefon nömrəsi düzgün deyil. Məsələn: +994605536990");
 
             // Adress
             RuleFor(x => x.Adress)
@@ -45,7 +45,7 @@ namespace CafeRestoranApp.Entities.Validations
             // Parol
             RuleFor(x => x.Parol)
                 .NotEmpty().WithMessage("Parol sahəsi boş ola bilməz.")
-                .MinimumLength(6).WithMessage("Parol ən az 6 simvol uzunluğunda olmalıdır.");
+                .MinimumLength(8).WithMessage("Parol ən az 8 simvol uzunluğunda olmalıdır.");
 
             // HatirlamaSuali
             RuleFor(x => x.HatirlamaSuali)
