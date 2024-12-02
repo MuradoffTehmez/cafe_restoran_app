@@ -82,6 +82,7 @@
     <Compile Include="DAL\ModlarDAL.cs" />
     <Compile Include="DAL\MusterilerDAL.cs" />
     <Compile Include="DAL\OdenisTarixcesiDAL.cs" />
+    <Compile Include="DAL\SatisKoduDAL.cs" />
     <Compile Include="DAL\SatislarDAL.cs" />
     <Compile Include="DAL\UrunDAL.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Mapping\ModlarMap.cs" />
     <Compile Include="Mapping\MusterilerMap.cs" />
     <Compile Include="Mapping\OdenisTarixcesiMap.cs" />
+    <Compile Include="Mapping\SatisKoduMap.cs" />
     <Compile Include="Mapping\SatislarMap.cs" />
     <Compile Include="Mapping\UrunMap.cs" />
     <Compile Include="Migrations\202411281240076_CreateDatabase.cs" />
@@ -114,6 +116,7 @@
     <Compile Include="Models\Modlar.cs" />
     <Compile Include="Models\Musteriler.cs" />
     <Compile Include="Models\OdenisTarixcesi.cs" />
+    <Compile Include="Models\SatisKodu.cs" />
     <Compile Include="Models\Satislar.cs" />
     <Compile Include="Models\Urun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,6 +131,7 @@
     <Compile Include="Validations\ModlarVALIDATOR.cs" />
     <Compile Include="Validations\MusterilerVALIDATOR.cs" />
     <Compile Include="Validations\OdenisTarixcesiVALIDATOR.cs" />
+    <Compile Include="Validations\SatisKoduVALIDATOR.cs" />
     <Compile Include="Validations\SatislarVALIDATOR.cs" />
     <Compile Include="Validations\UrunVALIDATOR.cs" />
   </ItemGroup>

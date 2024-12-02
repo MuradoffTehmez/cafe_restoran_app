@@ -5,10 +5,10 @@ namespace CafeRestoranApp.Entities.Models
 {
     public class CafeContext : DbContext
     {
-        // Connection string - sistemin ürək döyüntüsü
+        
         public CafeContext() : base("name =connection")
         {
-
+            // Connection string - sistemin ürək döyüntüsü
         }
 
         public DbSet<Menu> Menu { get; set; }
@@ -29,6 +29,12 @@ namespace CafeRestoranApp.Entities.Models
 
         public DbSet<OdenisTarixcesi> OdenisTarixcesi { get; set; }
 
+        public DbSet<SatisKodu> SatisKodu { get; set; }
+
+        public DbSet<Musteriler> Musteriler { get; set; }
+
+
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -41,6 +47,8 @@ namespace CafeRestoranApp.Entities.Models
             modelBuilder.Configurations.Add(new OdenisTarixcesiMap());
             modelBuilder.Configurations.Add(new SatislarMap());
             modelBuilder.Configurations.Add(new UrunMap());
+            modelBuilder.Configurations.Add(new SatisKoduMap());
+            modelBuilder.Configurations.Add(new MusterilerMap());
             //base.OnModelCreating(modelBuilder);
         }
 
