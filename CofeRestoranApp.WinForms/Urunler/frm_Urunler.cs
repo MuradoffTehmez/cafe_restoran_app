@@ -1,9 +1,18 @@
-﻿using CafeRestoranApp.Entities.DAL;
-using CafeRestoranApp.Entities.Models;
-using CafeRestoranApp.Entities.Utilities;
+﻿using DevExpress.XtraEditors;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using CafeRestoranApp.Entities.DAL;
+using CafeRestoranApp.Entities.Models;
+using DevExpress.Office.Utils;
+using System.IO;
+using CafeRestoranApp.Entities.Utilities;
 
 namespace CofeRestoranApp.WinForms.Urunler
 {
@@ -12,7 +21,7 @@ namespace CofeRestoranApp.WinForms.Urunler
         private CafeContext context = new CafeContext();
         private UrunDAL urunDal = new UrunDAL();
         private BindingSource bindingSource1 = new BindingSource();
-
+        
         public frm_Urunler()
         {
             InitializeComponent();
@@ -24,14 +33,14 @@ namespace CofeRestoranApp.WinForms.Urunler
             {
                 var urunListesi = urunDal.UrunListele(context);
 
-                if (urunListesi != null && urunListesi.Any())
+                if (urunListesi != null && urunListesi.Any()) 
                 {
-                    bindingSource1.DataSource = urunListesi;
-                    gridControl1.DataSource = bindingSource1;
+                    bindingSource1.DataSource = urunListesi;  
+                    gridControl1.DataSource = bindingSource1; 
                 }
                 else
                 {
-                    MessageBox.Show("Bazada məlumat tapılmadı.");
+                    MessageBox.Show("Bazada məlumat tapılmadı.");  
                 }
             }
             catch (Exception ex)
@@ -48,10 +57,10 @@ namespace CofeRestoranApp.WinForms.Urunler
                 frm_Urun_Qeydiyat frm = new frm_Urun_Qeydiyat(new Urun());
                 frm.ShowDialog();
 
-                if (frm.Qeydet)
+                if (frm.Qeydet) 
                 {
                     Listele();
-
+                    
                 }
             }
             catch (Exception ex)
@@ -68,12 +77,12 @@ namespace CofeRestoranApp.WinForms.Urunler
             {
                 int seciliid = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
 
-                if (seciliid > 1)
+                if (seciliid > 1) 
                 {
                     frm_Urun_Qeydiyat frm = new frm_Urun_Qeydiyat(urunDal.GetByFilter(context, u => u.Id == seciliid));
                     frm.ShowDialog();
 
-                    if (frm.Qeydet)
+                    if (frm.Qeydet)  
                     {
                         Listele();
                         this.Hide();
@@ -140,7 +149,7 @@ namespace CofeRestoranApp.WinForms.Urunler
 
         private void frm_Urunler_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

@@ -1,9 +1,18 @@
-﻿using CafeRestoranApp.Entities.Models;
-using CafeRestoranApp.Entities.Utilities;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Data.Entity;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using CafeRestoranApp.Entities.Models;
+using System.Runtime.Remoting.Contexts;
+using System.IO;
+using CafeRestoranApp.Entities.Utilities;
 
 namespace CofeRestoranApp.WinForms.Menular
 {

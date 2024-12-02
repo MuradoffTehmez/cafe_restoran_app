@@ -1,15 +1,23 @@
-﻿using CafeRestoranApp.Entities.Models;
-using CafeRestoranApp.Entities.Utilities;
+﻿using DevExpress.XtraEditors;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using CafeRestoranApp.Entities.Models;
+using CafeRestoranApp.Entities.Utilities;
+using BCrypt.Net;
 
 namespace CofeRestoranApp.WinForms.Istifadeciler
 {
     public partial class Frm_Istifadeci_Giris : DevExpress.XtraEditors.XtraForm
     {
-        private CafeContext context = new CafeContext();
-        private CafeContext _context;
+        private  CafeContext context = new CafeContext();
+        private  CafeContext _context;
         private bool _girisUgurlu;
 
         //private bool giris;
@@ -161,7 +169,7 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
             }
             catch (Exception ex)
             {
-
+                
                 MessageBox.Show(
                     $"Bir xəta baş verdi:\n{ex.Message}",
                     "Xəta",

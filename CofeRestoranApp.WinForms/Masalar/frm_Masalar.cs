@@ -1,8 +1,20 @@
-﻿using CafeRestoranApp.Entities.DAL;
-using CafeRestoranApp.Entities.Models;
-using CafeRestoranApp.Entities.Utilities;
+﻿using DevExpress.XtraEditors;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using CafeRestoranApp;
+using CafeRestoranApp.Entities;
+using CafeRestoranApp.Entities.DAL;
+using CafeRestoranApp.Entities.Models;
+using CafeRestoranApp.Entities.Mapping;
+using System.IO;
+using CafeRestoranApp.Entities.Utilities;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {

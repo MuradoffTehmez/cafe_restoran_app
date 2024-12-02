@@ -1,6 +1,9 @@
 ﻿namespace CafeRestoranApp.Entities.Migrations
 {
+    using System;
+    using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.Linq;
 
     public sealed class Configuration : DbMigrationsConfiguration<CafeRestoranApp.Entities.Models.CafeContext>
     {

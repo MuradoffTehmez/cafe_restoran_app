@@ -1,8 +1,20 @@
-﻿using CafeRestoranApp.Entities.DAL;
-using CafeRestoranApp.Entities.Models;
-using CafeRestoranApp.Entities.Utilities;
+﻿using DevExpress.XtraEditors;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using CafeRestoranApp.Entities.DAL;
+using CafeRestoranApp.Entities.Models;
+using DurableTask.Core.Common;
+using CafeRestoranApp;
+using System.IO;
+using CafeRestoranApp.Entities.Utilities;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -13,7 +25,7 @@ namespace CofeRestoranApp.WinForms.Masalar
         private readonly CafeRestoranApp.Entities.Models.Masalar _entity;
         public bool Qeydet { get; private set; }
 
-        public Frm_Masa_Qeyd_Et(CafeRestoranApp.Entities.Models.Masalar entity)
+        public Frm_Masa_Qeyd_Et(CafeRestoranApp.Entities.Models.Masalar entity) 
         {
             InitializeComponent();
             _entity = entity;
@@ -26,7 +38,7 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         }
 
-        private void Btn_cisix_et_Click(object sender, EventArgs e)
+       private void Btn_cisix_et_Click(object sender, EventArgs e)
         {
             Qeydet = false;
             this.Close();

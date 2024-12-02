@@ -1,10 +1,18 @@
-﻿using CofeRestoranApp.WinForms.Istifadeciler;
+﻿using DevExpress.XtraBars;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using CofeRestoranApp.WinForms.Istifadeciler;
 using CofeRestoranApp.WinForms.Masalar;
 using CofeRestoranApp.WinForms.Menular;
 using CofeRestoranApp.WinForms.Urunler;
-using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
-using System;
 
 namespace CofeRestoranApp.WinForms.AnaMenu
 {
@@ -30,7 +38,7 @@ namespace CofeRestoranApp.WinForms.AnaMenu
         private void btn_Meynular_ItemClick(object sender, ItemClickEventArgs e)
         {
             Frm_Menu frm = new Frm_Menu();
-
+            
             frm.ShowDialog();
         }
 

@@ -1,12 +1,18 @@
 ﻿using CafeRestoranApp.Entities.Interfaces;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Core.Mapping;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.Models
 {
     //[Table("Satislar")]
     public class Satislar : IEntity
     {
-
+      
         public int Id { get; set; }
 
         public string SatisKodu { get; set; }
@@ -21,6 +27,6 @@ namespace CafeRestoranApp.Entities.Models
 
         public DateTime SonIslemTarixi { get; set; }
 
-
+        
     }
 }
