@@ -3,6 +3,7 @@ using CafeRestoranApp.Entities.Utilities;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using CafeRestoranApp.Entities.DAL;
 
 namespace CofeRestoranApp.WinForms.Istifadeciler
 {
@@ -11,6 +12,8 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
         private CafeContext context = new CafeContext();
         private CafeContext _context;
         private bool _girisUgurlu;
+        private IstifadeciHereketleriDAL istifadeciHereketleriDal = new IstifadeciHereketleriDAL();
+        private IstifadeciHereketleri entity = new IstifadeciHereketleri();
 
         public Frm_Istifadeci_Giris()
         {
@@ -90,10 +93,13 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
                 var istifadeci = _context.Istifadeciler
                     .FirstOrDefault(i => i.IstifadeciAdi == Txt_Kullanici_Adi.Text);
 
-                if (istifadeci != null && istifadeci.Parol == Txt_Sifre.Text) // Şifrələməni ləğv et, sadə müqayisə et
+                if (istifadeci != null && istifadeci.Parol == Txt_Sifre.Text)
                 {
                     _girisUgurlu = true;
                     IstifadeciniMelumatlariniQeydEt();
+                    entity.IstifadeciID = istifadeci.Id;
+                    string Aciklama = istifadeci.IstifadeciAdi + "  Adlı İstifacədi Sistemə Giriş Etdi";
+                    istifadeciHereketleriDal.IstifadeciHereketleriElaveEt(context,entity,Aciklama);
                     this.Hide();
                 }
                 else

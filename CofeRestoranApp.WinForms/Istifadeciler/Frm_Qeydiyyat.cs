@@ -2,6 +2,7 @@
 using CafeRestoranApp.Entities.Models;
 using CafeRestoranApp.Entities.Utilities;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace CofeRestoranApp.WinForms.Istifadeciler
@@ -11,11 +12,13 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
         private CafeContext context = new CafeContext();
         private IstifadecilerDAL istifadecilerDal = new IstifadecilerDAL();
         private CafeRestoranApp.Entities.Models.Istifadeciler _entity;
+        private IstifadeciHereketleri isHereketleri = new IstifadeciHereketleri();
+        private IstifadeciHereketleriDAL isHereketleriDal = new IstifadeciHereketleriDAL();
 
         public Frm_Qeydiyyat(CafeRestoranApp.Entities.Models.Istifadeciler entity)
         {
             InitializeComponent();
-            _entity = entity;
+            _entity = entity ?? new CafeRestoranApp.Entities.Models.Istifadeciler(); // Null yoxlama əlavə edildi
             toggleAktiv.DataBindings.Add("EditValue", _entity, "IsDurumu");
             Txt_Ad_Soyad.DataBindings.Add("Text", _entity, "AdSoyad");
             Txt_Telefon.DataBindings.Add("Text", _entity, "Telefon");
@@ -33,15 +36,25 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
         {
             try
             {
-                // Şifrə müqayisəsi
+                // Şifrə və şifrə təkrarı uyğundurmu yoxlanır
                 if (Txt_Parol.Text == Txt_Parol_Tekrar.Text)
                 {
+                    // Əgər _entity null-dursa, yeni obyekt təyin olunur
+                    if (_entity == null)
+                    {
+                        MessageBox.Show("İstifadəçi məlumatı düzgün alınmadı.", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     _entity.KaytTarixi = DateTime.Now;
 
-                    // İstifadəçi əlavə və ya yeniləmə əməliyyatı
                     if (istifadecilerDal.AddOrUpdate(context, _entity))
                     {
                         istifadecilerDal.Save(context);
+                        var model = context.Istifadeciler.Max(i => i.Id);
+                        isHereketleri.IstifadeciID = model;
+                        string aciklama = "Yeni Istifadeci Elave olundu";
+                        isHereketleriDal.IstifadeciHereketleriElaveEt(context, isHereketleri, aciklama);
                         this.Close();
                     }
                     else

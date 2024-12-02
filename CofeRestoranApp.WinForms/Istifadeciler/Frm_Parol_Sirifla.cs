@@ -1,4 +1,5 @@
 ﻿using CafeRestoranApp.Entities.DAL;
+using CafeRestoranApp.Entities.Mapping;
 using CafeRestoranApp.Entities.Models;
 using System;
 using System.Linq;
@@ -8,21 +9,23 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
 {
     public partial class Frm_Parol_Sirifla : DevExpress.XtraEditors.XtraForm
     {
-        private CafeContext context = new CafeContext();
-        private IstifadecilerDAL istifadecilerDal = new IstifadecilerDAL();
         private CafeContext _context;
         private IstifadecilerDAL _istifadecilerDal;
+        private IstifadeciHereketleriDAL _istifadeciHereketleriDal;
+        private IstifadeciHereketleri _entity;
 
         public Frm_Parol_Sirifla()
         {
             InitializeComponent();
             _context = new CafeContext();
             _istifadecilerDal = new IstifadecilerDAL();
+            _istifadeciHereketleriDal = new IstifadeciHereketleriDAL();
+            _entity = new IstifadeciHereketleri();
         }
 
         private void Frm_Parol_Sirifla_Load(object sender, EventArgs e)
         {
-            // Form yükləndikdə əlavə əməliyyatlar edilə bilər
+            // Form yükləndikdə ediləcək əməliyyatları buraya əlavə edin
         }
 
         private void Btn_Qeyd_Et_Click(object sender, EventArgs e)
@@ -31,6 +34,7 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
 
             try
             {
+                // İstifadəçi adı və ya e-poçtla istifadəçi tapılmağa çalışılır
                 var istifadeci = _istifadecilerDal.GetByFilter(_context,
                     user => user.IstifadeciAdi == Txt_Istifadeci_Adi.Text ||
                             user.Email == Txt_Istifadeci_Adi.Text);
@@ -41,12 +45,14 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
                     return;
                 }
 
+                // Təhlükəsizlik sualı yoxlanır
                 if (!TehlukesulikSualiniYoxla(istifadeci))
                 {
                     SehvGoster("Sual və ya cavab düzgün deyil");
                     return;
                 }
 
+                // Şifrə yenilənir
                 SifreniYenile(istifadeci);
             }
             catch (Exception ex)
@@ -117,12 +123,19 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
 
         private void SifreniYenile(CafeRestoranApp.Entities.Models.Istifadeciler istifadeci)
         {
-            // Şifrə artıq hash-lanmayacaq, olduğu kimi saxlanacaq
+            // Şifrə yenilənir
             istifadeci.Parol = Txt_Parol.Text;
 
+            // İstifadəçi məlumatı əlavə və ya yenilənir
             if (_istifadecilerDal.AddOrUpdate(_context, istifadeci))
             {
                 _istifadecilerDal.Save(_context);
+
+                // İstifadəçi hərəkətləri qeyd edilir
+                _entity.IstifadeciID = istifadeci.Id;
+                string Aciklama = istifadeci.IstifadeciAdi + " adlı istifadəçinin parolu yeniləndi";
+                _istifadeciHereketleriDal.IstifadeciHereketleriElaveEt(_context, _entity, Aciklama);
+
                 MessageBox.Show("Şifrə uğurla dəyişdirildi", "Uğurlu", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

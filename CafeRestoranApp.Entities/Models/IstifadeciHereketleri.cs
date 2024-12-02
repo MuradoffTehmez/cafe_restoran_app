@@ -3,7 +3,6 @@ using System;
 
 namespace CafeRestoranApp.Entities.Models
 {
-    //[Table("IstifadeciHereketleri")]
     public class IstifadeciHereketleri : IEntity
     {
         public int Id { get; set; }

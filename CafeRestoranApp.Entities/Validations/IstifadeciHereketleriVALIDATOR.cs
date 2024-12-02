@@ -23,9 +23,9 @@ namespace CafeRestoranApp.Entities.Validations
                 .NotEmpty().WithMessage("Tarix sahəsi boş ola bilməz.")
                 .LessThanOrEqualTo(DateTime.Now).WithMessage("Tarix indiki tarixdən böyük ola bilməz.");
 
-            // Istifadeciler
-            RuleFor(x => x.Istifadeciler)
-                .NotNull().WithMessage("İstifadəçi məlumatı boş ola bilməz.");
+            //// Istifadeciler
+            //RuleFor(x => x.Istifadeciler)
+            //    .NotNull().WithMessage("İstifadəçi məlumatı boş ola bilməz.");
         }
 
     }
