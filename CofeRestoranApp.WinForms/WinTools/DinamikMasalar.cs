@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace CofeRestoranApp.WinForms.WinTools
 {
-    internal class DinamikMasalar
+    public class DinamikMasalar
     {
+        public void MasaGetir()
+        {
 
+        }
     }
 }
