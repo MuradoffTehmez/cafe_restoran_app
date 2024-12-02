@@ -1,10 +1,6 @@
 ﻿using CafeRestoranApp.Entities.Models;
 using FluentValidation;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.Validations
 {
@@ -14,7 +10,7 @@ namespace CafeRestoranApp.Entities.Validations
         {
             // Id
             //RuleFor(x => x.Id)
-           //.GreaterThanOrEqualTo(0).WithMessage("ID sıfırdan kiçik ola bilməz.");
+            //.GreaterThanOrEqualTo(0).WithMessage("ID sıfırdan kiçik ola bilməz.");
 
             // SatisKodu
             RuleFor(x => x.SatisKodu)

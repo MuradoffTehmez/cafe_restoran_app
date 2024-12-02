@@ -1,11 +1,11 @@
 ﻿using CafeRestoranApp.Entities.Interfaces;
+using CafeRestoranApp.Entities.Tools;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using FluentValidation;
-using CafeRestoranApp.Entities.Tools;
 
 namespace CafeRestoranApp.Entities.Repository
 {

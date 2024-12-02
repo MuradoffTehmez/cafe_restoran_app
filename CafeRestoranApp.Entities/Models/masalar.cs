@@ -1,10 +1,6 @@
 ﻿using CafeRestoranApp.Entities.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.Models
 {
@@ -16,9 +12,9 @@ namespace CafeRestoranApp.Entities.Models
 
         public string Aciklama { get; set; }
 
-        public bool Durumu {  get; set; }   
+        public bool Durumu { get; set; }
 
-        public bool Rezervasiya {  get; set; }
+        public bool Rezervasiya { get; set; }
 
         public DateTime ElaveOlmaTarixi { get; set; }
 

@@ -1,19 +1,14 @@
 ﻿using CafeRestoranApp.Entities.Mapping;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.Models
 {
-    public class CafeContext:DbContext
+    public class CafeContext : DbContext
     {
         // Connection string - sistemin ürək döyüntüsü
-        public CafeContext(): base("name =connection")
+        public CafeContext() : base("name =connection")
         {
-            
+
         }
 
         public DbSet<Menu> Menu { get; set; }
