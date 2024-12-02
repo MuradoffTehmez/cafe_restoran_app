@@ -80,6 +80,7 @@
     <Compile Include="DAL\MasalarDAL.cs" />
     <Compile Include="DAL\MenuDAL.cs" />
     <Compile Include="DAL\ModlarDAL.cs" />
+    <Compile Include="DAL\MusterilerDAL.cs" />
     <Compile Include="DAL\OdenisTarixcesiDAL.cs" />
     <Compile Include="DAL\SatislarDAL.cs" />
     <Compile Include="DAL\UrunDAL.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Mapping\MasalarMap.cs" />
     <Compile Include="Mapping\MenuMap.cs" />
     <Compile Include="Mapping\ModlarMap.cs" />
+    <Compile Include="Mapping\MusterilerMap.cs" />
     <Compile Include="Mapping\OdenisTarixcesiMap.cs" />
     <Compile Include="Mapping\SatislarMap.cs" />
     <Compile Include="Mapping\UrunMap.cs" />
@@ -110,6 +112,7 @@
     <Compile Include="Models\Masalar.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\Modlar.cs" />
+    <Compile Include="Models\Musteriler.cs" />
     <Compile Include="Models\OdenisTarixcesi.cs" />
     <Compile Include="Models\Satislar.cs" />
     <Compile Include="Models\Urun.cs" />
@@ -123,6 +126,7 @@
     <Compile Include="Validations\MasalarVALIDATOR.cs" />
     <Compile Include="Validations\MenuVALIDATOR.cs" />
     <Compile Include="Validations\ModlarVALIDATOR.cs" />
+    <Compile Include="Validations\MusterilerVALIDATOR.cs" />
     <Compile Include="Validations\OdenisTarixcesiVALIDATOR.cs" />
     <Compile Include="Validations\SatislarVALIDATOR.cs" />
     <Compile Include="Validations\UrunVALIDATOR.cs" />
