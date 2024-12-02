@@ -21,8 +21,16 @@ namespace CofeRestoranApp.WinForms.WinTools
                 btn.Text = model[i].Id.ToString();
                 btn.Height = 100;
                 btn.Width = 80;
+                pnl.Controls.Add(btn);
+                btn.Click += Btn_Click;
 
             }
+        }
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            var btn = sender as CheckButton;
+            MessageBox.Show(btn.Text);
         }
     }
 }
