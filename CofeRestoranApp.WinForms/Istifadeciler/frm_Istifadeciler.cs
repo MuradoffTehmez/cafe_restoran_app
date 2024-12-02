@@ -1,9 +1,9 @@
-﻿using CafeRestoranApp.Entities.Models;
+﻿using CafeRestoranApp.Entities.DAL;
+using CafeRestoranApp.Entities.Models;
 using CafeRestoranApp.Entities.Utilities;
 using System;
 using System.Linq;
 using System.Windows.Forms;
-using CafeRestoranApp.Entities.DAL;
 
 namespace CofeRestoranApp.WinForms.Istifadeciler
 {
@@ -99,7 +99,7 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
                     IstifadeciniMelumatlariniQeydEt();
                     entity.IstifadeciID = istifadeci.Id;
                     string Aciklama = istifadeci.IstifadeciAdi + "  Adlı İstifacədi Sistemə Giriş Etdi";
-                    istifadeciHereketleriDal.IstifadeciHereketleriElaveEt(context,entity,Aciklama);
+                    istifadeciHereketleriDal.IstifadeciHereketleriElaveEt(context, entity, Aciklama);
                     this.Hide();
                 }
                 else

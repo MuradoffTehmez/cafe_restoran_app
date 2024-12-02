@@ -3,7 +3,7 @@ using System;
 
 namespace CafeRestoranApp.Entities.Models
 {
-    
+
     public class MasaHaraketleri : IEntity
     {
         public int Id { get; set; }
@@ -28,7 +28,7 @@ namespace CafeRestoranApp.Entities.Models
 
         public virtual Masalar Masalar { get; set; }
 
-        public virtual Urun Urun { get; set; } 
+        public virtual Urun Urun { get; set; }
 
     }
 }

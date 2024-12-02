@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CafeRestoranApp.Entities.Models;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.Core.Metadata.Edm;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CafeRestoranApp.Entities.Interfaces;
-using CafeRestoranApp.Entities.Models;
 
 namespace CafeRestoranApp.Entities.Mapping
 {

@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CafeRestoranApp.Entities.Models;
+﻿using CafeRestoranApp.Entities.Models;
 using FluentValidation;
 
 namespace CafeRestoranApp.Entities.Validations
 {
     public class MusterilerVALIDATOR : AbstractValidator<Musteriler>
     {
-        
+
         public MusterilerVALIDATOR()
         {
             RuleFor(x => x.AdSoyad)

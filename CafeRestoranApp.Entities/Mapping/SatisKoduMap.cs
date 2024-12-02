@@ -7,11 +7,11 @@ namespace CafeRestoranApp.Entities.Mapping
     {
         public SatisKoduMap()
         {
-           this.ToTable("SatisKodu");
-           this.HasKey(s => s.Id);
-           //this.Property(s => s.Id).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity).IsRequired();
-           this.Property(s => s.SatisTanimi).HasColumnType("Varchar").HasMaxLength(20).IsOptional();
-           //this.Property(s => s.Sayi).IsRequired();
+            this.ToTable("SatisKodu");
+            this.HasKey(s => s.Id);
+            //this.Property(s => s.Id).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity).IsRequired();
+            this.Property(s => s.SatisTanimi).HasColumnType("Varchar").HasMaxLength(20).IsOptional();
+            //this.Property(s => s.Sayi).IsRequired();
         }
     }
 }
