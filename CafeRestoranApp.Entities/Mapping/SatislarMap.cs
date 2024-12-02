@@ -9,20 +9,11 @@ namespace CafeRestoranApp.Entities.Mapping
         public SatislarMap()
         {
             this.ToTable("Satislar");
-
             this.HasKey(p => p.Id);
-
-            this.Property(p => p.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-
-            this.Property(p => p.SatisKodu)
-                .HasColumnType("varchar")
-                .HasMaxLength(30);
-
-            this.Property(p => p.Aciklama)
-                .HasColumnType("varchar")
-                .HasMaxLength(300);
-
+            this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            this.Property(p => p.SatisKodu).HasColumnType("varchar").HasMaxLength(30);
+            this.Property(p => p.Aciklama).HasColumnType("varchar").HasMaxLength(300);
+            this.HasOptional(s => s.Musteriler).WithMany(s => s.Satislar).HasForeignKey(s => s.MusteriId);
         }
     }
 }

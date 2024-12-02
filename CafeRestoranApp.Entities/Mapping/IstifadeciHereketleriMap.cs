@@ -18,9 +18,7 @@ namespace CafeRestoranApp.Entities.Mapping
             this.Property(p => p.Aciklama)
                 .HasColumnType("varchar")
                 .HasMaxLength(300);
-
-
-
+            
             this.HasRequired(x => x.Istifadeciler)
                 .WithMany(x => x.IstifadeciHereketleri)
                 .HasForeignKey(x => x.IstifadeciID);
