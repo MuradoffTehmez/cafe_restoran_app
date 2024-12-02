@@ -358,7 +358,9 @@
     <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.Masalar.datasource" />
     <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.Menu.datasource" />
     <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.Modlar.datasource" />
+    <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.Musteriler.datasource" />
     <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.OdenisTarixcesi.datasource" />
+    <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.SatisKodu.datasource" />
     <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.Satislar.datasource" />
     <None Include="Properties\DataSources\CafeRestoranApp.Entities.Models.Urun.datasource" />
     <None Include="Properties\Settings.settings">
