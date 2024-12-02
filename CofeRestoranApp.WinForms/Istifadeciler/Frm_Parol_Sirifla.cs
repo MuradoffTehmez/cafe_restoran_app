@@ -2,8 +2,6 @@
 using CafeRestoranApp.Entities.Models;
 using System;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 using System.Windows.Forms;
 
 namespace CofeRestoranApp.WinForms.Istifadeciler
@@ -24,19 +22,15 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
 
         private void Frm_Parol_Sirifla_Load(object sender, EventArgs e)
         {
-
+            // Form yükləndikdə əlavə əməliyyatlar edilə bilər
         }
 
         private void Btn_Qeyd_Et_Click(object sender, EventArgs e)
         {
-            if (!GirisSaheleriniYoxla())
-            {
-                return;
-            }
+            if (!GirisSaheleriniYoxla()) return;
 
             try
             {
-
                 var istifadeci = _istifadecilerDal.GetByFilter(_context,
                     user => user.IstifadeciAdi == Txt_Istifadeci_Adi.Text ||
                             user.Email == Txt_Istifadeci_Adi.Text);
@@ -63,7 +57,6 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
 
         private bool GirisSaheleriniYoxla()
         {
-
             if (string.IsNullOrWhiteSpace(Txt_Istifadeci_Adi.Text))
             {
                 SehvGoster("İstifadəçi adı boş ola bilməz");
@@ -82,12 +75,7 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
                 return false;
             }
 
-            if (!SifreniYoxla())
-            {
-                return false;
-            }
-
-            return true;
+            return SifreniYoxla();
         }
 
         private bool SifreniYoxla()
@@ -113,6 +101,13 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
             return true;
         }
 
+        private bool SifreGuclumu(string sifre)
+        {
+            return sifre.Length >= 8 &&
+                   sifre.Any(char.IsUpper) &&
+                   sifre.Any(char.IsLower) &&
+                   sifre.Any(char.IsDigit);
+        }
 
         private bool TehlukesulikSualiniYoxla(CafeRestoranApp.Entities.Models.Istifadeciler istifadeci)
         {
@@ -120,11 +115,10 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
                    istifadeci.Cavab == Txt_Cavab.Text;
         }
 
-
         private void SifreniYenile(CafeRestoranApp.Entities.Models.Istifadeciler istifadeci)
         {
-
-            istifadeci.Parol = SifreniHash(Txt_Parol.Text);
+            // Şifrə artıq hash-lanmayacaq, olduğu kimi saxlanacaq
+            istifadeci.Parol = Txt_Parol.Text;
 
             if (_istifadecilerDal.AddOrUpdate(_context, istifadeci))
             {
@@ -136,24 +130,6 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
             {
                 SehvGoster("Şifrə dəyişdirilərkən xəta baş verdi");
             }
-        }
-
-
-        private string SifreniHash(string sifre)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(sifre));
-                return Convert.ToBase64String(hashedBytes);
-            }
-        }
-
-        private bool SifreGuclumu(string sifre)
-        {
-            return sifre.Length >= 8 &&
-           sifre.Any(char.IsUpper) &&
-           sifre.Any(char.IsLower) &&
-           sifre.Any(char.IsDigit);
         }
 
         private void SehvGoster(string mesaj)

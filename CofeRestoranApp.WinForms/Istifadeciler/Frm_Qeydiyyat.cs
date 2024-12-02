@@ -11,7 +11,6 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
         private CafeContext context = new CafeContext();
         private IstifadecilerDAL istifadecilerDal = new IstifadecilerDAL();
         private CafeRestoranApp.Entities.Models.Istifadeciler _entity;
-        //public bool kaydet = false;
 
         public Frm_Qeydiyyat(CafeRestoranApp.Entities.Models.Istifadeciler entity)
         {
@@ -28,25 +27,31 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
             Txt_Sual.DataBindings.Add("Text", _entity, "HatirlamaSuali");
             Txt_Cavab.DataBindings.Add("Text", _entity, "Cavab");
             TxtB_Melumat.DataBindings.Add("Text", _entity, "Aciklama");
-
         }
+
         private void Btn_Qeydiyyat_Click(object sender, EventArgs e)
         {
             try
             {
+                // Şifrə müqayisəsi
                 if (Txt_Parol.Text == Txt_Parol_Tekrar.Text)
                 {
                     _entity.KaytTarixi = DateTime.Now;
+
+                    // İstifadəçi əlavə və ya yeniləmə əməliyyatı
                     if (istifadecilerDal.AddOrUpdate(context, _entity))
                     {
                         istifadecilerDal.Save(context);
-                        //kaydet = true;
                         this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Qeydiyyat zamanı xəta baş verdi.", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("İstifadəçi adı və ya şifrə yanlışdır.", "Giriş xətası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Şifrə və ya şifrə təkrarı uyğun deyil.", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

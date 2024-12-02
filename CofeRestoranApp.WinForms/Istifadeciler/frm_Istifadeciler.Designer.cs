@@ -242,7 +242,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Istifadeci_Giris_FormClosing);
-            this.Load += new System.EventHandler(this.frm_Istifadeciler_Load);
+        //    this.Load += new System.EventHandler(this.Frm_Istifadeci_Giris_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

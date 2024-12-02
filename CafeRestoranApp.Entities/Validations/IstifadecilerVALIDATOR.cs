@@ -64,9 +64,9 @@ namespace CafeRestoranApp.Entities.Validations
             RuleFor(x => x.KaytTarixi)
                 .NotEmpty().WithMessage("Qeydiyyat tarixi boş ola bilməz.");
 
-            // FailedLoginAttempts
-            RuleFor(x => x.FailedLoginAttempts)
-                .GreaterThanOrEqualTo(0).WithMessage("FailedLoginAttempts dəyəri sıfırdan kiçik ola bilməz.");
+            //// FailedLoginAttempts
+            //RuleFor(x => x.FailedLoginAttempts)
+            //    .GreaterThanOrEqualTo(0).WithMessage("FailedLoginAttempts dəyəri sıfırdan kiçik ola bilməz.");
 
         }
 
