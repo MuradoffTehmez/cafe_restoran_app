@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeRestoranApp.Entities.Models;
+using DevExpress.XtraBars.Customization.Helpers;
 
 namespace CofeRestoranApp.WinForms.WinTools
 {
@@ -12,7 +13,12 @@ namespace CofeRestoranApp.WinForms.WinTools
     {
         public void MasaGetir(CafeContext context,FlowLayoutPanel pnl)
         {
-
+            var model = context.Masalar.ToList();
+            for (int i = 0; i < model.Count; i++)
+            {
+                var btn = new CheckButton();
+                btn.Text = model[i].MasaAdi;
+            }
         }
     }
 }
