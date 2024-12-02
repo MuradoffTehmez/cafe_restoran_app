@@ -10,6 +10,7 @@ namespace CafeRestoranApp.Entities.Validations
 {
     public class MusterilerVALIDATOR : AbstractValidator<Musteriler>
     {
+        
         public MusterilerVALIDATOR()
         {
             RuleFor(x => x.AdSoyad)
