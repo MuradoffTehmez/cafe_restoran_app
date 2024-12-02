@@ -262,6 +262,12 @@
     <Compile Include="Masalar\frm_Masalar.Designer.cs">
       <DependentUpon>frm_Masalar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Masalar\Frm_Masa_Durumu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masalar\Frm_Masa_Durumu.Designer.cs">
+      <DependentUpon>Frm_Masa_Durumu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Masalar\frm_Masa_Qeyd_Et.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Masalar\frm_Masalar.resx">
       <DependentUpon>frm_Masalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masalar\Frm_Masa_Durumu.resx">
+      <DependentUpon>Frm_Masa_Durumu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Masalar\frm_Masa_Qeyd_Et.resx">
       <DependentUpon>frm_Masa_Qeyd_Et.cs</DependentUpon>
