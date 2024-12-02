@@ -1,10 +1,6 @@
 ﻿using CafeRestoranApp.Entities.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.Models
 {
@@ -39,6 +35,6 @@ namespace CafeRestoranApp.Entities.Models
         public int FailedLoginAttempts { get; set; }
 
         public ICollection<IstifadeciHereketleri> IstifadeciHereketleri { get; set; }
-       
+
     }
 }

@@ -1,10 +1,10 @@
 ﻿using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
+using CafeRestoranApp.Entities.Utilities;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using CafeRestoranApp.Entities.Utilities;
 
 namespace CofeRestoranApp.WinForms.Urunler
 {
@@ -61,10 +61,10 @@ namespace CofeRestoranApp.WinForms.Urunler
             Cal_Qiymet_3.DataBindings.Add("Text", _entity, "Qiymet3", true);
             txtR_Aciklama.DataBindings.Add("Text", _entity, "Aciklama");
 
-            Date_Edit_Tarix.Properties.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss"; 
+            Date_Edit_Tarix.Properties.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
             Date_Edit_Tarix.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
 
-           
+
             Date_Edit_Tarix.DataBindings.Add("EditValue", _entity, "Tarix", true, DataSourceUpdateMode.OnPropertyChanged);
         }
 
@@ -155,7 +155,7 @@ namespace CofeRestoranApp.WinForms.Urunler
             }
         }
         private bool IsValid()
-        { 
+        {
             bool isValid =
 
                 !string.IsNullOrWhiteSpace(txt_Urun_Adi.Text) &&
