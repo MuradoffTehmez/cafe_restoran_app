@@ -22,10 +22,14 @@ namespace CafeRestoranApp.Entities.Models
 
         public string Islem { get; set; }
 
+        public string SatisKodu { get; set; }
+
         public int? KullaniciId { get; set; }
 
 
-        public ICollection<MasaHaraketleri> MasaHaraketleri { get; set; }
+        public virtual ICollection<MasaHaraketleri> MasaHaraketleri { get; set; }
+
+        public virtual Istifadeciler İsIstifadeciler { get; set; }
 
 
     }

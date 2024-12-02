@@ -3,7 +3,7 @@ using System;
 
 namespace CafeRestoranApp.Entities.Models
 {
-    //[Table("MasaHaraketleri")]
+    
     public class MasaHaraketleri : IEntity
     {
         public int Id { get; set; }
@@ -12,7 +12,7 @@ namespace CafeRestoranApp.Entities.Models
 
         public int MasaId { get; set; }
 
-        public int MenuId { get; set; }
+        //public int MenuId { get; set; }
 
         public int UrunId { get; set; }
 
@@ -20,12 +20,15 @@ namespace CafeRestoranApp.Entities.Models
 
         public decimal Qiymeti { get; set; }
 
+        public decimal EndirimQiymeti { get; set; }
+
         public string Aciklama { get; set; }
 
         public DateTime Tarix { get; set; }
 
-        public Masalar Masalar { get; set; }
+        public virtual Masalar Masalar { get; set; }
 
+        public virtual Urun Urun { get; set; } 
 
     }
 }

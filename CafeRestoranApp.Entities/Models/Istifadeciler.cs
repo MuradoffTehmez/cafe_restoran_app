@@ -34,7 +34,9 @@ namespace CafeRestoranApp.Entities.Models
 
         public int FailedLoginAttempts { get; set; }
 
-        public ICollection<IstifadeciHereketleri> IstifadeciHereketleri { get; set; }
+        public virtual ICollection<IstifadeciHereketleri> IstifadeciHereketleri { get; set; }
+
+        public virtual ICollection<Masalar> Masalar { get; set; }
 
     }
 }

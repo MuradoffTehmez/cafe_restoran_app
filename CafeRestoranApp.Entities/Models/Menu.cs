@@ -12,18 +12,7 @@ namespace CafeRestoranApp.Entities.Models
 
         public string Aciklama { get; set; }
 
-
-        public ICollection<Urun> Urun { get; set; }
-
-        //public virtual ICollection<Urun> Urun { get; set; }
-
-        /*
-        [Key]
-        [Column(TypeName = "varchar")]
-        [StringLength(50)]
-        [Column(TypeName = "varchar")]
-        [StringLength(50)]
-        */
+        public virtual ICollection<Urun> Urun { get; set; }
 
     }
 }

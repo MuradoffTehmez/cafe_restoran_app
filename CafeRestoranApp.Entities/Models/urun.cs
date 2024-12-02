@@ -1,5 +1,6 @@
 ﻿using CafeRestoranApp.Entities.Interfaces;
 using System;
+using System.Collections.Generic;
 
 namespace CafeRestoranApp.Entities.Models
 {
@@ -26,7 +27,9 @@ namespace CafeRestoranApp.Entities.Models
 
         public string Sekil { get; set; }
 
-        public Menu Menu { get; set; }
+        public virtual Menu Menu { get; set; }
+
+        public virtual ICollection<MasaHaraketleri> MasaHaraketleri { get; set; }
 
     }
 }

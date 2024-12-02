@@ -13,7 +13,7 @@ namespace CafeRestoranApp.Entities.Models
 
         public DateTime Tarix { get; set; }
 
-        public Istifadeciler Istifadeciler { get; set; }
+        public virtual Istifadeciler Istifadeciler { get; set; }
 
     }
 }

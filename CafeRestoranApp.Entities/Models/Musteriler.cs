@@ -23,5 +23,7 @@ namespace CafeRestoranApp.Entities.Models
 
         public DateTime Tarix { get; set; }
 
+        public virtual ICollection<Satislar> Satislar { get; set; }
+
     }
 }

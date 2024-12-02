@@ -3,7 +3,6 @@ using System;
 
 namespace CafeRestoranApp.Entities.Models
 {
-    //[Table("Satislar")]
     public class Satislar : IEntity
     {
 
@@ -11,7 +10,11 @@ namespace CafeRestoranApp.Entities.Models
 
         public string SatisKodu { get; set; }
 
+        public int? MusteriId { get; set; }
+
         public decimal Tutar { get; set; }
+
+        public decimal EndirimToplam { get; set; }
 
         public decimal Odenis { get; set; }
 
@@ -21,6 +24,7 @@ namespace CafeRestoranApp.Entities.Models
 
         public DateTime SonIslemTarixi { get; set; }
 
+        public virtual Musteriler Musteriler { get; set; }
 
     }
 }

@@ -19,6 +19,10 @@ namespace CafeRestoranApp.Entities.Mapping
                 .HasColumnType("varchar")
                 .HasMaxLength(50);
 
+            this.Property(p => p.SatisKodu)
+                .HasColumnType("varchar")
+                .HasMaxLength(30);
+
             this.Property(p => p.Aciklama)
                 .HasColumnType("varchar")
                 .HasMaxLength(300);
