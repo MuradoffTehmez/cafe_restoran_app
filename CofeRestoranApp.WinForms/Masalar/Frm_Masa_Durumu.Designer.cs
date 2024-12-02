@@ -41,6 +41,8 @@
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Group_Hesablamalar = new DevExpress.XtraEditors.GroupControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.Group_Emeliyyatlar)).BeginInit();
             this.Group_Emeliyyatlar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -50,6 +52,8 @@
             this.splitContainerControl1.Panel2.SuspendLayout();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Group_Hesablamalar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -77,7 +81,7 @@
             this.Group_Emeliyyatlar.Controls.Add(this.btn_cisix_et);
             this.Group_Emeliyyatlar.Controls.Add(this.btn_Sil);
             this.Group_Emeliyyatlar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Group_Emeliyyatlar.Location = new System.Drawing.Point(0, 693);
+            this.Group_Emeliyyatlar.Location = new System.Drawing.Point(0, 719);
             this.Group_Emeliyyatlar.Name = "Group_Emeliyyatlar";
             this.Group_Emeliyyatlar.Size = new System.Drawing.Size(1596, 111);
             this.Group_Emeliyyatlar.TabIndex = 4;
@@ -192,40 +196,59 @@
             // 
             // splitContainerControl1.Panel2
             // 
+            this.splitContainerControl1.Panel2.Controls.Add(this.gridControl1);
             this.splitContainerControl1.Panel2.Controls.Add(this.Group_Hesablamalar);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1596, 650);
-            this.splitContainerControl1.SplitterPosition = 283;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1596, 676);
+            this.splitContainerControl1.SplitterPosition = 272;
             this.splitContainerControl1.TabIndex = 5;
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1596, 283);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1596, 272);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // Group_Hesablamalar
             // 
             this.Group_Hesablamalar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Group_Hesablamalar.Location = new System.Drawing.Point(0, 188);
+            this.Group_Hesablamalar.Location = new System.Drawing.Point(0, 270);
             this.Group_Hesablamalar.Name = "Group_Hesablamalar";
-            this.Group_Hesablamalar.Size = new System.Drawing.Size(1596, 169);
+            this.Group_Hesablamalar.Size = new System.Drawing.Size(1596, 124);
             this.Group_Hesablamalar.TabIndex = 0;
-            this.Group_Hesablamalar.Text = "groupControl2";
+            this.Group_Hesablamalar.Text = "Hesablamalar";
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(1596, 270);
+            this.gridControl1.TabIndex = 1;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
             // 
             // Frm_Masa_Durumu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1596, 804);
+            this.ClientSize = new System.Drawing.Size(1596, 830);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.Group_Emeliyyatlar);
             this.Controls.Add(this.labelControl1);
             this.Name = "Frm_Masa_Durumu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Masa_Durumu";
+            this.Load += new System.EventHandler(this.Frm_Masa_Durumu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Group_Emeliyyatlar)).EndInit();
             this.Group_Emeliyyatlar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).EndInit();
@@ -235,6 +258,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Group_Hesablamalar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,5 +278,7 @@
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private DevExpress.XtraEditors.GroupControl Group_Hesablamalar;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

@@ -54,6 +54,7 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.Btn_Masa_Sifaris = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,9 +82,10 @@
             this.btn_Vayluta,
             this.barButtonItem2,
             this.btn_Yardim,
-            this.btn_haqqinizda});
+            this.btn_haqqinizda,
+            this.Btn_Masa_Sifaris});
             resources.ApplyResources(this.ribbon, "ribbon");
-            this.ribbon.MaxItemId = 16;
+            this.ribbon.MaxItemId = 17;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
@@ -104,6 +106,7 @@
             this.btn_Masa_Haraketleri.Id = 2;
             this.btn_Masa_Haraketleri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Masa_Haraketleri.ImageOptions.SvgImage")));
             this.btn_Masa_Haraketleri.Name = "btn_Masa_Haraketleri";
+            this.btn_Masa_Haraketleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Masa_Haraketleri_ItemClick);
             // 
             // btn_Meynular
             // 
@@ -204,6 +207,7 @@
             this.ribbonPageGroup2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup2.ImageOptions.Image")));
             this.ribbonPageGroup2.ItemLinks.Add(this.btn_Masalar);
             this.ribbonPageGroup2.ItemLinks.Add(this.btn_Masa_Haraketleri);
+            this.ribbonPageGroup2.ItemLinks.Add(this.Btn_Masa_Sifaris);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Tag = "";
             resources.ApplyResources(this.ribbonPageGroup2, "ribbonPageGroup2");
@@ -257,6 +261,14 @@
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             resources.ApplyResources(this.ribbonPageGroup7, "ribbonPageGroup7");
             // 
+            // Btn_Masa_Sifaris
+            // 
+            resources.ApplyResources(this.Btn_Masa_Sifaris, "Btn_Masa_Sifaris");
+            this.Btn_Masa_Sifaris.Id = 16;
+            this.Btn_Masa_Sifaris.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.Btn_Masa_Sifaris.Name = "Btn_Masa_Sifaris";
+            this.Btn_Masa_Sifaris.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Masa_Sifaris_ItemClick);
+            // 
             // Frm_Ana_Form
             // 
             this.Appearance.BackColor = System.Drawing.Color.Lime;
@@ -304,5 +316,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem btn_haqqinizda;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem Btn_Masa_Sifaris;
     }
 }

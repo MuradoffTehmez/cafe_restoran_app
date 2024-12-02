@@ -13,9 +13,17 @@ namespace CofeRestoranApp.WinForms.Masalar
 {
     public partial class Frm_Masa_Durumu : DevExpress.XtraEditors.XtraForm
     {
+
+
         public Frm_Masa_Durumu()
         {
             InitializeComponent();
+
+        }
+
+        private void Frm_Masa_Durumu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

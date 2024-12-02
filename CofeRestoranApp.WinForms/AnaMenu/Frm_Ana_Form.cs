@@ -18,7 +18,7 @@ namespace CofeRestoranApp.WinForms.AnaMenu
         public Frm_Ana_Form()
         {
             InitializeComponent();
-            Frm_Istifadeci_Giris frm = new Frm_Istifadeci_Giris();
+            XtraForm frm = new Frm_Istifadeci_Giris();
             frm.ShowDialog();
         }
 
@@ -29,20 +29,31 @@ namespace CofeRestoranApp.WinForms.AnaMenu
 
         private void btn_Meynular_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Frm_Menu frm = new Frm_Menu();
+            XtraForm frm = new Frm_Menu();
 
             frm.ShowDialog();
         }
 
         private void btn_Urunler_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frm_Urunler frm = new frm_Urunler();
+            XtraForm frm = new frm_Urunler();
             FormGetir(frm);
         }
 
         private void btn_Masalar_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Frm_Masalar frm = new Frm_Masalar();
+            XtraForm frm = new Frm_Masalar();
+            FormGetir(frm);
+        }
+
+        private void btn_Masa_Haraketleri_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void Btn_Masa_Sifaris_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            XtraForm frm = new Frm_Masa_Durumu();
             FormGetir(frm);
         }
     }
