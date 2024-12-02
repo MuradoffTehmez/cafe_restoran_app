@@ -18,11 +18,11 @@ namespace CofeRestoranApp.WinForms.WinTools
             {
                 var btn = new CheckButton();
                 btn.Text = model[i].MasaAdi;
-                btn.Text = model[i].Id.ToString();
+                btn.Name = model[i].Id.ToString();
                 btn.Height = 100;
                 btn.Width = 80;
                 pnl.Controls.Add(btn);
-                btn.Click += Btn_Click;
+                //btn.Click += Btn_Click;
 
             }
         }
