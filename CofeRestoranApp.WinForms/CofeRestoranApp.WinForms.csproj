@@ -274,6 +274,12 @@
     <Compile Include="Masalar\frm_Masa_Qeyd_Et.Designer.cs">
       <DependentUpon>frm_Masa_Qeyd_Et.cs</DependentUpon>
     </Compile>
+    <Compile Include="Masalar\Frm_Masa_Siparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masalar\Frm_Masa_Siparis.Designer.cs">
+      <DependentUpon>Frm_Masa_Siparis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menular\frm_menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Masalar\frm_Masa_Qeyd_Et.resx">
       <DependentUpon>frm_Masa_Qeyd_Et.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masalar\Frm_Masa_Siparis.resx">
+      <DependentUpon>Frm_Masa_Siparis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menular\frm_menu.resx">
       <DependentUpon>frm_menu.cs</DependentUpon>
