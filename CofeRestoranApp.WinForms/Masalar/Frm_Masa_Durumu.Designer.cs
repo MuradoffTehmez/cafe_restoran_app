@@ -54,18 +54,18 @@
             this.colTarix = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMasalar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Group_Hesablamalar = new DevExpress.XtraEditors.GroupControl();
+            this.Calc_Endirimli_Qiymet = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.Calc_Umumi_Qiymet = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.Calc_Endirim = new DevExpress.XtraEditors.CalcEdit();
+            this.Calc_Qalan = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.Calc_Endirim_Toplam = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.Calc_Odeden = new DevExpress.XtraEditors.CalcEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.Calc_Qalan = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.Calc_Endirim_Toplam = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.Calc_Endirim = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.Calc_Umumi_Qiymet = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.Calc_Endirimli_Qiymet = new DevExpress.XtraEditors.CalcEdit();
             ((System.ComponentModel.ISupportInitialize)(this.Group_Emeliyyatlar)).BeginInit();
             this.Group_Emeliyyatlar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -80,12 +80,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Group_Hesablamalar)).BeginInit();
             this.Group_Hesablamalar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Calc_Odeden.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Calc_Endirimli_Qiymet.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Calc_Umumi_Qiymet.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Calc_Endirim.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_Qalan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_Endirim_Toplam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Calc_Endirim.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Calc_Umumi_Qiymet.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Calc_Endirimli_Qiymet.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Calc_Odeden.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -380,182 +380,26 @@
             this.Group_Hesablamalar.TabIndex = 0;
             this.Group_Hesablamalar.Text = "Hesablamalar";
             // 
-            // Calc_Odeden
+            // Calc_Endirimli_Qiymet
             // 
-            this.Calc_Odeden.Location = new System.Drawing.Point(184, 33);
-            this.Calc_Odeden.Name = "Calc_Odeden";
-            this.Calc_Odeden.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Calc_Odeden.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calc_Odeden.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.Calc_Odeden.Properties.Appearance.Options.UseBackColor = true;
-            this.Calc_Odeden.Properties.Appearance.Options.UseFont = true;
-            this.Calc_Odeden.Properties.Appearance.Options.UseForeColor = true;
-            this.Calc_Odeden.Properties.Appearance.Options.UseTextOptions = true;
-            this.Calc_Odeden.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Calc_Odeden.Properties.MaskSettings.Set("mask", "c");
-            this.Calc_Odeden.Properties.NullText = "0,00  ₼";
-            this.Calc_Odeden.Properties.NullValuePrompt = "0,00  ₼";
-            this.Calc_Odeden.Properties.ShowCloseButton = true;
-            this.Calc_Odeden.Size = new System.Drawing.Size(248, 26);
-            this.Calc_Odeden.TabIndex = 0;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.BorderColor = System.Drawing.Color.Silver;
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Appearance.Options.UseBorderColor = true;
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseTextOptions = true;
-            this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl2.Location = new System.Drawing.Point(28, 32);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(150, 26);
-            this.labelControl2.TabIndex = 0;
-            this.labelControl2.Text = "Odenis :";
-            // 
-            // Calc_Qalan
-            // 
-            this.Calc_Qalan.Location = new System.Drawing.Point(184, 67);
-            this.Calc_Qalan.Name = "Calc_Qalan";
-            this.Calc_Qalan.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Calc_Qalan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calc_Qalan.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.Calc_Qalan.Properties.Appearance.Options.UseBackColor = true;
-            this.Calc_Qalan.Properties.Appearance.Options.UseFont = true;
-            this.Calc_Qalan.Properties.Appearance.Options.UseForeColor = true;
-            this.Calc_Qalan.Properties.Appearance.Options.UseTextOptions = true;
-            this.Calc_Qalan.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Calc_Qalan.Properties.MaskSettings.Set("mask", "c");
-            this.Calc_Qalan.Properties.NullText = "0,00  ₼";
-            this.Calc_Qalan.Properties.NullValuePrompt = "0,00  ₼";
-            this.Calc_Qalan.Properties.ShowCloseButton = true;
-            this.Calc_Qalan.Size = new System.Drawing.Size(248, 26);
-            this.Calc_Qalan.TabIndex = 1;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.BorderColor = System.Drawing.Color.Silver;
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Appearance.Options.UseBorderColor = true;
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Appearance.Options.UseTextOptions = true;
-            this.labelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl3.Location = new System.Drawing.Point(28, 66);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(150, 26);
-            this.labelControl3.TabIndex = 2;
-            this.labelControl3.Text = "Qalan :";
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.BorderColor = System.Drawing.Color.Silver;
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Appearance.Options.UseBorderColor = true;
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Appearance.Options.UseTextOptions = true;
-            this.labelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl4.Location = new System.Drawing.Point(598, 33);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(150, 26);
-            this.labelControl4.TabIndex = 0;
-            this.labelControl4.Text = "Endirim Toplam :";
-            // 
-            // Calc_Endirim_Toplam
-            // 
-            this.Calc_Endirim_Toplam.Location = new System.Drawing.Point(754, 33);
-            this.Calc_Endirim_Toplam.Name = "Calc_Endirim_Toplam";
-            this.Calc_Endirim_Toplam.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Calc_Endirim_Toplam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calc_Endirim_Toplam.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.Calc_Endirim_Toplam.Properties.Appearance.Options.UseBackColor = true;
-            this.Calc_Endirim_Toplam.Properties.Appearance.Options.UseFont = true;
-            this.Calc_Endirim_Toplam.Properties.Appearance.Options.UseForeColor = true;
-            this.Calc_Endirim_Toplam.Properties.Appearance.Options.UseTextOptions = true;
-            this.Calc_Endirim_Toplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Calc_Endirim_Toplam.Properties.MaskSettings.Set("mask", "c");
-            this.Calc_Endirim_Toplam.Properties.NullText = "0,00  ₼";
-            this.Calc_Endirim_Toplam.Properties.NullValuePrompt = "0,00  ₼";
-            this.Calc_Endirim_Toplam.Properties.ShowCloseButton = true;
-            this.Calc_Endirim_Toplam.Size = new System.Drawing.Size(248, 26);
-            this.Calc_Endirim_Toplam.TabIndex = 0;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.BorderColor = System.Drawing.Color.Silver;
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Appearance.Options.UseBorderColor = true;
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Appearance.Options.UseTextOptions = true;
-            this.labelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl5.Location = new System.Drawing.Point(598, 65);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(150, 26);
-            this.labelControl5.TabIndex = 2;
-            this.labelControl5.Text = "Endirim % -i :";
-            // 
-            // Calc_Endirim
-            // 
-            this.Calc_Endirim.Location = new System.Drawing.Point(755, 67);
-            this.Calc_Endirim.Name = "Calc_Endirim";
-            this.Calc_Endirim.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Calc_Endirim.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calc_Endirim.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.Calc_Endirim.Properties.Appearance.Options.UseBackColor = true;
-            this.Calc_Endirim.Properties.Appearance.Options.UseFont = true;
-            this.Calc_Endirim.Properties.Appearance.Options.UseForeColor = true;
-            this.Calc_Endirim.Properties.Appearance.Options.UseTextOptions = true;
-            this.Calc_Endirim.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Calc_Endirim.Properties.MaskSettings.Set("mask", "P");
-            this.Calc_Endirim.Properties.NullText = "% 0,00  ";
-            this.Calc_Endirim.Properties.NullValuePrompt = "% 0,00  ";
-            this.Calc_Endirim.Properties.ShowCloseButton = true;
-            this.Calc_Endirim.Size = new System.Drawing.Size(248, 26);
-            this.Calc_Endirim.TabIndex = 1;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl6.Appearance.BorderColor = System.Drawing.Color.Silver;
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Appearance.Options.UseBorderColor = true;
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Appearance.Options.UseTextOptions = true;
-            this.labelControl6.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl6.Location = new System.Drawing.Point(1160, 30);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(150, 26);
-            this.labelControl6.TabIndex = 0;
-            this.labelControl6.Text = "Ümumi Qiymət :";
-            // 
-            // Calc_Umumi_Qiymet
-            // 
-            this.Calc_Umumi_Qiymet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Calc_Umumi_Qiymet.Location = new System.Drawing.Point(1316, 32);
-            this.Calc_Umumi_Qiymet.Name = "Calc_Umumi_Qiymet";
-            this.Calc_Umumi_Qiymet.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Calc_Umumi_Qiymet.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calc_Umumi_Qiymet.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.Calc_Umumi_Qiymet.Properties.Appearance.Options.UseBackColor = true;
-            this.Calc_Umumi_Qiymet.Properties.Appearance.Options.UseFont = true;
-            this.Calc_Umumi_Qiymet.Properties.Appearance.Options.UseForeColor = true;
-            this.Calc_Umumi_Qiymet.Properties.Appearance.Options.UseTextOptions = true;
-            this.Calc_Umumi_Qiymet.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Calc_Umumi_Qiymet.Properties.MaskSettings.Set("mask", "c");
-            this.Calc_Umumi_Qiymet.Properties.NullText = "0,00  ₼";
-            this.Calc_Umumi_Qiymet.Properties.NullValuePrompt = "0,00  ₼";
-            this.Calc_Umumi_Qiymet.Properties.ShowCloseButton = true;
-            this.Calc_Umumi_Qiymet.Size = new System.Drawing.Size(248, 26);
-            this.Calc_Umumi_Qiymet.TabIndex = 0;
+            this.Calc_Endirimli_Qiymet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Calc_Endirimli_Qiymet.Location = new System.Drawing.Point(1317, 66);
+            this.Calc_Endirimli_Qiymet.Name = "Calc_Endirimli_Qiymet";
+            this.Calc_Endirimli_Qiymet.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Calc_Endirimli_Qiymet.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calc_Endirimli_Qiymet.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            this.Calc_Endirimli_Qiymet.Properties.Appearance.Options.UseBackColor = true;
+            this.Calc_Endirimli_Qiymet.Properties.Appearance.Options.UseFont = true;
+            this.Calc_Endirimli_Qiymet.Properties.Appearance.Options.UseForeColor = true;
+            this.Calc_Endirimli_Qiymet.Properties.Appearance.Options.UseTextOptions = true;
+            this.Calc_Endirimli_Qiymet.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Calc_Endirimli_Qiymet.Properties.MaskSettings.Set("mask", "c");
+            this.Calc_Endirimli_Qiymet.Properties.NullText = "0,00  ₼";
+            this.Calc_Endirimli_Qiymet.Properties.NullValuePrompt = "0,00  ₼";
+            this.Calc_Endirimli_Qiymet.Properties.ShowCloseButton = true;
+            this.Calc_Endirimli_Qiymet.Properties.UseMaskAsDisplayFormat = true;
+            this.Calc_Endirimli_Qiymet.Size = new System.Drawing.Size(248, 26);
+            this.Calc_Endirimli_Qiymet.TabIndex = 1;
             // 
             // labelControl7
             // 
@@ -574,25 +418,188 @@
             this.labelControl7.TabIndex = 2;
             this.labelControl7.Text = "Endirimli Qiymət :";
             // 
-            // Calc_Endirimli_Qiymet
+            // Calc_Umumi_Qiymet
             // 
-            this.Calc_Endirimli_Qiymet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Calc_Endirimli_Qiymet.Location = new System.Drawing.Point(1317, 66);
-            this.Calc_Endirimli_Qiymet.Name = "Calc_Endirimli_Qiymet";
-            this.Calc_Endirimli_Qiymet.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Calc_Endirimli_Qiymet.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calc_Endirimli_Qiymet.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.Calc_Endirimli_Qiymet.Properties.Appearance.Options.UseBackColor = true;
-            this.Calc_Endirimli_Qiymet.Properties.Appearance.Options.UseFont = true;
-            this.Calc_Endirimli_Qiymet.Properties.Appearance.Options.UseForeColor = true;
-            this.Calc_Endirimli_Qiymet.Properties.Appearance.Options.UseTextOptions = true;
-            this.Calc_Endirimli_Qiymet.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Calc_Endirimli_Qiymet.Properties.MaskSettings.Set("mask", "c");
-            this.Calc_Endirimli_Qiymet.Properties.NullText = "0,00  ₼";
-            this.Calc_Endirimli_Qiymet.Properties.NullValuePrompt = "0,00  ₼";
-            this.Calc_Endirimli_Qiymet.Properties.ShowCloseButton = true;
-            this.Calc_Endirimli_Qiymet.Size = new System.Drawing.Size(248, 26);
-            this.Calc_Endirimli_Qiymet.TabIndex = 1;
+            this.Calc_Umumi_Qiymet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Calc_Umumi_Qiymet.Location = new System.Drawing.Point(1316, 32);
+            this.Calc_Umumi_Qiymet.Name = "Calc_Umumi_Qiymet";
+            this.Calc_Umumi_Qiymet.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Calc_Umumi_Qiymet.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calc_Umumi_Qiymet.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            this.Calc_Umumi_Qiymet.Properties.Appearance.Options.UseBackColor = true;
+            this.Calc_Umumi_Qiymet.Properties.Appearance.Options.UseFont = true;
+            this.Calc_Umumi_Qiymet.Properties.Appearance.Options.UseForeColor = true;
+            this.Calc_Umumi_Qiymet.Properties.Appearance.Options.UseTextOptions = true;
+            this.Calc_Umumi_Qiymet.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Calc_Umumi_Qiymet.Properties.MaskSettings.Set("mask", "c");
+            this.Calc_Umumi_Qiymet.Properties.NullText = "0,00  ₼";
+            this.Calc_Umumi_Qiymet.Properties.NullValuePrompt = "0,00  ₼";
+            this.Calc_Umumi_Qiymet.Properties.ShowCloseButton = true;
+            this.Calc_Umumi_Qiymet.Properties.UseMaskAsDisplayFormat = true;
+            this.Calc_Umumi_Qiymet.Size = new System.Drawing.Size(248, 26);
+            this.Calc_Umumi_Qiymet.TabIndex = 0;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl6.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Options.UseBorderColor = true;
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Appearance.Options.UseTextOptions = true;
+            this.labelControl6.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl6.Location = new System.Drawing.Point(1160, 30);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(150, 26);
+            this.labelControl6.TabIndex = 0;
+            this.labelControl6.Text = "Ümumi Qiymət :";
+            // 
+            // Calc_Endirim
+            // 
+            this.Calc_Endirim.Location = new System.Drawing.Point(755, 67);
+            this.Calc_Endirim.Name = "Calc_Endirim";
+            this.Calc_Endirim.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Calc_Endirim.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calc_Endirim.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            this.Calc_Endirim.Properties.Appearance.Options.UseBackColor = true;
+            this.Calc_Endirim.Properties.Appearance.Options.UseFont = true;
+            this.Calc_Endirim.Properties.Appearance.Options.UseForeColor = true;
+            this.Calc_Endirim.Properties.Appearance.Options.UseTextOptions = true;
+            this.Calc_Endirim.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Calc_Endirim.Properties.MaskSettings.Set("mask", "P");
+            this.Calc_Endirim.Properties.NullText = "% 0,00  ";
+            this.Calc_Endirim.Properties.NullValuePrompt = "% 0,00  ";
+            this.Calc_Endirim.Properties.ShowCloseButton = true;
+            this.Calc_Endirim.Properties.UseMaskAsDisplayFormat = true;
+            this.Calc_Endirim.Size = new System.Drawing.Size(248, 26);
+            this.Calc_Endirim.TabIndex = 1;
+            // 
+            // Calc_Qalan
+            // 
+            this.Calc_Qalan.Location = new System.Drawing.Point(184, 67);
+            this.Calc_Qalan.Name = "Calc_Qalan";
+            this.Calc_Qalan.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Calc_Qalan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calc_Qalan.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            this.Calc_Qalan.Properties.Appearance.Options.UseBackColor = true;
+            this.Calc_Qalan.Properties.Appearance.Options.UseFont = true;
+            this.Calc_Qalan.Properties.Appearance.Options.UseForeColor = true;
+            this.Calc_Qalan.Properties.Appearance.Options.UseTextOptions = true;
+            this.Calc_Qalan.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Calc_Qalan.Properties.MaskSettings.Set("mask", "c");
+            this.Calc_Qalan.Properties.NullText = "0,00  ₼";
+            this.Calc_Qalan.Properties.NullValuePrompt = "0,00  ₼";
+            this.Calc_Qalan.Properties.ShowCloseButton = true;
+            this.Calc_Qalan.Properties.UseMaskAsDisplayFormat = true;
+            this.Calc_Qalan.Size = new System.Drawing.Size(248, 26);
+            this.Calc_Qalan.TabIndex = 1;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Options.UseBorderColor = true;
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Appearance.Options.UseTextOptions = true;
+            this.labelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl5.Location = new System.Drawing.Point(598, 65);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(150, 26);
+            this.labelControl5.TabIndex = 2;
+            this.labelControl5.Text = "Endirim % -i :";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Options.UseBorderColor = true;
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Appearance.Options.UseTextOptions = true;
+            this.labelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl3.Location = new System.Drawing.Point(28, 66);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(150, 26);
+            this.labelControl3.TabIndex = 2;
+            this.labelControl3.Text = "Qalan :";
+            // 
+            // Calc_Endirim_Toplam
+            // 
+            this.Calc_Endirim_Toplam.Location = new System.Drawing.Point(754, 33);
+            this.Calc_Endirim_Toplam.Name = "Calc_Endirim_Toplam";
+            this.Calc_Endirim_Toplam.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Calc_Endirim_Toplam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calc_Endirim_Toplam.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            this.Calc_Endirim_Toplam.Properties.Appearance.Options.UseBackColor = true;
+            this.Calc_Endirim_Toplam.Properties.Appearance.Options.UseFont = true;
+            this.Calc_Endirim_Toplam.Properties.Appearance.Options.UseForeColor = true;
+            this.Calc_Endirim_Toplam.Properties.Appearance.Options.UseTextOptions = true;
+            this.Calc_Endirim_Toplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Calc_Endirim_Toplam.Properties.MaskSettings.Set("mask", "c");
+            this.Calc_Endirim_Toplam.Properties.NullText = "0,00  ₼";
+            this.Calc_Endirim_Toplam.Properties.NullValuePrompt = "0,00  ₼";
+            this.Calc_Endirim_Toplam.Properties.ShowCloseButton = true;
+            this.Calc_Endirim_Toplam.Properties.UseMaskAsDisplayFormat = true;
+            this.Calc_Endirim_Toplam.Size = new System.Drawing.Size(248, 26);
+            this.Calc_Endirim_Toplam.TabIndex = 0;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Options.UseBorderColor = true;
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Appearance.Options.UseTextOptions = true;
+            this.labelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl4.Location = new System.Drawing.Point(598, 33);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(150, 26);
+            this.labelControl4.TabIndex = 0;
+            this.labelControl4.Text = "Endirim Toplam :";
+            // 
+            // Calc_Odeden
+            // 
+            this.Calc_Odeden.Location = new System.Drawing.Point(184, 33);
+            this.Calc_Odeden.Name = "Calc_Odeden";
+            this.Calc_Odeden.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Calc_Odeden.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calc_Odeden.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            this.Calc_Odeden.Properties.Appearance.Options.UseBackColor = true;
+            this.Calc_Odeden.Properties.Appearance.Options.UseFont = true;
+            this.Calc_Odeden.Properties.Appearance.Options.UseForeColor = true;
+            this.Calc_Odeden.Properties.Appearance.Options.UseTextOptions = true;
+            this.Calc_Odeden.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Calc_Odeden.Properties.MaskSettings.Set("mask", "c");
+            this.Calc_Odeden.Properties.NullText = "0,00  ₼";
+            this.Calc_Odeden.Properties.NullValuePrompt = "0,00  ₼";
+            this.Calc_Odeden.Properties.ShowCloseButton = true;
+            this.Calc_Odeden.Properties.UseMaskAsDisplayFormat = true;
+            this.Calc_Odeden.Properties.ValidateOnEnterKey = true;
+            this.Calc_Odeden.Size = new System.Drawing.Size(248, 26);
+            this.Calc_Odeden.TabIndex = 0;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseBorderColor = true;
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Appearance.Options.UseTextOptions = true;
+            this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl2.Location = new System.Drawing.Point(28, 32);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(150, 26);
+            this.labelControl2.TabIndex = 0;
+            this.labelControl2.Text = "Odenis :";
             // 
             // Frm_Masa_Durumu
             // 
@@ -621,12 +628,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Group_Hesablamalar)).EndInit();
             this.Group_Hesablamalar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Calc_Odeden.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Calc_Endirimli_Qiymet.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Calc_Umumi_Qiymet.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Calc_Endirim.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_Qalan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_Endirim_Toplam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Calc_Endirim.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Calc_Umumi_Qiymet.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Calc_Endirimli_Qiymet.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Calc_Odeden.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

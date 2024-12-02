@@ -30,8 +30,7 @@ namespace CofeRestoranApp.WinForms.AnaMenu
         private void btn_Meynular_ItemClick(object sender, ItemClickEventArgs e)
         {
             XtraForm frm = new Frm_Menu();
-
-            frm.ShowDialog();
+            FormGetir(frm);
         }
 
         private void btn_Urunler_ItemClick(object sender, ItemClickEventArgs e)

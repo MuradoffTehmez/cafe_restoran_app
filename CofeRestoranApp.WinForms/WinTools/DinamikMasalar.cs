@@ -21,7 +21,7 @@ namespace CofeRestoranApp.WinForms.WinTools
                 btn.Text = model[i].MasaAdi;
                 btn.Name = model[i].Id.ToString();
                 btn.Height = 150;
-                btn.Width = 150;
+                btn.Width = 125;
                 pnl.Controls.Add(btn);
                 if (model[i].Rezervasiya && !model[i].Durumu)
                 {
