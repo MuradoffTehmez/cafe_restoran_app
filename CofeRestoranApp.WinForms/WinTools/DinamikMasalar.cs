@@ -18,6 +18,9 @@ namespace CofeRestoranApp.WinForms.WinTools
             {
                 var btn = new CheckButton();
                 btn.Text = model[i].MasaAdi;
+                btn.Text = model[i].Id.ToString();
+                btn.Height = 100;
+
             }
         }
     }
