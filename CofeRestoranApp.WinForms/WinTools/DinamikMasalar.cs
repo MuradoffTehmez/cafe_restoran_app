@@ -20,6 +20,7 @@ namespace CofeRestoranApp.WinForms.WinTools
                 btn.Text = model[i].MasaAdi;
                 btn.Text = model[i].Id.ToString();
                 btn.Height = 100;
+                btn.Width = 80;
 
             }
         }
