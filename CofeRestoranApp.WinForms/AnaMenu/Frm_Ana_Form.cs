@@ -5,6 +5,7 @@ using CofeRestoranApp.WinForms.Urunler;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using System;
+using CofeRestoranApp.WinForms.Musteriler;
 
 namespace CofeRestoranApp.WinForms.AnaMenu
 {
@@ -53,6 +54,12 @@ namespace CofeRestoranApp.WinForms.AnaMenu
         private void Btn_Masa_Sifaris_ItemClick(object sender, ItemClickEventArgs e)
         {
             XtraForm frm = new Frm_Masa_Durumu();
+            FormGetir(frm);
+        }
+
+        private void Btn_Musteriler_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            XtraForm frm = new Frm_Musteriler();
             FormGetir(frm);
         }
     }

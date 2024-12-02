@@ -12,30 +12,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeRestoranApp.Entities.Utilities;
+using System.Data.Entity.Infrastructure;
 
 namespace CofeRestoranApp.WinForms.Musteriler
 {
     public partial class Frm_Musteriler : DevExpress.XtraEditors.XtraForm
     {
         private readonly CafeContext context = new CafeContext();
+        private readonly CafeContext _context;
         public Frm_Musteriler()
         {
             InitializeComponent();
-            context.Musteriler.Load();
-            gridControl1.DataSource = context.Musteriler.Local.ToBindingList();
+            _context = context;
+            _context.Musteriler.Load();
+            gridControl1.DataSource = _context.Musteriler.Local.ToBindingList();
         }
 
         private void brn_Elave_et_Click(object sender, EventArgs e)
         {
             SaveSelectedItem();
-            context.SaveChanges();
+            _context.SaveChanges();
             gridView1.RefreshData();
         }
         private void SaveSelectedItem()
         {
             if (ShowConfirmation("Seçili olan qeyd olunsun?", "Diqqət") == DialogResult.Yes)
             {
-                context.SaveChanges();
+                _context.SaveChanges();
                 gridView1.RefreshData();
             }
         }
@@ -57,9 +60,15 @@ namespace CofeRestoranApp.WinForms.Musteriler
         {
             try
             {
-                context.SaveChanges();
+                _context.SaveChanges();
                 gridView1.RefreshData();
                 XtraMessageBox.Show("Əməliyyat uğurla tamamlandı!", "Məlumat", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (DbUpdateException dbEx)
+            {
+                var innerException = dbEx.InnerException?.InnerException?.Message;
+                MessageBox.Show($"Veritabanı güncelleme hatası:\n{innerException}", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.LogXeta(dbEx);
             }
             catch (Exception ex)
             {
@@ -67,6 +76,7 @@ namespace CofeRestoranApp.WinForms.Musteriler
                 Logger.LogXeta(ex);
             }
         }
+
         private DialogResult ShowConfirmation(string message, string title)
         {
             return XtraMessageBox.Show(message, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);

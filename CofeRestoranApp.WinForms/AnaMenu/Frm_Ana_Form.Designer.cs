@@ -45,16 +45,18 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.btn_Yardim = new DevExpress.XtraBars.BarButtonItem();
             this.btn_haqqinizda = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_Masa_Sifaris = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_Musteriler = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.Btn_Masa_Sifaris = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,9 +85,10 @@
             this.barButtonItem2,
             this.btn_Yardim,
             this.btn_haqqinizda,
-            this.Btn_Masa_Sifaris});
+            this.Btn_Masa_Sifaris,
+            this.Btn_Musteriler});
             resources.ApplyResources(this.ribbon, "ribbon");
-            this.ribbon.MaxItemId = 17;
+            this.ribbon.MaxItemId = 18;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
@@ -192,13 +195,30 @@
             this.btn_haqqinizda.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_haqqinizda.ImageOptions.LargeImage")));
             this.btn_haqqinizda.Name = "btn_haqqinizda";
             // 
+            // Btn_Masa_Sifaris
+            // 
+            resources.ApplyResources(this.Btn_Masa_Sifaris, "Btn_Masa_Sifaris");
+            this.Btn_Masa_Sifaris.Id = 16;
+            this.Btn_Masa_Sifaris.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_Masa_Sifaris.ImageOptions.LargeImage")));
+            this.Btn_Masa_Sifaris.Name = "Btn_Masa_Sifaris";
+            this.Btn_Masa_Sifaris.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Masa_Sifaris_ItemClick);
+            // 
+            // Btn_Musteriler
+            // 
+            resources.ApplyResources(this.Btn_Musteriler, "Btn_Musteriler");
+            this.Btn_Musteriler.Id = 17;
+            this.Btn_Musteriler.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_Musteriler.ImageOptions.LargeImage")));
+            this.Btn_Musteriler.Name = "Btn_Musteriler";
+            this.Btn_Musteriler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Musteriler_ItemClick);
+            // 
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2,
             this.ribbonPageGroup3,
             this.ribbonPageGroup4,
-            this.ribbonPageGroup5});
+            this.ribbonPageGroup5,
+            this.ribbonPageGroup8});
             this.ribbonPage2.Name = "ribbonPage2";
             resources.ApplyResources(this.ribbonPage2, "ribbonPage2");
             // 
@@ -234,6 +254,12 @@
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             resources.ApplyResources(this.ribbonPageGroup5, "ribbonPageGroup5");
             // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.Btn_Musteriler);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            resources.ApplyResources(this.ribbonPageGroup8, "ribbonPageGroup8");
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -260,14 +286,6 @@
             this.ribbonPageGroup7.ItemLinks.Add(this.btn_haqqinizda);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             resources.ApplyResources(this.ribbonPageGroup7, "ribbonPageGroup7");
-            // 
-            // Btn_Masa_Sifaris
-            // 
-            resources.ApplyResources(this.Btn_Masa_Sifaris, "Btn_Masa_Sifaris");
-            this.Btn_Masa_Sifaris.Id = 16;
-            this.Btn_Masa_Sifaris.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
-            this.Btn_Masa_Sifaris.Name = "Btn_Masa_Sifaris";
-            this.Btn_Masa_Sifaris.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Masa_Sifaris_ItemClick);
             // 
             // Frm_Ana_Form
             // 
@@ -317,5 +335,7 @@
         private DevExpress.XtraBars.BarButtonItem btn_haqqinizda;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem Btn_Masa_Sifaris;
+        private DevExpress.XtraBars.BarButtonItem Btn_Musteriler;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
     }
 }

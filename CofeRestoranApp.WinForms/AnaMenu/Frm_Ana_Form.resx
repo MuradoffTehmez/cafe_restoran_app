@@ -503,16 +503,64 @@
 
 Siparis</value>
   </data>
-  <data name="barButtonItem3.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Btn_Masa_Sifaris.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAA90RVh0VGl0bGUAQnV5O0NhcnQ70AxJmAAAAUxJREFUWEfNlrtKBEEQRcdHoH+y
+        ayCIgYmJUH9SX7HBogaiJooGKvhZK1ggq4GCaCQGpiM9KDR3bg3LTHdrcJKe6r5nunoeVV3XlankZomM
+        NVQFBDZMpfYoIXCIoaUFDENLCmxFYe+msoo1uQVOIoFrcj2rQDj5j5HAHqnJKrAThb+ayjKpySpwHglc
+        kusNvwIzPJ2J2cVgFNgnk1Lx7G1/LDAiE1NxhqFMIJCrDeEwtoKZQI42PHV9iFCg86PRk1MMRPAxvCOL
+        DGEbAxEUSNmGBwxjoEDKNhxhGAMFhrBmKp+RwCapacEE8E76cI9BHrkEDjDII5fAGIM8mEBRPIF1U7ky
+        lY+fX6ljU1kZUOfiCdySbWV9XbTOhQmEd/cXWXjes66TfykQuCELTwfUuXgC4a12YSpvpvJiKhPncC1a
+        59II/CWtgdK0BkrzDa3tC24n0C0tAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="Btn_Musteriler.Caption" xml:space="preserve">
+    <value>    Musteriler</value>
+  </data>
+  <data name="Btn_Musteriler.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
+        AElFTkSuQmCC
 </value>
   </data>
   <data name="ribbon.Location" type="System.Drawing.Point, System.Drawing">
@@ -544,6 +592,9 @@ Siparis</value>
   </data>
   <data name="ribbonPageGroup5.Text" xml:space="preserve">
     <value>İstifaadəcilər</value>
+  </data>
+  <data name="ribbonPageGroup8.Text" xml:space="preserve">
+    <value>Musteriler</value>
   </data>
   <data name="ribbonPage2.Text" xml:space="preserve">
     <value>Cafe Ayarlari</value>
@@ -730,6 +781,18 @@ Siparis</value>
   <data name="&gt;&gt;btn_haqqinizda.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;Btn_Masa_Sifaris.Name" xml:space="preserve">
+    <value>Btn_Masa_Sifaris</value>
+  </data>
+  <data name="&gt;&gt;Btn_Masa_Sifaris.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Btn_Musteriler.Name" xml:space="preserve">
+    <value>Btn_Musteriler</value>
+  </data>
+  <data name="&gt;&gt;Btn_Musteriler.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;ribbonPage2.Name" xml:space="preserve">
     <value>ribbonPage2</value>
   </data>
@@ -760,6 +823,12 @@ Siparis</value>
   <data name="&gt;&gt;ribbonPageGroup5.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;ribbonPageGroup8.Name" xml:space="preserve">
+    <value>ribbonPageGroup8</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup8.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;ribbonPage1.Name" xml:space="preserve">
     <value>ribbonPage1</value>
   </data>
@@ -783,12 +852,6 @@ Siparis</value>
   </data>
   <data name="&gt;&gt;ribbonPageGroup7.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;Btn_Masa_Sifaris.Name" xml:space="preserve">
-    <value>Btn_Masa_Sifaris</value>
-  </data>
-  <data name="&gt;&gt;Btn_Masa_Sifaris.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Frm_Ana_Form</value>
