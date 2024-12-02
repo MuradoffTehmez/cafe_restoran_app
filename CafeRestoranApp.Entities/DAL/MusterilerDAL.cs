@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CafeRestoranApp.Entities.DAL
 {
-    internal class MusterilerDAL : EntityRepositoryBase<CafeContext, Musteriler, MusterilerVALIDATOR>
+    public class MusterilerDAL : EntityRepositoryBase<CafeContext, Musteriler, MusterilerVALIDATOR>
     {
 
     }
