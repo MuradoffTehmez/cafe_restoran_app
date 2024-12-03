@@ -98,6 +98,7 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void Btn_Yeni_Sifaris_Click(object sender, EventArgs e)
         {
+            _SatisKodu = BtnSender.Tag.ToString();
             Frm_Masa_Siparis frm = new Frm_Masa_Siparis(masaId: _masaId, masaadi: BtnSender.Text);
             frm.ShowDialog();
         }
@@ -115,6 +116,11 @@ namespace CofeRestoranApp.WinForms.Masalar
                 DurumYenile();
                 MasaGetir();
             }
+        }
+
+        private void Btn_Rezev_Et_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

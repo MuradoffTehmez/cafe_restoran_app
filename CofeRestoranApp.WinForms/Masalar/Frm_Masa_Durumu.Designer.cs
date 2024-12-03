@@ -85,6 +85,7 @@
             this.Btn_Rezev_Et.Size = new System.Drawing.Size(125, 46);
             this.Btn_Rezev_Et.TabIndex = 4;
             this.Btn_Rezev_Et.Text = "Rezev Et";
+            this.Btn_Rezev_Et.Click += new System.EventHandler(this.Btn_Rezev_Et_Click);
             // 
             // Btn_Masa_Ac
             // 
