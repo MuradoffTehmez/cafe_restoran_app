@@ -13,6 +13,7 @@ namespace CofeRestoranApp.WinForms.Masalar
         private CheckButton BtnSender;
         private SatisKodu modelSatisKodu;
         private object _SatisKodu;
+        private int _masaId;
 
         public Frm_Masa_Durumu()
         {
@@ -53,9 +54,9 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         public void DurumYenile()
         {
-            Btn_Yeni_Sifaris.Enabled= false;
-            Btn_Masa_Ac.Enabled= false;
-            Btn_Rezev_Et.Enabled= false;
+            Btn_Yeni_Sifaris.Enabled = false;
+            Btn_Masa_Ac.Enabled = false;
+            Btn_Rezev_Et.Enabled = false;
 
         }
 
@@ -63,16 +64,16 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
             BtnSender = sender as CheckButton;
             DurumYenile();
-            if (BtnSender.Appearance.BackColor==Color.Green)
+            if (BtnSender.Appearance.BackColor == Color.Green)
             {
                 Btn_Masa_Ac.Enabled = true;
-            } 
-            else if (BtnSender.Appearance.BackColor==Color.Red)
+            }
+            else if (BtnSender.Appearance.BackColor == Color.Red)
             {
                 Btn_Masa_Ac.Enabled = true;
                 Btn_Rezev_Et.Enabled = true;
-            } 
-            else if (BtnSender.Appearance.BackColor==Color.Blue)
+            }
+            else if (BtnSender.Appearance.BackColor == Color.Blue)
             {
                 Btn_Yeni_Sifaris.Enabled = true;
             }
@@ -89,7 +90,9 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void Btn_Yeni_Sifaris_Click(object sender, EventArgs e)
         {
-            Frm_Masa_Siparis frm = new Frm_Masa_Siparis();
+            _masaId = Convert.ToInt32(BtnSender.Name);
+            Frm_Masa_Siparis frm = new Frm_Masa_Siparis(masaId: _masaId, masaadi: BtnSender.Text);
+
             frm.ShowDialog();
         }
     }

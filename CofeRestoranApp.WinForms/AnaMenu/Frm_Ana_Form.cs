@@ -1,11 +1,11 @@
 ﻿using CofeRestoranApp.WinForms.Istifadeciler;
 using CofeRestoranApp.WinForms.Masalar;
 using CofeRestoranApp.WinForms.Menular;
+using CofeRestoranApp.WinForms.Musteriler;
 using CofeRestoranApp.WinForms.Urunler;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using System;
-using CofeRestoranApp.WinForms.Musteriler;
 
 namespace CofeRestoranApp.WinForms.AnaMenu
 {

@@ -168,6 +168,7 @@
             this.Btn_Yeni_Sifaris.Size = new System.Drawing.Size(125, 46);
             this.Btn_Yeni_Sifaris.TabIndex = 0;
             this.Btn_Yeni_Sifaris.Text = "Sifaris \r\nelave et";
+            this.Btn_Yeni_Sifaris.Click += new System.EventHandler(this.Btn_Yeni_Sifaris_Click);
             // 
             // Btn_Sonuclandir
             // 
@@ -691,8 +692,8 @@
             this.lookUpMusteri.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpMusteri.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AdiSoyadi", "Adi Soyadi"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AdSoyad", "Adi Soyadi"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Telefon", "Telefon")});
             this.lookUpMusteri.Properties.DisplayMember = "AdiSoyadi";
             this.lookUpMusteri.Properties.NullText = "Musteri Sec";

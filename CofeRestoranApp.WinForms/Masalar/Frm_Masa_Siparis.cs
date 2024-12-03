@@ -1,6 +1,6 @@
-﻿using System;
-using CafeRestoranApp.Entities.DAL;
+﻿using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
+using System;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -10,14 +10,14 @@ namespace CofeRestoranApp.WinForms.Masalar
         private MusterilerDAL musterilerDAL = new MusterilerDAL();
         private int? _masaId = null;
 
-        public Frm_Masa_Siparis(int? masaId=null,string masaadi=null,string satiskodu=null)
+        public Frm_Masa_Siparis(int? masaId = null, string masaadi = null, string satiskodu = null)
         {
             InitializeComponent();
             _masaId = masaId;
             lookUpMusteri.Properties.DataSource = musterilerDAL.GetAll(context);
-            if (_masaId!=null)
+            if (_masaId != null)
             {
-                Lbn_Basliq.Text = masaadi + "Siparisleri";
+                Lbn_Basliq.Text = masaadi + "  Siparisleri";
             }
         }
 
@@ -37,6 +37,11 @@ namespace CofeRestoranApp.WinForms.Masalar
         }
 
         private void OdenisSİlGr_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+        }
+
+        private void Btn_Yeni_Sifaris_Click(object sender, EventArgs e)
         {
 
         }
