@@ -58,5 +58,5 @@ jobs:
       # # 5. Değişiklikleri GitHub'a push ediyoruz
       # - name: Push changes
       #   run: |
-      #     git remote set-url origin https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/MuradoffTehmez/cafe_restoran_app.git
+      #     git remote set-url origin https://github-actions[bot]:{{ secrets.GITHUB_TOKEN }}@github.com/MuradoffTehmez/cafe_restoran_app.git
       #     git push origin master
