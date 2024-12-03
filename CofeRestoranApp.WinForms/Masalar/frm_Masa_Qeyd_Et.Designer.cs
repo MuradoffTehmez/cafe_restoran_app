@@ -110,6 +110,7 @@
             this.txtR_Aciklama.Properties.Appearance.Options.UseFont = true;
             this.txtR_Aciklama.Size = new System.Drawing.Size(332, 111);
             this.txtR_Aciklama.TabIndex = 29;
+            this.txtR_Aciklama.EditValueChanged += new System.EventHandler(this.txtR_Aciklama_EditValueChanged);
             // 
             // labelControl8
             // 

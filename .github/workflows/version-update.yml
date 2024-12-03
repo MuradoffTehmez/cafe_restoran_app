@@ -17,7 +17,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2. Versiyon numarasını güncelliyoruz
+      # 2. Git konfigürasyonunu yapıyoruz (E-posta ve kullanıcı adı)
+      - name: Set up Git configuration
+        run: |
+          git config --global user.email "muradofftehmez01@gmail.com"
+          git config --global user.name "MuradoffTehmez"
+
+      # 3. Versiyon numarasını güncelliyoruz
       - name: Update version number
         run: |
           VERSION_FILE="version.txt"
@@ -37,7 +43,7 @@ jobs:
           # Yeni versiyonu version.txt dosyasına yaz
           echo $NEW_VERSION > $VERSION_FILE
 
-      # 3. Değişiklikleri commit ediyoruz
+      # 4. Değişiklikleri commit ediyoruz
       - name: Commit changes
         run: |
           # Git'e değişiklikleri ekliyoruz
@@ -49,7 +55,7 @@ jobs:
           # Değişiklikleri commit ediyoruz
           git commit -m "$COMMIT_MSG"
 
-      # 4. Değişiklikleri GitHub'a push ediyoruz
+      # 5. Değişiklikleri GitHub'a push ediyoruz
       - name: Push changes
         run: |
           git push origin master

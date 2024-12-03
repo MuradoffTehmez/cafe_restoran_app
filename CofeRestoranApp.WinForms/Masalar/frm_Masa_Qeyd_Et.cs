@@ -65,6 +65,11 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         }
 
+        private void txtR_Aciklama_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
         //public void LogXeta(Exception ex)
         //{
         //    string logDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFiles");
