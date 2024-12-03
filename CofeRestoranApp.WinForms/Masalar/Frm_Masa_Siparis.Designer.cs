@@ -384,7 +384,7 @@
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(1161, 43);
             this.labelControl1.TabIndex = 7;
-            this.labelControl1.Text = "Masalar Haqqinda Melumat";
+            this.labelControl1.Text = "Siparisler Haqqinda Melumat";
             // 
             // Frm_Masa_Siparis
             // 
@@ -395,7 +395,7 @@
             this.Controls.Add(this.Group_Hesablamalar);
             this.Controls.Add(this.Group_Emeliyyatlar);
             this.Name = "Frm_Masa_Siparis";
-            this.Text = "Frm_Masa_Siparis";
+            this.Text = "Siparisler";
             ((System.ComponentModel.ISupportInitialize)(this.Group_Emeliyyatlar)).EndInit();
             this.Group_Emeliyyatlar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Group_Hesablamalar)).EndInit();
