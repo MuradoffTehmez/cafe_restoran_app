@@ -900,6 +900,8 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.Lbn_Basliq);
             this.Controls.Add(this.Group_Emeliyyatlar);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_Masa_Siparis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Siparisler";

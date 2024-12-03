@@ -340,6 +340,9 @@
     <EmbeddedResource Include="Masalar\frm_Masa_Qeyd_Et.resx">
       <DependentUpon>frm_Masa_Qeyd_Et.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Masalar\Frm_Masa_Rezervasiya.resx">
+      <DependentUpon>Frm_Masa_Rezervasiya.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Masalar\Frm_Masa_Siparis.resx">
       <DependentUpon>Frm_Masa_Siparis.cs</DependentUpon>
     </EmbeddedResource>
