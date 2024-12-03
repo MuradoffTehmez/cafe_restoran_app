@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Masa_Durumu));
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.Lbn_Basliq = new DevExpress.XtraEditors.LabelControl();
             this.Group_Emeliyyatlar = new DevExpress.XtraEditors.GroupControl();
             this.Btn_Rezev_Et = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_Masa_Ac = new DevExpress.XtraEditors.SimpleButton();
@@ -41,22 +41,22 @@
             this.Group_Emeliyyatlar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // labelControl1
+            // Lbn_Basliq
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Appearance.Options.UseTextOptions = true;
-            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelControl1.Location = new System.Drawing.Point(0, 0);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1155, 43);
-            this.labelControl1.TabIndex = 8;
-            this.labelControl1.Text = "Masa Melumati";
+            this.Lbn_Basliq.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbn_Basliq.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.Lbn_Basliq.Appearance.Options.UseFont = true;
+            this.Lbn_Basliq.Appearance.Options.UseForeColor = true;
+            this.Lbn_Basliq.Appearance.Options.UseTextOptions = true;
+            this.Lbn_Basliq.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Lbn_Basliq.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Lbn_Basliq.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.Lbn_Basliq.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Lbn_Basliq.Location = new System.Drawing.Point(0, 0);
+            this.Lbn_Basliq.Name = "Lbn_Basliq";
+            this.Lbn_Basliq.Size = new System.Drawing.Size(1155, 43);
+            this.Lbn_Basliq.TabIndex = 8;
+            this.Lbn_Basliq.Text = "Masa Melumati";
             // 
             // Group_Emeliyyatlar
             // 
@@ -157,7 +157,7 @@
             this.ClientSize = new System.Drawing.Size(1155, 757);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.Group_Emeliyyatlar);
-            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.Lbn_Basliq);
             this.Name = "Frm_Masa_Durumu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Masa_Durumu";
@@ -171,7 +171,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl Lbn_Basliq;
         private DevExpress.XtraEditors.GroupControl Group_Emeliyyatlar;
         private DevExpress.XtraEditors.SimpleButton btn_Guncelle;
         private DevExpress.XtraEditors.SimpleButton Btn_Yeni_Sifaris;
