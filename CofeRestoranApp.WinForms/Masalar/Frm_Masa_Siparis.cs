@@ -17,5 +17,10 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
             InitializeComponent();
         }
+
+        private void repositorySiparisSil_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+        }
     }
 }

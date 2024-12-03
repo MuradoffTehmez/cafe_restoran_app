@@ -1,0 +1,65 @@
+name: Auto Version Update
+
+# Workflow'u tetikleyen olaylar
+on:
+  push:
+    branches:
+      - main  # Ana branch'e yapılan her push işleminde çalışacak
+    paths:
+      - version.txt  # Yalnızca version.txt dosyasındaki değişiklikleri dinliyoruz
+
+jobs:
+  version-update:
+    runs-on: ubuntu-latest  # GitHub Actions işlemi Ubuntu üzerinde çalışacak
+
+    steps:
+      # 1. Kodu çekiyoruz
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Versiyon numarasını güncelliyoruz
+      - name: Update version number
+        run: |
+          VERSION_FILE="version.txt"
+          
+          # version.txt dosyasındaki mevcut versiyon numarasını oku
+          VERSION=$(cat $VERSION_FILE)
+          
+          # Versiyon numarasını ayır
+          IFS='.' read -r major minor patch <<< "$VERSION"
+          
+          # Patch numarasını 1 artır
+          patch=$((patch + 1))
+          
+          # Yeni versiyon numarasını oluştur
+          NEW_VERSION="$major.$minor.$patch"
+          
+          # Yeni versiyonu version.txt dosyasına yaz
+          echo $NEW_VERSION > $VERSION_FILE
+
+      # 3. Değişiklikleri commit ediyoruz
+      - name: Commit changes
+        run: |
+          # Git'e değişiklikleri ekliyoruz
+          git add $VERSION_FILE
+          
+          # Commit mesajı oluşturuyoruz
+          COMMIT_MSG="Auto version update to $NEW_VERSION"
+          
+          # Eğer commit mesajında 'skip ci' varsa, GitHub Actions'ı tetiklemesini engelliyoruz
+          if [[ "$COMMIT_MSG" != *"[skip ci]"* ]]; then
+            git commit -m "$COMMIT_MSG"
+          fi
+
+      # 4. Değişiklikleri GitHub'a push ediyoruz
+      - name: Push changes
+        run: |
+          # Değişiklikleri remote depoya push ediyoruz
+          git push
+
+      # 5. CI iş akışını tetiklememek için 'skip ci' etiketini ekliyoruz
+      - name: Create tag with version (optional)
+        run: |
+          # Sürümü tagliyoruz
+          git tag "v$NEW_VERSION"
+          git push origin "v$NEW_VERSION"
