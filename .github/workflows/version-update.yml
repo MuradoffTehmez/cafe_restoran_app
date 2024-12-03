@@ -4,7 +4,7 @@ name: Auto Version Update
 on:
   push:
     branches:
-      - main  # Ana branch'e yapılan her push işleminde çalışacak
+      - master  # Ana branch'e yapılan her push işleminde çalışacak
     paths:
       - version.txt  # Yalnızca version.txt dosyasındaki değişiklikleri dinliyoruz
 
@@ -54,8 +54,7 @@ jobs:
       # 4. Değişiklikleri GitHub'a push ediyoruz
       - name: Push changes
         run: |
-          # Değişiklikleri remote depoya push ediyoruz
-          git push
+          git push origin master  # Değişiklikleri remote depoya master branch'ine push ediyoruz
 
       # 5. CI iş akışını tetiklememek için 'skip ci' etiketini ekliyoruz
       - name: Create tag with version (optional)
