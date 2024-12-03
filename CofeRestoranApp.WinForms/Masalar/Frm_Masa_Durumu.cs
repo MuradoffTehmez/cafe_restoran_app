@@ -11,6 +11,8 @@ namespace CofeRestoranApp.WinForms.Masalar
     {
         private CafeContext context = new CafeContext();
         private CheckButton BtnSender;
+        private SatisKodu modelSatisKodu;
+        private object _SatisKodu;
 
         public Frm_Masa_Durumu()
         {
@@ -83,6 +85,12 @@ namespace CofeRestoranApp.WinForms.Masalar
                     MessageBoxIcon.Error
                 );
             }
+        }
+
+        private void Btn_Yeni_Sifaris_Click(object sender, EventArgs e)
+        {
+            Frm_Masa_Siparis frm = new Frm_Masa_Siparis();
+            frm.ShowDialog();
         }
     }
 }

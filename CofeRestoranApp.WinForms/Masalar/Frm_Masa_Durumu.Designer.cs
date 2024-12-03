@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Masa_Durumu));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.Group_Emeliyyatlar = new DevExpress.XtraEditors.GroupControl();
+            this.Btn_Rezev_Et = new DevExpress.XtraEditors.SimpleButton();
+            this.Btn_Masa_Ac = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_Yeni_Sifaris = new DevExpress.XtraEditors.SimpleButton();
             this.btn_cisix_et = new DevExpress.XtraEditors.SimpleButton();
-            this.Btn_Masa_Ac = new DevExpress.XtraEditors.SimpleButton();
-            this.Btn_Rezev_Et = new DevExpress.XtraEditors.SimpleButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.Group_Emeliyyatlar)).BeginInit();
             this.Group_Emeliyyatlar.SuspendLayout();
@@ -72,6 +72,34 @@
             this.Group_Emeliyyatlar.TabIndex = 9;
             this.Group_Emeliyyatlar.Text = "Əməliyyatlar";
             // 
+            // Btn_Rezev_Et
+            // 
+            this.Btn_Rezev_Et.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Rezev_Et.Appearance.Options.UseFont = true;
+            this.Btn_Rezev_Et.Appearance.Options.UseTextOptions = true;
+            this.Btn_Rezev_Et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Btn_Rezev_Et.Enabled = false;
+            this.Btn_Rezev_Et.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Rezev_Et.ImageOptions.Image")));
+            this.Btn_Rezev_Et.Location = new System.Drawing.Point(273, 26);
+            this.Btn_Rezev_Et.Name = "Btn_Rezev_Et";
+            this.Btn_Rezev_Et.Size = new System.Drawing.Size(125, 46);
+            this.Btn_Rezev_Et.TabIndex = 4;
+            this.Btn_Rezev_Et.Text = "Rezev Et";
+            // 
+            // Btn_Masa_Ac
+            // 
+            this.Btn_Masa_Ac.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Masa_Ac.Appearance.Options.UseFont = true;
+            this.Btn_Masa_Ac.Appearance.Options.UseTextOptions = true;
+            this.Btn_Masa_Ac.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Btn_Masa_Ac.Enabled = false;
+            this.Btn_Masa_Ac.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Masa_Ac.ImageOptions.Image")));
+            this.Btn_Masa_Ac.Location = new System.Drawing.Point(143, 26);
+            this.Btn_Masa_Ac.Name = "Btn_Masa_Ac";
+            this.Btn_Masa_Ac.Size = new System.Drawing.Size(125, 46);
+            this.Btn_Masa_Ac.TabIndex = 4;
+            this.Btn_Masa_Ac.Text = "Masa Ac";
+            // 
             // btn_Guncelle
             // 
             this.btn_Guncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,6 +126,7 @@
             this.Btn_Yeni_Sifaris.Size = new System.Drawing.Size(125, 46);
             this.Btn_Yeni_Sifaris.TabIndex = 0;
             this.Btn_Yeni_Sifaris.Text = "Sifarisler";
+            this.Btn_Yeni_Sifaris.Click += new System.EventHandler(this.Btn_Yeni_Sifaris_Click);
             // 
             // btn_cisix_et
             // 
@@ -112,34 +141,6 @@
             this.btn_cisix_et.Size = new System.Drawing.Size(125, 46);
             this.btn_cisix_et.TabIndex = 3;
             this.btn_cisix_et.Text = "Çıxış";
-            // 
-            // Btn_Masa_Ac
-            // 
-            this.Btn_Masa_Ac.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Masa_Ac.Appearance.Options.UseFont = true;
-            this.Btn_Masa_Ac.Appearance.Options.UseTextOptions = true;
-            this.Btn_Masa_Ac.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Btn_Masa_Ac.Enabled = false;
-            this.Btn_Masa_Ac.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.Btn_Masa_Ac.Location = new System.Drawing.Point(143, 26);
-            this.Btn_Masa_Ac.Name = "Btn_Masa_Ac";
-            this.Btn_Masa_Ac.Size = new System.Drawing.Size(125, 46);
-            this.Btn_Masa_Ac.TabIndex = 4;
-            this.Btn_Masa_Ac.Text = "Masa Ac";
-            // 
-            // Btn_Rezev_Et
-            // 
-            this.Btn_Rezev_Et.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Rezev_Et.Appearance.Options.UseFont = true;
-            this.Btn_Rezev_Et.Appearance.Options.UseTextOptions = true;
-            this.Btn_Rezev_Et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Btn_Rezev_Et.Enabled = false;
-            this.Btn_Rezev_Et.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.Btn_Rezev_Et.Location = new System.Drawing.Point(273, 26);
-            this.Btn_Rezev_Et.Name = "Btn_Rezev_Et";
-            this.Btn_Rezev_Et.Size = new System.Drawing.Size(125, 46);
-            this.Btn_Rezev_Et.TabIndex = 4;
-            this.Btn_Rezev_Et.Text = "Rezev Et";
             // 
             // flowLayoutPanel1
             // 
