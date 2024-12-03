@@ -48,9 +48,7 @@ jobs:
         run: |
           # Git'e değişiklikleri ekliyoruz
           git add $VERSION_FILE
-          
-          # Commit mesajı oluşturuyoruz
-          COMMIT_MSG="Auto version update to $NEW_VERSION"
+                  COMMIT_MSG="Auto version update to $NEW_VERSION"
           
           # Değişiklikleri commit ediyoruz
           git commit -m "$COMMIT_MSG" || echo "No changes to commit"
