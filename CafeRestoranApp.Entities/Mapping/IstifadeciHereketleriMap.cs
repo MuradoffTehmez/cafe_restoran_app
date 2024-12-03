@@ -16,7 +16,7 @@ namespace CafeRestoranApp.Entities.Mapping
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             this.Property(p => p.Aciklama)
-                .HasColumnType("varchar")
+                .HasColumnType("nvarchar ")
                 .HasMaxLength(300);
 
             this.HasRequired(x => x.Istifadeciler)

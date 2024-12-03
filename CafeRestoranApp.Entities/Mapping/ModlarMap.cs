@@ -11,9 +11,9 @@ namespace CafeRestoranApp.Entities.Mapping
             this.ToTable("Modlar");
             this.HasKey(p => p.Id);
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.ControlCaption).HasColumnType("varchar").HasMaxLength(50);
-            this.Property(p => p.ControlName).HasColumnType("varchar").HasMaxLength(50);
-            this.Property(p => p.FormName).HasColumnType("varchar").HasMaxLength(50);
+            this.Property(p => p.ControlCaption).HasColumnType("nvarchar").HasMaxLength(50);
+            this.Property(p => p.ControlName).HasColumnType("nvarchar").HasMaxLength(50);
+            this.Property(p => p.FormName).HasColumnType("nvarchar").HasMaxLength(50);
         }
     }
 }

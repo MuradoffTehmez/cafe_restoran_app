@@ -11,9 +11,9 @@ namespace CafeRestoranApp.Entities.Mapping
             this.ToTable("Masalar");
             this.HasKey(p => p.Id);
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.MasaAdi).HasColumnType("varchar").HasMaxLength(50);
-            this.Property(p => p.SatisKodu).HasColumnType("varchar").HasMaxLength(30);
-            this.Property(p => p.Aciklama).HasColumnType("varchar").HasMaxLength(300);
+            this.Property(p => p.MasaAdi).HasColumnType("nvarchar").HasMaxLength(50);
+            this.Property(p => p.SatisKodu).HasColumnType("nvarchar").HasMaxLength(30);
+            this.Property(p => p.Aciklama).HasColumnType("nvarchar").HasMaxLength(300);
             this.Property(p => p.ElaveOlmaTarixi).HasColumnType("Date");
             this.HasOptional(m => m.İsIstifadeciler).WithMany(m => m.Masalar).HasForeignKey(m => m.KullaniciId);
 

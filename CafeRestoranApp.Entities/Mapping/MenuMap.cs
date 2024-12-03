@@ -11,8 +11,8 @@ namespace CafeRestoranApp.Entities.Mapping
             this.ToTable("Menu");
             this.HasKey(p => p.Id);
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.MenuAdi).HasColumnType("varchar").HasMaxLength(60);
-            this.Property(p => p.Aciklama).HasColumnType("varchar").HasMaxLength(500);
+            this.Property(p => p.MenuAdi).HasColumnType("nvarchar").HasMaxLength(60);
+            this.Property(p => p.Aciklama).HasColumnType("nvarchar").HasMaxLength(500);
         }
     }
 }
