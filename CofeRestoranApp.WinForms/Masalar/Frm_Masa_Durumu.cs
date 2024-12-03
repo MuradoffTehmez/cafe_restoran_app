@@ -52,6 +52,7 @@ namespace CofeRestoranApp.WinForms.Masalar
                 {
                     btn.Appearance.BackColor = Color.Green;
                 }
+                btn.Click -= Btn_Click;
                 btn.Click += Btn_Click;
             }
         }
