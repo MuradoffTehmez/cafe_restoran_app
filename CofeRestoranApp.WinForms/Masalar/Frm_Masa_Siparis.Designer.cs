@@ -660,6 +660,7 @@
             this.Controls.Add(this.Group_Emeliyyatlar);
             this.Name = "Frm_Masa_Siparis";
             this.Text = "Siparisler";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.Group_Emeliyyatlar)).EndInit();
             this.Group_Emeliyyatlar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Calc_Endirimli_Qiymet.Properties)).EndInit();

@@ -48,7 +48,8 @@ namespace CofeRestoranApp.WinForms.AnaMenu
 
         private void btn_Masa_Haraketleri_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            XtraForm frm = new Frm_Masa_Siparis();
+            FormGetir(frm);
         }
 
         private void Btn_Masa_Sifaris_ItemClick(object sender, ItemClickEventArgs e)
