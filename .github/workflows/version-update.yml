@@ -46,19 +46,10 @@ jobs:
           # Commit mesajı oluşturuyoruz
           COMMIT_MSG="Auto version update to $NEW_VERSION"
           
-          # Eğer commit mesajında 'skip ci' varsa, GitHub Actions'ı tetiklemesini engelliyoruz
-          if [[ "$COMMIT_MSG" != *"[skip ci]"* ]]; then
-            git commit -m "$COMMIT_MSG"
-          fi
+          # Değişiklikleri commit ediyoruz
+          git commit -m "$COMMIT_MSG"
 
       # 4. Değişiklikleri GitHub'a push ediyoruz
       - name: Push changes
         run: |
-          git push origin master  # Değişiklikleri remote depoya master branch'ine push ediyoruz
-
-      # 5. CI iş akışını tetiklememek için 'skip ci' etiketini ekliyoruz
-      - name: Create tag with version (optional)
-        run: |
-          # Sürümü tagliyoruz
-          git tag "v$NEW_VERSION"
-          git push origin "v$NEW_VERSION"
+          git push origin master
