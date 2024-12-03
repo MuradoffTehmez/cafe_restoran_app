@@ -690,8 +690,14 @@
             this.lookUpMusteri.Properties.Appearance.Options.UseFont = true;
             this.lookUpMusteri.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpMusteri.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AdiSoyadi", "Adi Soyadi"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Telefon", "Telefon")});
+            this.lookUpMusteri.Properties.DisplayMember = "AdiSoyadi";
             this.lookUpMusteri.Properties.NullText = "Musteri Sec";
             this.lookUpMusteri.Properties.NullValuePrompt = "Musteri Sec";
+            this.lookUpMusteri.Properties.ValueMember = "Id";
             this.lookUpMusteri.Size = new System.Drawing.Size(358, 26);
             this.lookUpMusteri.TabIndex = 28;
             // 
