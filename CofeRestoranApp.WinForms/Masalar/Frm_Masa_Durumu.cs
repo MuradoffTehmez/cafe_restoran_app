@@ -48,6 +48,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             }
         }
 
+
         public void DurumYenile()
         {
             Btn_Yeni_Sifaris.Enabled= false;
