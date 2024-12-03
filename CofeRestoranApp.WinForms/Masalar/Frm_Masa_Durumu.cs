@@ -10,6 +10,7 @@ namespace CofeRestoranApp.WinForms.Masalar
     public partial class Frm_Masa_Durumu : DevExpress.XtraEditors.XtraForm
     {
         private CafeContext context = new CafeContext();
+        private CheckButton BtnSender;
 
         public Frm_Masa_Durumu()
         {
@@ -48,11 +49,40 @@ namespace CofeRestoranApp.WinForms.Masalar
             }
         }
 
+        public void DurumYenile()
+        {
+            Btn_Yeni_Sifaris.Enabled= false;
+            Btn_Masa_Ac.Enabled= false;
+            Btn_Rezev_Et.Enabled= false;
+
+        }
+
         private void Btn_Click(object sender, EventArgs e)
         {
-            var btn = sender as CheckButton;
-            MessageBox.Show($"Masa Adi: {btn.Text} Masa ID: {btn.Name}");
-
+            BtnSender = sender as CheckButton;
+            DurumYenile();
+            if (BtnSender.Appearance.BackColor==Color.Green)
+            {
+                Btn_Masa_Ac.Enabled = true;
+            } 
+            else if (BtnSender.Appearance.BackColor==Color.Red)
+            {
+                Btn_Masa_Ac.Enabled = true;
+                Btn_Rezev_Et.Enabled = true;
+            } 
+            else if (BtnSender.Appearance.BackColor==Color.Blue)
+            {
+                Btn_Yeni_Sifaris.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Xəta: Bu hadisə CheckButton növündə bir obyekt ilə tetiklenmedi.",
+                    "Xəta",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
         }
     }
 }

@@ -91,6 +91,7 @@
             this.Btn_Yeni_Sifaris.Appearance.Options.UseFont = true;
             this.Btn_Yeni_Sifaris.Appearance.Options.UseTextOptions = true;
             this.Btn_Yeni_Sifaris.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Btn_Yeni_Sifaris.Enabled = false;
             this.Btn_Yeni_Sifaris.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Yeni_Sifaris.ImageOptions.Image")));
             this.Btn_Yeni_Sifaris.Location = new System.Drawing.Point(13, 26);
             this.Btn_Yeni_Sifaris.Name = "Btn_Yeni_Sifaris";
@@ -118,6 +119,7 @@
             this.Btn_Masa_Ac.Appearance.Options.UseFont = true;
             this.Btn_Masa_Ac.Appearance.Options.UseTextOptions = true;
             this.Btn_Masa_Ac.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Btn_Masa_Ac.Enabled = false;
             this.Btn_Masa_Ac.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.Btn_Masa_Ac.Location = new System.Drawing.Point(143, 26);
             this.Btn_Masa_Ac.Name = "Btn_Masa_Ac";
@@ -131,6 +133,7 @@
             this.Btn_Rezev_Et.Appearance.Options.UseFont = true;
             this.Btn_Rezev_Et.Appearance.Options.UseTextOptions = true;
             this.Btn_Rezev_Et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Btn_Rezev_Et.Enabled = false;
             this.Btn_Rezev_Et.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
             this.Btn_Rezev_Et.Location = new System.Drawing.Point(273, 26);
             this.Btn_Rezev_Et.Name = "Btn_Rezev_Et";
