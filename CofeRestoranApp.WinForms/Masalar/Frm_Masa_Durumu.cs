@@ -4,6 +4,8 @@ using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using CafeRestoranApp.Entities.DAL;
+using DurableTask.Core.Common;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -11,9 +13,11 @@ namespace CofeRestoranApp.WinForms.Masalar
     {
         private CafeContext context = new CafeContext();
         private CheckButton BtnSender;
-        private SatisKodu modelSatisKodu;
-        private object _SatisKodu;
+        private SatisKodu modelSatisKodu = new SatisKodu();
+        private string _SatisKodu;
         private int _masaId;
+        private CafeRestoranApp.Entities.Models.Masalar masalar;
+        MasalarDAL masalarDal= new MasalarDAL();
 
         public Frm_Masa_Durumu()
         {
@@ -26,6 +30,7 @@ namespace CofeRestoranApp.WinForms.Masalar
         }
         public void MasaGetir()
         {
+            flowLayoutPanel1.Controls.Clear();
             var model = context.Masalar.ToList();
             for (int i = 0; i < model.Count; i++)
             {
@@ -37,7 +42,7 @@ namespace CofeRestoranApp.WinForms.Masalar
                 flowLayoutPanel1.Controls.Add(btn);
                 if (model[i].Rezervasiya && !model[i].Durumu)
                 {
-                    btn.Appearance.BackColor = Color.Green;
+                    btn.Appearance.BackColor = Color.Yellow;
                 }
                 else if (model[i].Durumu)
                 {
@@ -45,7 +50,7 @@ namespace CofeRestoranApp.WinForms.Masalar
                 }
                 else if (!model[i].Durumu)
                 {
-                    btn.Appearance.BackColor = Color.Blue;
+                    btn.Appearance.BackColor = Color.Green;
                 }
                 btn.Click += Btn_Click;
             }
@@ -63,17 +68,19 @@ namespace CofeRestoranApp.WinForms.Masalar
         private void Btn_Click(object sender, EventArgs e)
         {
             BtnSender = sender as CheckButton;
+            _masaId = Convert.ToInt32(BtnSender.Name);
+            //_SatisKodu = BtnSender.Tag.ToString();
             DurumYenile();
-            if (BtnSender.Appearance.BackColor == Color.Green)
+            if (BtnSender.Appearance.BackColor == Color.Yellow)
             {
                 Btn_Masa_Ac.Enabled = true;
             }
-            else if (BtnSender.Appearance.BackColor == Color.Red)
+            else if (BtnSender.Appearance.BackColor == Color.Green)
             {
                 Btn_Masa_Ac.Enabled = true;
                 Btn_Rezev_Et.Enabled = true;
             }
-            else if (BtnSender.Appearance.BackColor == Color.Blue)
+            else if (BtnSender.Appearance.BackColor == Color.Red)
             {
                 Btn_Yeni_Sifaris.Enabled = true;
             }
@@ -90,10 +97,23 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void Btn_Yeni_Sifaris_Click(object sender, EventArgs e)
         {
-            _masaId = Convert.ToInt32(BtnSender.Name);
             Frm_Masa_Siparis frm = new Frm_Masa_Siparis(masaId: _masaId, masaadi: BtnSender.Text);
-
             frm.ShowDialog();
+        }
+
+        private void Btn_Masa_Ac_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(BtnSender.Text+ "  Acilsin ?","Melumat",MessageBoxButtons.YesNo,MessageBoxIcon.Information)==DialogResult.Yes)
+            {
+                masalar = masalarDal.GetByFilter(context, m => m.Id == _masaId);
+                masalar.SatisKodu = modelSatisKodu.SatisTanimi + modelSatisKodu.Sayi;
+                masalar.Durumu = true;
+                modelSatisKodu.Sayi++;
+                masalarDal.Save(context);
+                BtnSender = null;
+                DurumYenile();
+                MasaGetir();
+            }
         }
     }
 }

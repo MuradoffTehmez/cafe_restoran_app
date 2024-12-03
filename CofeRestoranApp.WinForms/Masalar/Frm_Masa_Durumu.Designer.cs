@@ -54,7 +54,7 @@
             this.Lbn_Basliq.Dock = System.Windows.Forms.DockStyle.Top;
             this.Lbn_Basliq.Location = new System.Drawing.Point(0, 0);
             this.Lbn_Basliq.Name = "Lbn_Basliq";
-            this.Lbn_Basliq.Size = new System.Drawing.Size(1155, 43);
+            this.Lbn_Basliq.Size = new System.Drawing.Size(998, 43);
             this.Lbn_Basliq.TabIndex = 8;
             this.Lbn_Basliq.Text = "Masa Melumati";
             // 
@@ -66,9 +66,9 @@
             this.Group_Emeliyyatlar.Controls.Add(this.Btn_Yeni_Sifaris);
             this.Group_Emeliyyatlar.Controls.Add(this.btn_cisix_et);
             this.Group_Emeliyyatlar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Group_Emeliyyatlar.Location = new System.Drawing.Point(0, 676);
+            this.Group_Emeliyyatlar.Location = new System.Drawing.Point(0, 621);
             this.Group_Emeliyyatlar.Name = "Group_Emeliyyatlar";
-            this.Group_Emeliyyatlar.Size = new System.Drawing.Size(1155, 81);
+            this.Group_Emeliyyatlar.Size = new System.Drawing.Size(998, 81);
             this.Group_Emeliyyatlar.TabIndex = 9;
             this.Group_Emeliyyatlar.Text = "Əməliyyatlar";
             // 
@@ -99,6 +99,7 @@
             this.Btn_Masa_Ac.Size = new System.Drawing.Size(125, 46);
             this.Btn_Masa_Ac.TabIndex = 4;
             this.Btn_Masa_Ac.Text = "Masa Ac";
+            this.Btn_Masa_Ac.Click += new System.EventHandler(this.Btn_Masa_Ac_Click);
             // 
             // btn_Guncelle
             // 
@@ -136,7 +137,7 @@
             this.btn_cisix_et.Appearance.Options.UseTextOptions = true;
             this.btn_cisix_et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btn_cisix_et.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_cisix_et.ImageOptions.SvgImage")));
-            this.btn_cisix_et.Location = new System.Drawing.Point(1026, 26);
+            this.btn_cisix_et.Location = new System.Drawing.Point(869, 26);
             this.btn_cisix_et.Name = "btn_cisix_et";
             this.btn_cisix_et.Size = new System.Drawing.Size(125, 46);
             this.btn_cisix_et.TabIndex = 3;
@@ -147,14 +148,14 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 43);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1155, 633);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(998, 578);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // Frm_Masa_Durumu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 757);
+            this.ClientSize = new System.Drawing.Size(998, 702);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.Group_Emeliyyatlar);
             this.Controls.Add(this.Lbn_Basliq);
