@@ -34,6 +34,11 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.Group_Emeliyyatlar = new DevExpress.XtraEditors.GroupControl();
             this.btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_Yeni_Sifaris = new DevExpress.XtraEditors.SimpleButton();
@@ -91,6 +96,8 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.Btn_Karla_Satis = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_Nagd_Satis = new DevExpress.XtraEditors.SimpleButton();
+            this.ColumnOdenisSil = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.OdenisSİlGr = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.Group_Emeliyyatlar)).BeginInit();
             this.Group_Emeliyyatlar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_Endirimli_Qiymet.Properties)).BeginInit();
@@ -118,6 +125,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOdenisler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OdenisSİlGr)).BeginInit();
             this.SuspendLayout();
             // 
             // Group_Emeliyyatlar
@@ -764,6 +772,8 @@
             this.gridControlOdenisler.Location = new System.Drawing.Point(0, 61);
             this.gridControlOdenisler.MainView = this.gridViewOdenisler;
             this.gridControlOdenisler.Name = "gridControlOdenisler";
+            this.gridControlOdenisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.OdenisSİlGr});
             this.gridControlOdenisler.Size = new System.Drawing.Size(1075, 373);
             this.gridControlOdenisler.TabIndex = 1;
             this.gridControlOdenisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -772,6 +782,7 @@
             // gridViewOdenisler
             // 
             this.gridViewOdenisler.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.ColumnOdenisSil,
             this.colId1,
             this.colSatisKodu1,
             this.colOdemeTuru,
@@ -786,42 +797,42 @@
             this.colId1.FieldName = "Id";
             this.colId1.Name = "colId1";
             this.colId1.Visible = true;
-            this.colId1.VisibleIndex = 0;
+            this.colId1.VisibleIndex = 1;
             // 
             // colSatisKodu1
             // 
             this.colSatisKodu1.FieldName = "SatisKodu";
             this.colSatisKodu1.Name = "colSatisKodu1";
             this.colSatisKodu1.Visible = true;
-            this.colSatisKodu1.VisibleIndex = 1;
+            this.colSatisKodu1.VisibleIndex = 2;
             // 
             // colOdemeTuru
             // 
             this.colOdemeTuru.FieldName = "OdemeTuru";
             this.colOdemeTuru.Name = "colOdemeTuru";
             this.colOdemeTuru.Visible = true;
-            this.colOdemeTuru.VisibleIndex = 2;
+            this.colOdemeTuru.VisibleIndex = 3;
             // 
             // colOdenis
             // 
             this.colOdenis.FieldName = "Odenis";
             this.colOdenis.Name = "colOdenis";
             this.colOdenis.Visible = true;
-            this.colOdenis.VisibleIndex = 3;
+            this.colOdenis.VisibleIndex = 4;
             // 
             // colAciklama1
             // 
             this.colAciklama1.FieldName = "Aciklama";
             this.colAciklama1.Name = "colAciklama1";
             this.colAciklama1.Visible = true;
-            this.colAciklama1.VisibleIndex = 4;
+            this.colAciklama1.VisibleIndex = 5;
             // 
             // colTarix1
             // 
             this.colTarix1.FieldName = "Tarix";
             this.colTarix1.Name = "colTarix1";
             this.colTarix1.Visible = true;
-            this.colTarix1.VisibleIndex = 5;
+            this.colTarix1.VisibleIndex = 6;
             // 
             // panelControl2
             // 
@@ -854,6 +865,25 @@
             this.Btn_Nagd_Satis.Size = new System.Drawing.Size(187, 50);
             this.Btn_Nagd_Satis.TabIndex = 0;
             this.Btn_Nagd_Satis.Text = "Nagd Satis";
+            // 
+            // ColumnOdenisSil
+            // 
+            this.ColumnOdenisSil.Caption = "Sil";
+            this.ColumnOdenisSil.ColumnEdit = this.OdenisSİlGr;
+            this.ColumnOdenisSil.Name = "ColumnOdenisSil";
+            this.ColumnOdenisSil.Visible = true;
+            this.ColumnOdenisSil.VisibleIndex = 0;
+            // 
+            // OdenisSİlGr
+            // 
+            this.OdenisSİlGr.AutoHeight = false;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            this.OdenisSİlGr.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.OdenisSİlGr.Name = "OdenisSİlGr";
+            this.OdenisSİlGr.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.OdenisSİlGr.UseMaskAsDisplayFormat = false;
+            this.OdenisSİlGr.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.OdenisSİlGr_ButtonClick);
             // 
             // Frm_Masa_Siparis
             // 
@@ -895,6 +925,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOdenisler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.OdenisSİlGr)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -958,5 +989,7 @@
         private DevExpress.XtraEditors.SimpleButton Btn_Nagd_Satis;
         private DevExpress.XtraGrid.Columns.GridColumn ColSipatisSil;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositorySiparisSil;
+        private DevExpress.XtraGrid.Columns.GridColumn ColumnOdenisSil;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit OdenisSİlGr;
     }
 }

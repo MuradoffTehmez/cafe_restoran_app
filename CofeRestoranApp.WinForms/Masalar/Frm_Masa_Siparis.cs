@@ -16,9 +16,15 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void btn_cisix_et_Click(object sender, EventArgs e)
         {
+
         }
 
         private void btn_Guncelle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OdenisSİlGr_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
 
         }
