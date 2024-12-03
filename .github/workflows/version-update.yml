@@ -53,7 +53,7 @@ jobs:
           COMMIT_MSG="Auto version update to $NEW_VERSION"
           
           # Değişiklikleri commit ediyoruz
-          git commit -m "$COMMIT_MSG"
+          git commit -m "$COMMIT_MSG" || echo "No changes to commit"
 
       # 5. Değişiklikleri GitHub'a push ediyoruz
       - name: Push changes

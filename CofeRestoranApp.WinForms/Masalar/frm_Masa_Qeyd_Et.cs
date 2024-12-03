@@ -69,32 +69,5 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
 
         }
-
-        //public void LogXeta(Exception ex)
-        //{
-        //    string logDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFiles");
-        //    string logFilePath = Path.Combine(logDirectory, "error_log.txt");
-
-        //    try
-        //    {
-        //        if (!Directory.Exists(logDirectory))
-        //        {
-        //            Directory.CreateDirectory(logDirectory);
-        //        }
-
-        //        using (StreamWriter sw = new StreamWriter(logFilePath, true))
-        //        {
-        //            sw.WriteLine($"Tarix: {DateTime.Now}");
-        //            sw.WriteLine($"Xəta mesajı: {ex.Message}");
-        //            sw.WriteLine($"Sətir məlumatı:\n{ex.StackTrace}");
-        //            sw.WriteLine("--------------------------------------------------");
-        //        }
-        //    }
-        //    catch (Exception logEx)
-        //    {
-        //        MessageBox.Show($"Xətanı log faylına yazarkən problem baş verdi:\n{logEx.Message}", "Log Xətası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //    }
-        //}
-
     }
 }
