@@ -9,11 +9,14 @@ namespace CofeRestoranApp.WinForms.Masalar
         private CafeContext context = new CafeContext();
         private MusterilerDAL musterilerDAL = new MusterilerDAL();
         private int? _masaId = null;
+        private string _satiskodu =null;
 
         public Frm_Masa_Siparis(int? masaId = null, string masaadi = null, string satiskodu = null)
         {
             InitializeComponent();
             _masaId = masaId;
+            _satiskodu=satiskodu;
+
             lookUpMusteri.Properties.DataSource = musterilerDAL.GetAll(context);
             if (_masaId != null)
             {
