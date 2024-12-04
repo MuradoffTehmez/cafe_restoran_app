@@ -1,9 +1,9 @@
 ﻿using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
+using CofeRestoranApp.WinForms.Urunler;
 using System;
 using System.Data.Entity;
 using System.Linq;
-using CofeRestoranApp.WinForms.Urunler;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -13,13 +13,13 @@ namespace CofeRestoranApp.WinForms.Masalar
         private MusterilerDAL musterilerDAL = new MusterilerDAL();
         private MasaHerekleriDAL masaHerekleriDAL = new MasaHerekleriDAL();
         private int? _masaId = null;
-        private string _satiskodu =null;
+        private string _satiskodu = null;
 
         public Frm_Masa_Siparis(int? masaId = null, string masaadi = null, string satiskodu = null)
         {
             InitializeComponent();
             _masaId = masaId;
-            _satiskodu=satiskodu;
+            _satiskodu = satiskodu;
             context.MasaHaraketleri.Where(m => m.SatisKodu == _satiskodu).Load();
             context.OdenisTarixcesi.Where(o => o.SatisKodu == _satiskodu).Load();
             context.Urun.Load();
@@ -52,7 +52,7 @@ namespace CofeRestoranApp.WinForms.Masalar
                 MasaHaraketleri entity = new MasaHaraketleri
                 {
                     SatisKodu = _satiskodu,
-                    MasaId =Convert.ToInt32(_masaId),
+                    MasaId = Convert.ToInt32(_masaId),
                     UrunId = frm.urunModel.Id,
                     Miqdari = 1,
                     Qiymeti = frm.urunModel.Qiymet1,
@@ -62,6 +62,11 @@ namespace CofeRestoranApp.WinForms.Masalar
                 };
                 masaHerekleriDAL.AddOrUpdate(context, entity);
             }
+        }
+
+        private void btn_cisix_et_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

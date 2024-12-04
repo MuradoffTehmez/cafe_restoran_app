@@ -1,6 +1,6 @@
-﻿using System;
-using CafeRestoranApp.Entities.DAL;
+﻿using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
+using System;
 
 namespace CofeRestoranApp.WinForms.Urunler
 {
@@ -19,12 +19,12 @@ namespace CofeRestoranApp.WinForms.Urunler
 
         private void Btn_Sec_Click(object sender, System.EventArgs e)
         {
-            if (gridView1.SelectedRowsCount>0)
+            if (gridView1.SelectedRowsCount > 0)
             {
                 int urunId = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
                 urunModel = urunDal.GetByFilter(context, u => u.Id == urunId);
                 secildi = true;
-                this.Close(); 
+                this.Close();
             }
         }
     }
