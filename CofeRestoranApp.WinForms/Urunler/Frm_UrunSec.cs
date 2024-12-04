@@ -9,6 +9,8 @@ namespace CofeRestoranApp.WinForms.Urunler
         private CafeContext context = new CafeContext();
         private UrunDAL urunDal = new UrunDAL();
         public Urun urunModel;
+        public bool secildi;
+
         public Frm_UrunSec()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace CofeRestoranApp.WinForms.Urunler
             {
                 int urunId = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
                 urunModel = urunDal.GetByFilter(context, u => u.Id == urunId);
+                secildi = true;
                 this.Close(); 
             }
         }
