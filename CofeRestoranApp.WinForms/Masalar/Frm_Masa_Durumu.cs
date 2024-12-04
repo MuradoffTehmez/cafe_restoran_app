@@ -122,7 +122,12 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
             Frm_Masa_Rezervasiya frm = new Frm_Masa_Rezervasiya(_masaId);
             frm.ShowDialog();
-            if
+            if (frm.islemyapildi)
+            {
+                DurumYenile();
+                MasaGetir();
+                BtnSender = null;
+            }
         }
     }
 }
