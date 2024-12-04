@@ -120,7 +120,9 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void Btn_Rezev_Et_Click(object sender, EventArgs e)
         {
-
+            Frm_Masa_Rezervasiya frm = new Frm_Masa_Rezervasiya(_masaId);
+            frm.ShowDialog();
+            if
         }
     }
 }

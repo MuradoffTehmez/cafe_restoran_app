@@ -152,6 +152,7 @@
             this.Btn_Tesdiqle.Size = new System.Drawing.Size(133, 64);
             this.Btn_Tesdiqle.TabIndex = 0;
             this.Btn_Tesdiqle.Text = "Tesdiqle";
+            this.Btn_Tesdiqle.Click += new System.EventHandler(this.Btn_Tesdiqle_Click);
             // 
             // btn_cisix_et
             // 
