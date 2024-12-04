@@ -1,6 +1,8 @@
 ﻿using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
 using System;
+using System.Data.Entity;
+using System.Linq;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -16,7 +18,8 @@ namespace CofeRestoranApp.WinForms.Masalar
             InitializeComponent();
             _masaId = masaId;
             _satiskodu=satiskodu;
-
+            context.MasaHaraketleri.Where(m => m.SatisKodu == _satiskodu).Load();
+            context.OdenisTarixcesi.Where(o => o.SatisKodu == _satiskodu).Load();
             lookUpMusteri.Properties.DataSource = musterilerDAL.GetAll(context);
             if (_masaId != null)
             {
