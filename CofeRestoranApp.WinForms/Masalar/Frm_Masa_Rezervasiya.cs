@@ -35,6 +35,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             masalar.SonIslemTarixi = Convert.ToDateTime(dateTarix.EditValue);
             masalar.KullaniciId = IstifadeciAyarlari.istifadciId;
             masalarDal.Save(context);
+            islemyapildi=true;
         }
     }
 }
