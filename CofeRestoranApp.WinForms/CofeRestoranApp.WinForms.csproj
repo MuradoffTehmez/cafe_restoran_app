@@ -312,6 +312,7 @@
     <Compile Include="Urunler\frm_Urun_Qeydiyat.Designer.cs">
       <DependentUpon>frm_Urun_Qeydiyat.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinTools\IstifadeciAyarlari.cs" />
     <EmbeddedResource Include="AnaMenu\Frm_Ana_Form.resx">
       <DependentUpon>Frm_Ana_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -408,7 +409,6 @@
   <ItemGroup>
     <Folder Include="bin\Debug\Image\" />
     <Folder Include="Utilities\" />
-    <Folder Include="WinTools\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
