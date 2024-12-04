@@ -10,7 +10,7 @@ namespace CofeRestoranApp.WinForms.Urunler
         public Frm_UrunSec()
         {
             InitializeComponent();
-            gridControl1.DataSource = urunDal.GetAll(context);
+            gridControl1.DataSource = urunDal.UrunListele(context);
         }
     }
 }
