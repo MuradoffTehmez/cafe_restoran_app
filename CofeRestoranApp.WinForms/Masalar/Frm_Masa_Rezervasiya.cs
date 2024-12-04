@@ -36,6 +36,12 @@ namespace CofeRestoranApp.WinForms.Masalar
             masalar.KullaniciId = IstifadeciAyarlari.istifadciId;
             masalarDal.Save(context);
             islemyapildi=true;
+            this.Close();
+        }
+
+        private void btn_cisix_et_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
