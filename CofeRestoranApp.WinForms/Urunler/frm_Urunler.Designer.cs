@@ -78,9 +78,9 @@
             this.groupControl1.Controls.Add(this.btn_Sil);
             this.groupControl1.Controls.Add(this.brn_Elave_Et);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 598);
+            this.groupControl1.Location = new System.Drawing.Point(0, 662);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1471, 149);
+            this.groupControl1.Size = new System.Drawing.Size(1471, 85);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Əməliyyatlar";
             // 
@@ -91,11 +91,11 @@
             this.btn_Guncelle.Appearance.Options.UseTextOptions = true;
             this.btn_Guncelle.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btn_Guncelle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Guncelle.ImageOptions.SvgImage")));
-            this.btn_Guncelle.Location = new System.Drawing.Point(356, 34);
+            this.btn_Guncelle.Location = new System.Drawing.Point(280, 26);
             this.btn_Guncelle.Name = "btn_Guncelle";
-            this.btn_Guncelle.Size = new System.Drawing.Size(166, 103);
+            this.btn_Guncelle.Size = new System.Drawing.Size(128, 47);
             this.btn_Guncelle.TabIndex = 4;
-            this.btn_Guncelle.Text = "Güncəllə \r\nvə \r\nListələ";
+            this.btn_Guncelle.Text = "Güncəllə";
             this.btn_Guncelle.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btn_cisix_et
@@ -106,9 +106,9 @@
             this.btn_cisix_et.Appearance.Options.UseTextOptions = true;
             this.btn_cisix_et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btn_cisix_et.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_cisix_et.ImageOptions.SvgImage")));
-            this.btn_cisix_et.Location = new System.Drawing.Point(1340, 34);
+            this.btn_cisix_et.Location = new System.Drawing.Point(1331, 26);
             this.btn_cisix_et.Name = "btn_cisix_et";
-            this.btn_cisix_et.Size = new System.Drawing.Size(119, 103);
+            this.btn_cisix_et.Size = new System.Drawing.Size(128, 47);
             this.btn_cisix_et.TabIndex = 3;
             this.btn_cisix_et.Text = "Çıxış";
             this.btn_cisix_et.Click += new System.EventHandler(this.btn_cisix_et_Click);
@@ -120,9 +120,9 @@
             this.btn_Duzenle.Appearance.Options.UseTextOptions = true;
             this.btn_Duzenle.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btn_Duzenle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Duzenle.ImageOptions.SvgImage")));
-            this.btn_Duzenle.Location = new System.Drawing.Point(184, 34);
+            this.btn_Duzenle.Location = new System.Drawing.Point(146, 26);
             this.btn_Duzenle.Name = "btn_Duzenle";
-            this.btn_Duzenle.Size = new System.Drawing.Size(166, 103);
+            this.btn_Duzenle.Size = new System.Drawing.Size(128, 47);
             this.btn_Duzenle.TabIndex = 2;
             this.btn_Duzenle.Text = "Dəyişdir";
             this.btn_Duzenle.Click += new System.EventHandler(this.btn_Duzenle_Click);
@@ -135,9 +135,9 @@
             this.btn_Sil.Appearance.Options.UseTextOptions = true;
             this.btn_Sil.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btn_Sil.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_Sil.ImageOptions.SvgImage")));
-            this.btn_Sil.Location = new System.Drawing.Point(1168, 34);
+            this.btn_Sil.Location = new System.Drawing.Point(1197, 26);
             this.btn_Sil.Name = "btn_Sil";
-            this.btn_Sil.Size = new System.Drawing.Size(166, 103);
+            this.btn_Sil.Size = new System.Drawing.Size(128, 47);
             this.btn_Sil.TabIndex = 1;
             this.btn_Sil.Text = "Sil";
             this.btn_Sil.Click += new System.EventHandler(this.btn_Sil_Click);
@@ -149,9 +149,9 @@
             this.brn_Elave_Et.Appearance.Options.UseTextOptions = true;
             this.brn_Elave_Et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.brn_Elave_Et.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("brn_Elave_Et.ImageOptions.SvgImage")));
-            this.brn_Elave_Et.Location = new System.Drawing.Point(12, 34);
+            this.brn_Elave_Et.Location = new System.Drawing.Point(12, 26);
             this.brn_Elave_Et.Name = "brn_Elave_Et";
-            this.brn_Elave_Et.Size = new System.Drawing.Size(166, 103);
+            this.brn_Elave_Et.Size = new System.Drawing.Size(128, 47);
             this.brn_Elave_Et.TabIndex = 0;
             this.brn_Elave_Et.Text = "Əlavə et";
             this.brn_Elave_Et.Click += new System.EventHandler(this.brn_Elave_Et_Click);
@@ -162,7 +162,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 43);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1471, 555);
+            this.gridControl1.Size = new System.Drawing.Size(1471, 619);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
