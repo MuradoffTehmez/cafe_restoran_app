@@ -11,11 +11,11 @@ namespace CofeRestoranApp.WinForms.Masalar
     public partial class Frm_Masa_Durumu : DevExpress.XtraEditors.XtraForm
     {
         private CafeContext context = new CafeContext();
-        private CheckButton BtnSender;
+        private CheckButton BtnSender = new CheckButton();
         private SatisKodu modelSatisKodu = new SatisKodu();
         private string _SatisKodu;
         private int _masaId;
-        private CafeRestoranApp.Entities.Models.Masalar masalar;
+        private CafeRestoranApp.Entities.Models.Masalar masalar = new CafeRestoranApp.Entities.Models.Masalar();
         MasalarDAL masalarDal = new MasalarDAL();
 
         public Frm_Masa_Durumu()

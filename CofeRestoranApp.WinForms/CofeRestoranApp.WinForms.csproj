@@ -306,6 +306,12 @@
     <Compile Include="Urunler\frm_Urunler.Designer.cs">
       <DependentUpon>frm_Urunler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Urunler\Frm_UrunSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urunler\Frm_UrunSec.Designer.cs">
+      <DependentUpon>Frm_UrunSec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Urunler\frm_Urun_Qeydiyat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,6 +371,9 @@
     </Compile>
     <EmbeddedResource Include="Urunler\frm_Urunler.resx">
       <DependentUpon>frm_Urunler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urunler\Frm_UrunSec.resx">
+      <DependentUpon>Frm_UrunSec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Urunler\frm_Urun_Qeydiyat.resx">
       <DependentUpon>frm_Urun_Qeydiyat.cs</DependentUpon>
