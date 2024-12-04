@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
+using CofeRestoranApp.WinForms.WinTools;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -32,6 +33,8 @@ namespace CofeRestoranApp.WinForms.Masalar
             masalar = masalarDal.GetByFilter(context,m=>m.Id==_masaId);
             masalar.Islem = txtR_Proses.Text;
             masalar.SonIslemTarixi = Convert.ToDateTime(dateTarix.EditValue);
+            masalar.KullaniciId = IstifadeciAyarlari.istifadciId;
+            masalarDal.Save(context);
         }
     }
 }
