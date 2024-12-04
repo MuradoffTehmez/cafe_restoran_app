@@ -4,6 +4,7 @@ using CafeRestoranApp.Entities.Utilities;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using CofeRestoranApp.WinForms.WinTools;
 
 namespace CofeRestoranApp.WinForms.Istifadeciler
 {
@@ -97,6 +98,7 @@ namespace CofeRestoranApp.WinForms.Istifadeciler
                 {
                     _girisUgurlu = true;
                     IstifadeciniMelumatlariniQeydEt();
+                    IstifadeciAyarlari.istifadciId = istifadeci.Id;
                     entity.IstifadeciID = istifadeci.Id;
                     string Aciklama = istifadeci.IstifadeciAdi + "  Adlı İstifacədi Sistemə Giriş Etdi";
                     istifadeciHereketleriDal.IstifadeciHereketleriElaveEt(context, entity, Aciklama);
