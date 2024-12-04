@@ -20,6 +20,8 @@ namespace CofeRestoranApp.WinForms.Masalar
             _satiskodu=satiskodu;
             context.MasaHaraketleri.Where(m => m.SatisKodu == _satiskodu).Load();
             context.OdenisTarixcesi.Where(o => o.SatisKodu == _satiskodu).Load();
+            context.MasaHaraketleri.Local.ToBindingList();
+            context.OdenisTarixcesi.Local.ToBindingList();
             lookUpMusteri.Properties.DataSource = musterilerDAL.GetAll(context);
             if (_masaId != null)
             {
