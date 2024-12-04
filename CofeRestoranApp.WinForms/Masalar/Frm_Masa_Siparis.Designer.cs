@@ -631,7 +631,7 @@
             this.colAciklama.Name = "colAciklama";
             this.colAciklama.Visible = true;
             this.colAciklama.VisibleIndex = 6;
-            this.colAciklama.Width = 373;
+            this.colAciklama.Width = 342;
             // 
             // colTarix
             // 
@@ -639,7 +639,7 @@
             this.colTarix.Name = "colTarix";
             this.colTarix.Visible = true;
             this.colTarix.VisibleIndex = 7;
-            this.colTarix.Width = 120;
+            this.colTarix.Width = 151;
             // 
             // colMasalar
             // 
