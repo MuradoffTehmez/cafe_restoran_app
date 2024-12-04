@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Masa_Siparis));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.Group_Emeliyyatlar = new DevExpress.XtraEditors.GroupControl();
             this.btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_Yeni_Sifaris = new DevExpress.XtraEditors.SimpleButton();
@@ -65,6 +65,7 @@
             this.gridViewSiparisler = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ColSipatisSil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositorySiparisSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colUrunAdi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSatisKodu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMasaId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -72,6 +73,7 @@
             this.colMiqdari = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQiymeti = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEndirimQiymeti = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColmnTutar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTarix = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMasalar = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -98,8 +100,6 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.Btn_Karla_Satis = new DevExpress.XtraEditors.SimpleButton();
             this.Btn_Nagd_Satis = new DevExpress.XtraEditors.SimpleButton();
-            this.ColmnTutar = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUrunAdi = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Group_Emeliyyatlar)).BeginInit();
             this.Group_Emeliyyatlar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Calc_Endirimli_Qiymet.Properties)).BeginInit();
@@ -547,12 +547,21 @@
             // repositorySiparisSil
             // 
             this.repositorySiparisSil.AutoHeight = false;
-            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.repositorySiparisSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositorySiparisSil.Name = "repositorySiparisSil";
             this.repositorySiparisSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repositorySiparisSil.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositorySiparisSil_ButtonClick);
+            // 
+            // colUrunAdi
+            // 
+            this.colUrunAdi.Caption = "MehsulAdi";
+            this.colUrunAdi.FieldName = "Urun.UrunAdi";
+            this.colUrunAdi.Name = "colUrunAdi";
+            this.colUrunAdi.Visible = true;
+            this.colUrunAdi.VisibleIndex = 1;
+            this.colUrunAdi.Width = 99;
             // 
             // colId
             // 
@@ -606,13 +615,23 @@
             this.colEndirimQiymeti.VisibleIndex = 4;
             this.colEndirimQiymeti.Width = 107;
             // 
+            // ColmnTutar
+            // 
+            this.ColmnTutar.Caption = "Total Qiymet";
+            this.ColmnTutar.DisplayFormat.FormatString = "C2";
+            this.ColmnTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.ColmnTutar.Name = "ColmnTutar";
+            this.ColmnTutar.Visible = true;
+            this.ColmnTutar.VisibleIndex = 5;
+            this.ColmnTutar.Width = 106;
+            // 
             // colAciklama
             // 
             this.colAciklama.FieldName = "Aciklama";
             this.colAciklama.Name = "colAciklama";
             this.colAciklama.Visible = true;
             this.colAciklama.VisibleIndex = 6;
-            this.colAciklama.Width = 376;
+            this.colAciklama.Width = 373;
             // 
             // colTarix
             // 
@@ -810,9 +829,9 @@
             // OdenisSİlGr
             // 
             this.OdenisSİlGr.AutoHeight = false;
-            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.OdenisSİlGr.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.OdenisSİlGr.Name = "OdenisSİlGr";
             this.OdenisSİlGr.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.OdenisSİlGr.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.OdenisSİlGr_ButtonClick);
@@ -890,25 +909,6 @@
             this.Btn_Nagd_Satis.Size = new System.Drawing.Size(187, 50);
             this.Btn_Nagd_Satis.TabIndex = 0;
             this.Btn_Nagd_Satis.Text = "Nagd Satis";
-            // 
-            // ColmnTutar
-            // 
-            this.ColmnTutar.Caption = "Total Qiymet";
-            this.ColmnTutar.DisplayFormat.FormatString = "C2";
-            this.ColmnTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.ColmnTutar.Name = "ColmnTutar";
-            this.ColmnTutar.Visible = true;
-            this.ColmnTutar.VisibleIndex = 5;
-            this.ColmnTutar.Width = 103;
-            // 
-            // colUrunAdi
-            // 
-            this.colUrunAdi.Caption = "MehsulAdi";
-            this.colUrunAdi.FieldName = "Urun.UrunAdi";
-            this.colUrunAdi.Name = "colUrunAdi";
-            this.colUrunAdi.Visible = true;
-            this.colUrunAdi.VisibleIndex = 1;
-            this.colUrunAdi.Width = 99;
             // 
             // Frm_Masa_Siparis
             // 
