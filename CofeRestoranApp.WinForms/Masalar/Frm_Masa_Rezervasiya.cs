@@ -31,7 +31,7 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
             masalar = masalarDal.GetByFilter(context,m=>m.Id==_masaId);
             masalar.Islem = txtR_Proses.Text;
-
+            masalar.SonIslemTarixi = Convert.ToDateTime(dateTarix.EditValue);
         }
     }
 }
