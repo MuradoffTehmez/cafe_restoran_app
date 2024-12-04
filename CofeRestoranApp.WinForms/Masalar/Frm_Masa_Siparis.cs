@@ -11,6 +11,7 @@ namespace CofeRestoranApp.WinForms.Masalar
     {
         private CafeContext context = new CafeContext();
         private MusterilerDAL musterilerDAL = new MusterilerDAL();
+        private MasaHerekleriDAL masaHerekleriDAL = new MasaHerekleriDAL();
         private int? _masaId = null;
         private string _satiskodu =null;
 
@@ -46,6 +47,24 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
             Frm_UrunSec frm = new Frm_UrunSec();
             frm.ShowDialog();
+            if (frm.secildi)
+            {
+                MasaHaraketleri entity = new MasaHaraketleri
+                {
+                    SatisKodu = _satiskodu,
+                    MasaId =Convert.ToInt32(_masaId),
+                    UrunId = frm.urunModel.Id,
+                    Miqdari = 1,
+                    Qiymeti = frm.urunModel.Qiymet1,
+                    EndirimQiymeti = 0,
+                    Aciklama = "",
+                    Tarix = DateTime.Now
+                };
+                if (masaHerekleriDAL.AddOrUpdate(context,entity))
+                {
+                   
+                }
+            }
         }
     }
 }
