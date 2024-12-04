@@ -3,6 +3,7 @@ using CafeRestoranApp.Entities.Models;
 using System;
 using System.Data.Entity;
 using System.Linq;
+using CofeRestoranApp.WinForms.Urunler;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -39,6 +40,12 @@ namespace CofeRestoranApp.WinForms.Masalar
         private void OdenisSİlGr_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
 
+        }
+
+        private void Btn_Yeni_Sifaris_Click(object sender, EventArgs e)
+        {
+            Frm_UrunSec frm = new Frm_UrunSec();
+            frm.ShowDialog();
         }
     }
 }
