@@ -87,12 +87,13 @@
             this.Btn_Sec.Appearance.Options.UseFont = true;
             this.Btn_Sec.Appearance.Options.UseTextOptions = true;
             this.Btn_Sec.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Btn_Sec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Sonuclandir.ImageOptions.Image")));
+            this.Btn_Sec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Sec.ImageOptions.Image")));
             this.Btn_Sec.Location = new System.Drawing.Point(1202, 26);
             this.Btn_Sec.Name = "Btn_Sec";
             this.Btn_Sec.Size = new System.Drawing.Size(125, 46);
             this.Btn_Sec.TabIndex = 3;
             this.Btn_Sec.Text = "Sec";
+            this.Btn_Sec.Click += new System.EventHandler(this.Btn_Sec_Click);
             // 
             // btn_cisix_et
             // 
