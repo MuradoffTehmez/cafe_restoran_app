@@ -13,9 +13,9 @@ namespace CafeRestoranApp.Entities.Validations
             //    .GreaterThanOrEqualTo(0).WithMessage("ID sıfırdan kiçik ola bilməz.");
 
             // SatisKodu
-            RuleFor(x => x.SatisKodu)
-                .NotEmpty().WithMessage("Satış kodu boş ola bilməz.")
-                .Length(1, 50).WithMessage("Satış kodu 1 ilə 50 simvol arasında olmalıdır.");
+            //RuleFor(x => x.SatisKodu)
+            //    .NotEmpty().WithMessage("Satış kodu boş ola bilməz.")
+            //    .Length(1, 50).WithMessage("Satış kodu 1 ilə 50 simvol arasında olmalıdır.");
 
             // MasaId
             RuleFor(x => x.MasaId)

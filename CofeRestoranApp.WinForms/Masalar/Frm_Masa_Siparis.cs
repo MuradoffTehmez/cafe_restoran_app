@@ -23,8 +23,8 @@ namespace CofeRestoranApp.WinForms.Masalar
             context.MasaHaraketleri.Where(m => m.SatisKodu == _satiskodu).Load();
             context.OdenisTarixcesi.Where(o => o.SatisKodu == _satiskodu).Load();
             context.Urun.Load();
-            context.MasaHaraketleri.Local.ToBindingList();
-            context.OdenisTarixcesi.Local.ToBindingList();
+            gridControlSiparisler.DataSource = context.MasaHaraketleri.Local.ToBindingList();
+            gridControlOdenisler.DataSource = context.OdenisTarixcesi.Local.ToBindingList();
 
             lookUpMusteri.Properties.DataSource = musterilerDAL.GetAll(context);
             if (_masaId != null)
@@ -60,10 +60,7 @@ namespace CofeRestoranApp.WinForms.Masalar
                     Aciklama = "",
                     Tarix = DateTime.Now
                 };
-                if (masaHerekleriDAL.AddOrUpdate(context,entity))
-                {
-                   
-                }
+                masaHerekleriDAL.AddOrUpdate(context, entity);
             }
         }
     }
