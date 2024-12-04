@@ -1,10 +1,10 @@
 ﻿using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
 using CafeRestoranApp.Entities.Utilities;
+using CofeRestoranApp.WinForms.WinTools;
 using System;
 using System.Linq;
 using System.Windows.Forms;
-using CofeRestoranApp.WinForms.WinTools;
 
 namespace CofeRestoranApp.WinForms.Istifadeciler
 {

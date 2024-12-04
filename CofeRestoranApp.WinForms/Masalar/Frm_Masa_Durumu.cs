@@ -1,11 +1,10 @@
-﻿using CafeRestoranApp.Entities.Models;
+﻿using CafeRestoranApp.Entities.DAL;
+using CafeRestoranApp.Entities.Models;
 using DevExpress.XtraEditors;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using CafeRestoranApp.Entities.DAL;
-using DurableTask.Core.Common;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -17,7 +16,7 @@ namespace CofeRestoranApp.WinForms.Masalar
         private string _SatisKodu;
         private int _masaId;
         private CafeRestoranApp.Entities.Models.Masalar masalar;
-        MasalarDAL masalarDal= new MasalarDAL();
+        MasalarDAL masalarDal = new MasalarDAL();
 
         public Frm_Masa_Durumu()
         {
@@ -106,7 +105,7 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void Btn_Masa_Ac_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(BtnSender.Text+ "  Acilsin ?","Melumat",MessageBoxButtons.YesNo,MessageBoxIcon.Information)==DialogResult.Yes)
+            if (MessageBox.Show(BtnSender.Text + "  Acilsin ?", "Melumat", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 masalar = masalarDal.GetByFilter(context, m => m.Id == _masaId);
                 masalar.SatisKodu = modelSatisKodu.SatisTanimi + modelSatisKodu.Sayi;

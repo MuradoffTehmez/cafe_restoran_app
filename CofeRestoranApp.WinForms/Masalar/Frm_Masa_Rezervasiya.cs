@@ -1,16 +1,7 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using CafeRestoranApp.Entities.DAL;
+﻿using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
 using CofeRestoranApp.WinForms.WinTools;
+using System;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -30,13 +21,13 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void Btn_Tesdiqle_Click(object sender, EventArgs e)
         {
-            masalar = masalarDal.GetByFilter(context,m=>m.Id==_masaId);
+            masalar = masalarDal.GetByFilter(context, m => m.Id == _masaId);
             masalar.Islem = txtR_Proses.Text;
             masalar.SonIslemTarixi = Convert.ToDateTime(dateTarix.EditValue);
             masalar.KullaniciId = IstifadeciAyarlari.istifadciId;
             masalar.Rezervasiya = true;
             masalarDal.Save(context);
-            islemyapildi=true;
+            islemyapildi = true;
             this.Close();
         }
 

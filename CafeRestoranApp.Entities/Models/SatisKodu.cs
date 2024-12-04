@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using CafeRestoranApp.Entities.Interfaces;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using CafeRestoranApp.Entities.Interfaces;
 
 namespace CafeRestoranApp.Entities.Models
 {
