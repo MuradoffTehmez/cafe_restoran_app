@@ -618,7 +618,10 @@
             this.ColmnTutar.Caption = "Total Qiymet";
             this.ColmnTutar.DisplayFormat.FormatString = "C2";
             this.ColmnTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.ColmnTutar.FieldName = "ColmnTutar";
             this.ColmnTutar.Name = "ColmnTutar";
+            this.ColmnTutar.UnboundDataType = typeof(decimal);
+            this.ColmnTutar.UnboundExpression = "[Miqdari] * [Qiymeti] - [EndirimQiymeti]";
             this.ColmnTutar.Visible = true;
             this.ColmnTutar.VisibleIndex = 5;
             this.ColmnTutar.Width = 106;
