@@ -218,7 +218,7 @@
             // 
             // colMenu
             // 
-            this.colMenu.FieldName = "Menu";
+            this.colMenu.FieldName = "MenuAdi";
             this.colMenu.Name = "colMenu";
             // 
             // Frm_UrunSec

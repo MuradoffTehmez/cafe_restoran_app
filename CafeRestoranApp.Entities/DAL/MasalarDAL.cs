@@ -27,7 +27,6 @@ namespace CafeRestoranApp.Entities.DAL
                              kullanici = KullaniciMasa.IstifadeciAdi
                          }).ToList();
             return model;
-
         }
     }
 }

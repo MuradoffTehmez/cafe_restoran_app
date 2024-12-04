@@ -7,8 +7,6 @@ namespace CafeRestoranApp.Entities.DAL
 {
     public class IstifadeciHereketleriDAL : EntityRepositoryBase<CafeContext, IstifadeciHereketleri, IstifadeciHereketleriVALIDATOR>
     {
-        //public static int istifadeciId { get; set; }
-
         public void IstifadeciHereketleriElaveEt(CafeContext context, IstifadeciHereketleri IstidaceciHereketleriEntity, string Aciklama)
         {
 
