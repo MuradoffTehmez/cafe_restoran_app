@@ -17,9 +17,12 @@ namespace CofeRestoranApp.WinForms.Urunler
 
         private void Btn_Sec_Click(object sender, System.EventArgs e)
         {
-            int urunId = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
-            urunModel = urunDal.GetByFilter(context, u => u.Id == urunId);
-            this.Close();
+            if (gridView1.SelectedRowsCount>0)
+            {
+                int urunId = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+                urunModel = urunDal.GetByFilter(context, u => u.Id == urunId);
+                this.Close(); 
+            }
         }
     }
 }
