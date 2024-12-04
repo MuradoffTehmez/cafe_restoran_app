@@ -32,6 +32,7 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
             flowLayoutPanel1.Controls.Clear();
             var model = context.Masalar.ToList();
+            context = new CafeContext();
             for (int i = 0; i < model.Count; i++)
             {
                 var btn = new CheckButton();
