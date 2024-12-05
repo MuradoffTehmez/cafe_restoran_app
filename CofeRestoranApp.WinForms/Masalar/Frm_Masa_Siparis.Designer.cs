@@ -600,6 +600,8 @@
             this.colQiymeti.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colQiymeti.FieldName = "Qiymeti";
             this.colQiymeti.Name = "colQiymeti";
+            this.colQiymeti.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Qiymeti", "SUM={0:C2}")});
             this.colQiymeti.Visible = true;
             this.colQiymeti.VisibleIndex = 3;
             this.colQiymeti.Width = 111;
@@ -610,6 +612,8 @@
             this.colEndirimQiymeti.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colEndirimQiymeti.FieldName = "EndirimQiymeti";
             this.colEndirimQiymeti.Name = "colEndirimQiymeti";
+            this.colEndirimQiymeti.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "EndirimQiymeti", "SUM={0:C2}")});
             this.colEndirimQiymeti.Visible = true;
             this.colEndirimQiymeti.VisibleIndex = 4;
             this.colEndirimQiymeti.Width = 107;
@@ -621,6 +625,8 @@
             this.ColmnTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.ColmnTutar.FieldName = "ColmnTutar";
             this.ColmnTutar.Name = "ColmnTutar";
+            this.ColmnTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ColmnTutar", "SUM={0:C2}")});
             this.ColmnTutar.UnboundDataType = typeof(decimal);
             this.ColmnTutar.UnboundExpression = "[Miqdari] * [Qiymeti] - [EndirimQiymeti]";
             this.ColmnTutar.Visible = true;
@@ -792,7 +798,7 @@
             this.navigationPage2.Controls.Add(this.panelControl2);
             this.navigationPage2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navigationPage2.ImageOptions.SvgImage")));
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(1075, 434);
+            this.navigationPage2.Size = new System.Drawing.Size(1216, 546);
             // 
             // gridControlOdenisler
             // 
@@ -802,7 +808,7 @@
             this.gridControlOdenisler.Name = "gridControlOdenisler";
             this.gridControlOdenisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.OdenisSİlGr});
-            this.gridControlOdenisler.Size = new System.Drawing.Size(1075, 373);
+            this.gridControlOdenisler.Size = new System.Drawing.Size(1216, 485);
             this.gridControlOdenisler.TabIndex = 1;
             this.gridControlOdenisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOdenisler});
@@ -893,7 +899,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1075, 61);
+            this.panelControl2.Size = new System.Drawing.Size(1216, 61);
             this.panelControl2.TabIndex = 0;
             // 
             // Btn_Karla_Satis
