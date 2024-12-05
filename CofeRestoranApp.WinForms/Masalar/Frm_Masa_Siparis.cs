@@ -33,6 +33,10 @@ namespace CofeRestoranApp.WinForms.Masalar
             }
         }
 
+        void hesabla()
+        {
+
+        }
         private void repositorySiparisSil_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
 

@@ -870,6 +870,8 @@
             this.colOdenis.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colOdenis.FieldName = "Odenis";
             this.colOdenis.Name = "colOdenis";
+            this.colOdenis.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Odenis", "SUM={0:C2}")});
             this.colOdenis.Visible = true;
             this.colOdenis.VisibleIndex = 2;
             this.colOdenis.Width = 115;
