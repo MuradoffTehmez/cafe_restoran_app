@@ -14,7 +14,7 @@ namespace CofeRestoranApp.WinForms.Urunler
         public Frm_UrunSec()
         {
             InitializeComponent();
-            gridControl1.DataSource = urunDal.UrunListele(context);
+            gridControl1.DataSource = urunDal.GetAll(context);
         }
 
         private void Btn_Sec_Click(object sender, System.EventArgs e)
