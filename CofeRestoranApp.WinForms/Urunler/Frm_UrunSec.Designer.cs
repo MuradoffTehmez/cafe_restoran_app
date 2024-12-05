@@ -46,6 +46,7 @@
             this.colTarix = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSekil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMenu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Menuadi = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Group_Emeliyyatlar)).BeginInit();
             this.Group_Emeliyyatlar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -133,7 +134,8 @@
             this.colAciklama,
             this.colTarix,
             this.colSekil,
-            this.colMenu});
+            this.colMenu,
+            this.Menuadi});
             this.gridView1.CustomizationFormBounds = new System.Drawing.Rectangle(1304, 647, 259, 272);
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
@@ -222,6 +224,14 @@
             this.colMenu.FieldName = "MenuAdi";
             this.colMenu.Name = "colMenu";
             // 
+            // Menuadi
+            // 
+            this.Menuadi.Caption = "Menu";
+            this.Menuadi.FieldName = "Menu.MenuAdi";
+            this.Menuadi.Name = "Menuadi";
+            this.Menuadi.Visible = true;
+            this.Menuadi.VisibleIndex = 9;
+            // 
             // Frm_UrunSec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,5 +270,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTarix;
         private DevExpress.XtraGrid.Columns.GridColumn colSekil;
         private DevExpress.XtraGrid.Columns.GridColumn colMenu;
+        private DevExpress.XtraGrid.Columns.GridColumn Menuadi;
     }
 }
