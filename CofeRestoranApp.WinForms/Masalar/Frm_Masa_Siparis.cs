@@ -35,6 +35,26 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         void hesabla()
         {
+            Calc_EndirimToplam.Value = Convert.ToDecimal(colEndirimQiymeti.SummaryItem.SummaryValue);
+            Calc_EndirimliToplam.Value = Convert.ToDecimal(ColmnTutar.SummaryItem.SummaryValue);
+            CalcOdeden.Value = Convert.ToDecimal(colOdenis.SummaryItem.SummaryValue);
+            Calc_Toplam.Value = Calc_EndirimToplam.Value + Calc_EndirimliToplam.Value;
+            CalcKalan.Value = Calc_EndirimliToplam.Value - Calc_Toplam.Value;
+            /*************************************************************************************/
+            /// Endirim Orani
+            if (Calc_Toplam.Value == 0)
+            {
+                Calc_Endirim_Orani.Value = 100 * Calc_EndirimToplam.Value / Calc_Toplam.Value;
+                /*
+                  Calc_Endirim_Orani.Value = 100 * Convert.ToDecimal(colEndirimQiymeti.SummaryItem.SummaryValue) /
+                                              (Convert.ToDecimal(ColmnTutar.SummaryItem.SummaryValue) +
+                                               Convert.ToDecimal(colEndirimQiymeti.SummaryItem.SummaryValue));
+                 */
+            }
+            else if (Calc_Toplam.Value == 0)
+            {
+                Calc_Endirim_Orani.Value = 0;
+            }
 
         }
         private void repositorySiparisSil_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -70,7 +90,12 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void btn_cisix_et_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void gridViewSiparisler_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            hesabla();
         }
     }
 }
