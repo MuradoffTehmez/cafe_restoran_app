@@ -153,8 +153,6 @@
             this.colMeynuID.Caption = "Meynu";
             this.colMeynuID.FieldName = "Menu";
             this.colMeynuID.Name = "colMeynuID";
-            this.colMeynuID.Visible = true;
-            this.colMeynuID.VisibleIndex = 1;
             this.colMeynuID.Width = 73;
             // 
             // colUrunKodu
@@ -230,7 +228,7 @@
             this.Menuadi.FieldName = "Menu.MenuAdi";
             this.Menuadi.Name = "Menuadi";
             this.Menuadi.Visible = true;
-            this.Menuadi.VisibleIndex = 9;
+            this.Menuadi.VisibleIndex = 1;
             // 
             // Frm_UrunSec
             // 

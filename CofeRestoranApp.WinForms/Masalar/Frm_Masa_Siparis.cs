@@ -18,6 +18,7 @@ namespace CofeRestoranApp.WinForms.Masalar
         public Frm_Masa_Siparis(int? masaId = null, string masaadi = null, string satiskodu = null)
         {
             InitializeComponent();
+
             _masaId = masaId;
             _satiskodu = satiskodu;
             context.MasaHaraketleri.Where(m => m.SatisKodu == _satiskodu).Load();
@@ -42,14 +43,13 @@ namespace CofeRestoranApp.WinForms.Masalar
             CalcKalan.Value = Calc_EndirimliToplam.Value - Calc_Toplam.Value;
             /*************************************************************************************/
             /// Endirim Orani
-            if (Calc_Toplam.Value == 0)
+            if (Calc_Toplam.Value != 0)
             {
-                Calc_Endirim_Orani.Value = 100 * Calc_EndirimToplam.Value / Calc_Toplam.Value;
-                /*
-                  Calc_Endirim_Orani.Value = 100 * Convert.ToDecimal(colEndirimQiymeti.SummaryItem.SummaryValue) /
-                                              (Convert.ToDecimal(ColmnTutar.SummaryItem.SummaryValue) +
-                                               Convert.ToDecimal(colEndirimQiymeti.SummaryItem.SummaryValue));
-                 */
+                //Calc_Endirim_Orani.Value = 100 * Calc_EndirimToplam.Value / Calc_Toplam.Value;
+
+                Calc_Endirim_Orani.Value = 100 * Convert.ToDecimal(colEndirimQiymeti.SummaryItem.SummaryValue) /
+                                            (Convert.ToDecimal(ColmnTutar.SummaryItem.SummaryValue) +
+                                             Convert.ToDecimal(colEndirimQiymeti.SummaryItem.SummaryValue));
             }
             else if (Calc_Toplam.Value == 0)
             {
@@ -59,12 +59,12 @@ namespace CofeRestoranApp.WinForms.Masalar
         }
         private void repositorySiparisSil_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-
+            //hesabla();
         }
 
         private void OdenisSİlGr_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-
+            //hesabla();
         }
 
         private void Btn_Yeni_Sifaris_Click(object sender, EventArgs e)
@@ -94,6 +94,11 @@ namespace CofeRestoranApp.WinForms.Masalar
         }
 
         private void gridViewSiparisler_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            //hesabla();
+        }
+
+        private void gridViewSiparisler_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
         {
             hesabla();
         }
