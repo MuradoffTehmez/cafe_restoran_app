@@ -41,7 +41,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             CalcOdeden.Value = Convert.ToDecimal(colOdenis.SummaryItem.SummaryValue);
             Calc_Toplam.Value = Calc_EndirimToplam.Value + Calc_EndirimliToplam.Value;
             CalcKalan.Value = Calc_EndirimliToplam.Value - Calc_Toplam.Value;
-            /*************************************************************************************/
+            /************************************************************************************/
             /// Endirim Orani
             if (Calc_Toplam.Value != 0)
             {
