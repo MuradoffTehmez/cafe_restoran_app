@@ -286,6 +286,12 @@
     <Compile Include="Musteriler\Frm_Musteriler.Designer.cs">
       <DependentUpon>Frm_Musteriler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Odenisler\Frm_Odeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odenisler\Frm_Odeme.Designer.cs">
+      <DependentUpon>Frm_Odeme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Urunler\frm_Urunler.cs">
@@ -346,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Musteriler\Frm_Musteriler.resx">
       <DependentUpon>Frm_Musteriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odenisler\Frm_Odeme.resx">
+      <DependentUpon>Frm_Odeme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
