@@ -102,5 +102,20 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
             hesabla();
         }
+
+        private void btn_Guncelle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Kayd_Et_Click(object sender, EventArgs e)
+        {
+            context.SaveChanges();
+        }
+
+        private void Btn_Sonuclandir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
