@@ -50,7 +50,7 @@
             this.Lbn_Basliq.Dock = System.Windows.Forms.DockStyle.Top;
             this.Lbn_Basliq.Location = new System.Drawing.Point(0, 0);
             this.Lbn_Basliq.Name = "Lbn_Basliq";
-            this.Lbn_Basliq.Size = new System.Drawing.Size(522, 43);
+            this.Lbn_Basliq.Size = new System.Drawing.Size(513, 43);
             this.Lbn_Basliq.TabIndex = 8;
             this.Lbn_Basliq.Text = "Odenisler";
             // 
@@ -61,7 +61,7 @@
             this.Group_Emeliyyatlar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Group_Emeliyyatlar.Location = new System.Drawing.Point(0, 317);
             this.Group_Emeliyyatlar.Name = "Group_Emeliyyatlar";
-            this.Group_Emeliyyatlar.Size = new System.Drawing.Size(522, 81);
+            this.Group_Emeliyyatlar.Size = new System.Drawing.Size(513, 81);
             this.Group_Emeliyyatlar.TabIndex = 9;
             this.Group_Emeliyyatlar.Text = "Əməliyyatlar";
             // 
@@ -73,7 +73,7 @@
             this.btn_cisix_et.Appearance.Options.UseTextOptions = true;
             this.btn_cisix_et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btn_cisix_et.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_cisix_et.ImageOptions.SvgImage")));
-            this.btn_cisix_et.Location = new System.Drawing.Point(393, 26);
+            this.btn_cisix_et.Location = new System.Drawing.Point(384, 26);
             this.btn_cisix_et.Name = "btn_cisix_et";
             this.btn_cisix_et.Size = new System.Drawing.Size(125, 46);
             this.btn_cisix_et.TabIndex = 3;
@@ -87,7 +87,7 @@
             this.Btn_Kayd_Et.Appearance.Options.UseTextOptions = true;
             this.Btn_Kayd_Et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.Btn_Kayd_Et.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kayd_Et.ImageOptions.Image")));
-            this.Btn_Kayd_Et.Location = new System.Drawing.Point(262, 26);
+            this.Btn_Kayd_Et.Location = new System.Drawing.Point(253, 26);
             this.Btn_Kayd_Et.Name = "Btn_Kayd_Et";
             this.Btn_Kayd_Et.Size = new System.Drawing.Size(125, 46);
             this.Btn_Kayd_Et.TabIndex = 1;
@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 398);
+            this.ClientSize = new System.Drawing.Size(513, 398);
             this.Controls.Add(this.Group_Emeliyyatlar);
             this.Controls.Add(this.Lbn_Basliq);
             this.Name = "Frm_Odeme";
