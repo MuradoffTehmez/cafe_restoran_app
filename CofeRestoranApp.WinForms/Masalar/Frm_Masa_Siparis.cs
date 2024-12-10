@@ -5,6 +5,7 @@ using System;
 using System.Data.Entity;
 using System.Linq;
 using CofeRestoranApp.WinForms.Odenisler;
+using DevExpress.XtraEditors;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -129,6 +130,13 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
             //Frm_Odeme frm = new Frm_Odeme("Keredi Karti", _satiskodu);
             //frm.ShowDialog();
+        }
+
+        private void Odenisler_Click(object sender, EventArgs e)
+        {
+            var btn = sender as SimpleButton;
+            Frm_Odeme frm = new Frm_Odeme(btn.Text, _satiskodu);
+            frm.ShowDialog();
         }
     }
 }

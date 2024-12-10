@@ -11,13 +11,13 @@
             _satisKodu = satisKodu;
             _odemeTuru = odemeTuru;
 
-            if (_odemeTuru=="Nakit")
+            if (_odemeTuru== "Nagd Satis")
             {
-                Lbn_Basliq.Text = "Nakit Odeme";
+                Lbn_Basliq.Text = "Nagd Satis";
             }
-            else if (_odemeTuru == "Keredi Karti")
+            else if (_odemeTuru == "Kart ile Satis")
             {
-                Lbn_Basliq.Text = "Kredi karti ile Odeme";
+                Lbn_Basliq.Text = "Kart ile Satis";
             }
         }
     }

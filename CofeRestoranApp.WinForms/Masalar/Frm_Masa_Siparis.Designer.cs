@@ -928,7 +928,7 @@
             this.Btn_Karla_Satis.Size = new System.Drawing.Size(187, 50);
             this.Btn_Karla_Satis.TabIndex = 1;
             this.Btn_Karla_Satis.Text = "Kart ile Satis";
-            this.Btn_Karla_Satis.Click += new System.EventHandler(this.Btn_Karla_Satis_Click);
+            this.Btn_Karla_Satis.Click += new System.EventHandler(this.Odenisler_Click);
             // 
             // Btn_Nagd_Satis
             // 
@@ -940,7 +940,7 @@
             this.Btn_Nagd_Satis.Size = new System.Drawing.Size(187, 50);
             this.Btn_Nagd_Satis.TabIndex = 0;
             this.Btn_Nagd_Satis.Text = "Nagd Satis";
-            this.Btn_Nagd_Satis.Click += new System.EventHandler(this.Btn_Nagd_Satis_Click);
+            this.Btn_Nagd_Satis.Click += new System.EventHandler(this.Odenisler_Click);
             // 
             // Frm_Masa_Siparis
             // 
