@@ -69,7 +69,7 @@
             this.Group_Emeliyyatlar.Controls.Add(this.btn_cisix_et);
             this.Group_Emeliyyatlar.Controls.Add(this.Btn_Kayd_Et);
             this.Group_Emeliyyatlar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Group_Emeliyyatlar.Location = new System.Drawing.Point(0, 272);
+            this.Group_Emeliyyatlar.Location = new System.Drawing.Point(0, 214);
             this.Group_Emeliyyatlar.Name = "Group_Emeliyyatlar";
             this.Group_Emeliyyatlar.Size = new System.Drawing.Size(521, 81);
             this.Group_Emeliyyatlar.TabIndex = 9;
@@ -107,9 +107,9 @@
             // 
             this.Calc_OdenecekTutar.Location = new System.Drawing.Point(212, 57);
             this.Calc_OdenecekTutar.Name = "Calc_OdenecekTutar";
-            this.Calc_OdenecekTutar.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Calc_OdenecekTutar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.Calc_OdenecekTutar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calc_OdenecekTutar.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            this.Calc_OdenecekTutar.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.Calc_OdenecekTutar.Properties.Appearance.Options.UseBackColor = true;
             this.Calc_OdenecekTutar.Properties.Appearance.Options.UseFont = true;
             this.Calc_OdenecekTutar.Properties.Appearance.Options.UseForeColor = true;
@@ -131,12 +131,12 @@
             this.txtR_Aciklama.Name = "txtR_Aciklama";
             this.txtR_Aciklama.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtR_Aciklama.Properties.Appearance.Options.UseFont = true;
-            this.txtR_Aciklama.Size = new System.Drawing.Size(297, 142);
+            this.txtR_Aciklama.Size = new System.Drawing.Size(297, 83);
             this.txtR_Aciklama.TabIndex = 33;
             // 
             // labelControl10
             // 
-            this.labelControl10.Appearance.BackColor = System.Drawing.Color.White;
+            this.labelControl10.Appearance.BackColor = System.Drawing.Color.Red;
             this.labelControl10.Appearance.BorderColor = System.Drawing.Color.Gray;
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -150,7 +150,7 @@
             this.labelControl10.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.labelControl10.Location = new System.Drawing.Point(12, 89);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(176, 141);
+            this.labelControl10.Size = new System.Drawing.Size(176, 83);
             this.labelControl10.TabIndex = 32;
             this.labelControl10.Text = "Melumat :  ";
             // 
@@ -158,7 +158,7 @@
             // 
             this.dateTarix.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTarix.EditValue = null;
-            this.dateTarix.Location = new System.Drawing.Point(212, 237);
+            this.dateTarix.Location = new System.Drawing.Point(212, 178);
             this.dateTarix.Name = "dateTarix";
             this.dateTarix.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.dateTarix.Properties.Appearance.Options.UseFont = true;
@@ -172,7 +172,7 @@
             // labelControl9
             // 
             this.labelControl9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelControl9.Appearance.BackColor = System.Drawing.Color.White;
+            this.labelControl9.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.labelControl9.Appearance.BorderColor = System.Drawing.Color.Gray;
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -184,7 +184,7 @@
             this.labelControl9.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl9.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl9.Location = new System.Drawing.Point(12, 236);
+            this.labelControl9.Location = new System.Drawing.Point(12, 178);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(176, 26);
             this.labelControl9.TabIndex = 34;
@@ -193,7 +193,7 @@
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelControl1.Appearance.BackColor = System.Drawing.Color.White;
+            this.labelControl1.Appearance.BackColor = System.Drawing.Color.Blue;
             this.labelControl1.Appearance.BorderColor = System.Drawing.Color.Gray;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -215,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 353);
+            this.ClientSize = new System.Drawing.Size(521, 295);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.dateTarix);
             this.Controls.Add(this.labelControl9);
