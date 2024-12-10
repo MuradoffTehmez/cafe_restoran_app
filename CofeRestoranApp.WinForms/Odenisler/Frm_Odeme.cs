@@ -8,6 +8,7 @@ namespace CofeRestoranApp.WinForms.Odenisler
         private string _satisKodu;
         private string _odemeTuru;
         public OdenisTarixcesi OdemeHaraketleri;
+        public bool kayedildi;
 
         public Frm_Odeme(string odemeTuru,string satisKodu)
         {
@@ -35,6 +36,7 @@ namespace CofeRestoranApp.WinForms.Odenisler
                 Aciklama = txtR_Aciklama.Text,
                 Tarix = Convert.ToDateTime(dateTarix.Text)
             };
+            kayedildi = true;
         }
     }
 }
