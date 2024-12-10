@@ -16,6 +16,7 @@ namespace CofeRestoranApp.WinForms.Masalar
         private MasaHerekleriDAL masaHerekleriDAL = new MasaHerekleriDAL();
         private int? _masaId = null;
         private string _satiskodu = null;
+        private OdenisTarixcesiDAL odenisHaraketleriDAl = new OdenisTarixcesiDAL();
 
         public Frm_Masa_Siparis(int? masaId = null, string masaadi = null, string satiskodu = null)
         {
@@ -125,6 +126,10 @@ namespace CofeRestoranApp.WinForms.Masalar
             var btn = sender as SimpleButton;
             Frm_Odeme frm = new Frm_Odeme(btn.Text, _satiskodu);
             frm.ShowDialog();
+            if (frm.kayedildi)
+            {
+                
+            }
         }
     }
 }
