@@ -32,7 +32,7 @@
             this.Lbn_Basliq = new DevExpress.XtraEditors.LabelControl();
             this.Group_Emeliyyatlar = new DevExpress.XtraEditors.GroupControl();
             this.btn_cisix_et = new DevExpress.XtraEditors.SimpleButton();
-            this.Btn_Kayd_Et = new DevExpress.XtraEditors.SimpleButton();
+            this.Btn_Onay = new DevExpress.XtraEditors.SimpleButton();
             this.Calc_OdenecekTutar = new DevExpress.XtraEditors.CalcEdit();
             this.txtR_Aciklama = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
@@ -67,7 +67,7 @@
             // Group_Emeliyyatlar
             // 
             this.Group_Emeliyyatlar.Controls.Add(this.btn_cisix_et);
-            this.Group_Emeliyyatlar.Controls.Add(this.Btn_Kayd_Et);
+            this.Group_Emeliyyatlar.Controls.Add(this.Btn_Onay);
             this.Group_Emeliyyatlar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Group_Emeliyyatlar.Location = new System.Drawing.Point(0, 214);
             this.Group_Emeliyyatlar.Name = "Group_Emeliyyatlar";
@@ -89,19 +89,19 @@
             this.btn_cisix_et.TabIndex = 3;
             this.btn_cisix_et.Text = "Çıxış";
             // 
-            // Btn_Kayd_Et
+            // Btn_Onay
             // 
-            this.Btn_Kayd_Et.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Kayd_Et.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Kayd_Et.Appearance.Options.UseFont = true;
-            this.Btn_Kayd_Et.Appearance.Options.UseTextOptions = true;
-            this.Btn_Kayd_Et.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Btn_Kayd_Et.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kayd_Et.ImageOptions.Image")));
-            this.Btn_Kayd_Et.Location = new System.Drawing.Point(261, 26);
-            this.Btn_Kayd_Et.Name = "Btn_Kayd_Et";
-            this.Btn_Kayd_Et.Size = new System.Drawing.Size(125, 46);
-            this.Btn_Kayd_Et.TabIndex = 1;
-            this.Btn_Kayd_Et.Text = "Qeyd et";
+            this.Btn_Onay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Onay.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Onay.Appearance.Options.UseFont = true;
+            this.Btn_Onay.Appearance.Options.UseTextOptions = true;
+            this.Btn_Onay.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Btn_Onay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kayd_Et.ImageOptions.Image")));
+            this.Btn_Onay.Location = new System.Drawing.Point(261, 26);
+            this.Btn_Onay.Name = "Btn_Onay";
+            this.Btn_Onay.Size = new System.Drawing.Size(125, 46);
+            this.Btn_Onay.TabIndex = 1;
+            this.Btn_Onay.Text = "Təstiqlə";
             // 
             // Calc_OdenecekTutar
             // 
@@ -244,7 +244,7 @@
         private DevExpress.XtraEditors.LabelControl Lbn_Basliq;
         private DevExpress.XtraEditors.GroupControl Group_Emeliyyatlar;
         private DevExpress.XtraEditors.SimpleButton btn_cisix_et;
-        private DevExpress.XtraEditors.SimpleButton Btn_Kayd_Et;
+        private DevExpress.XtraEditors.SimpleButton Btn_Onay;
         private DevExpress.XtraEditors.CalcEdit Calc_OdenecekTutar;
         private DevExpress.XtraEditors.MemoEdit txtR_Aciklama;
         private DevExpress.XtraEditors.LabelControl labelControl10;
