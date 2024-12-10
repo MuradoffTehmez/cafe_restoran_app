@@ -39,5 +39,10 @@ namespace CofeRestoranApp.WinForms.Odenisler
             kayedildi = true;
             this.Close();
         }
+
+        private void btn_cisix_et_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -88,6 +88,7 @@
             this.btn_cisix_et.Size = new System.Drawing.Size(125, 46);
             this.btn_cisix_et.TabIndex = 3;
             this.btn_cisix_et.Text = "Çıxış";
+            this.btn_cisix_et.Click += new System.EventHandler(this.btn_cisix_et_Click);
             // 
             // Btn_Onay
             // 
