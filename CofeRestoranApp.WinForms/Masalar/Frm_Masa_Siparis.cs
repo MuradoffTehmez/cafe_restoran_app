@@ -21,7 +21,6 @@ namespace CofeRestoranApp.WinForms.Masalar
         public Frm_Masa_Siparis(int? masaId = null, string masaadi = null, string satiskodu = null)
         {
             InitializeComponent();
-
             _masaId = masaId;
             _satiskodu = satiskodu;
             context.MasaHaraketleri.Where(m => m.SatisKodu == _satiskodu).Load();
@@ -29,7 +28,6 @@ namespace CofeRestoranApp.WinForms.Masalar
             context.Urun.Load();
             gridControlSiparisler.DataSource = context.MasaHaraketleri.Local.ToBindingList();
             gridControlOdenisler.DataSource = context.OdenisTarixcesi.Local.ToBindingList();
-
             lookUpMusteri.Properties.DataSource = musterilerDAL.GetAll(context);
             if (_masaId != null)
             {
@@ -87,6 +85,7 @@ namespace CofeRestoranApp.WinForms.Masalar
                     Aciklama = "",
                     Tarix = DateTime.Now
                 };
+
                 masaHerekleriDAL.AddOrUpdate(context, entity);
             }
         }
@@ -108,7 +107,6 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void btn_Guncelle_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Btn_Kayd_Et_Click(object sender, EventArgs e)
@@ -118,7 +116,6 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void Btn_Sonuclandir_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Odenisler_Click(object sender, EventArgs e)
