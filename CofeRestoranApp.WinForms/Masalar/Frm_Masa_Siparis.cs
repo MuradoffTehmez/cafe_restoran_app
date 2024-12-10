@@ -117,5 +117,15 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
 
         }
+
+        private void Btn_Nagd_Satis_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Karla_Satis_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
