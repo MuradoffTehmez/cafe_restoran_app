@@ -128,7 +128,11 @@ namespace CofeRestoranApp.WinForms.Masalar
             frm.ShowDialog();
             if (frm.kayedildi)
             {
-                
+                if (odenisHaraketleriDAl.AddOrUpdate(context,frm.OdemeHaraketleri))
+                {
+                    gridViewOdenisler.RefreshData();
+                    hesabla();
+                }
             }
         }
     }
