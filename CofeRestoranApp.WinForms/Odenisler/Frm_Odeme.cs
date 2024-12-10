@@ -1,4 +1,5 @@
-﻿using CafeRestoranApp.Entities.Models;
+﻿using System;
+using CafeRestoranApp.Entities.Models;
 
 namespace CofeRestoranApp.WinForms.Odenisler
 {
@@ -6,7 +7,7 @@ namespace CofeRestoranApp.WinForms.Odenisler
     {
         private string _satisKodu;
         private string _odemeTuru;
-        private OdenisTarixcesi OdemeHaraketleri;
+        public OdenisTarixcesi OdemeHaraketleri;
 
         public Frm_Odeme(string odemeTuru,string satisKodu)
         {
@@ -26,7 +27,14 @@ namespace CofeRestoranApp.WinForms.Odenisler
 
         private void Btn_Onay_Click(object sender, System.EventArgs e)
         {
-
+            OdemeHaraketleri = new OdenisTarixcesi
+            {
+                SatisKodu = _satisKodu,
+                OdemeTuru = _odemeTuru,
+                Odenis =  Calc_OdenecekTutar.Value,
+                Aciklama = txtR_Aciklama.Text,
+                Tarix = Convert.ToDateTime(dateTarix.Text)
+            };
         }
     }
 }
