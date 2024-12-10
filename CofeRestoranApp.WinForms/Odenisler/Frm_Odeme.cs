@@ -1,9 +1,12 @@
-﻿namespace CofeRestoranApp.WinForms.Odenisler
+﻿using CafeRestoranApp.Entities.Models;
+
+namespace CofeRestoranApp.WinForms.Odenisler
 {
     public partial class Frm_Odeme : DevExpress.XtraEditors.XtraForm
     {
         private string _satisKodu;
         private string _odemeTuru;
+        private OdenisTarixcesi OdemeHaraketleri;
 
         public Frm_Odeme(string odemeTuru,string satisKodu)
         {
@@ -19,6 +22,11 @@
             {
                 Lbn_Basliq.Text = "Kart ile Satis";
             }
+        }
+
+        private void Btn_Onay_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

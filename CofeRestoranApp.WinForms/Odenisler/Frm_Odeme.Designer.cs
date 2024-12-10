@@ -96,12 +96,13 @@
             this.Btn_Onay.Appearance.Options.UseFont = true;
             this.Btn_Onay.Appearance.Options.UseTextOptions = true;
             this.Btn_Onay.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Btn_Onay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kayd_Et.ImageOptions.Image")));
+            this.Btn_Onay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Onay.ImageOptions.Image")));
             this.Btn_Onay.Location = new System.Drawing.Point(261, 26);
             this.Btn_Onay.Name = "Btn_Onay";
             this.Btn_Onay.Size = new System.Drawing.Size(125, 46);
             this.Btn_Onay.TabIndex = 1;
             this.Btn_Onay.Text = "Təstiqlə";
+            this.Btn_Onay.Click += new System.EventHandler(this.Btn_Onay_Click);
             // 
             // Calc_OdenecekTutar
             // 
