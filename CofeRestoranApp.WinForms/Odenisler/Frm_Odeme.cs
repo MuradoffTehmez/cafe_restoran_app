@@ -37,6 +37,7 @@ namespace CofeRestoranApp.WinForms.Odenisler
                 Tarix = Convert.ToDateTime(dateTarix.Text)
             };
             kayedildi = true;
+            this.Close();
         }
     }
 }
