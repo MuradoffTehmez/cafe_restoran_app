@@ -120,18 +120,6 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         }
 
-        private void Btn_Nagd_Satis_Click(object sender, EventArgs e)
-        {
-            //Frm_Odeme frm = new Frm_Odeme("Nakit", _satiskodu);
-            //frm.ShowDialog();
-        }
-
-        private void Btn_Karla_Satis_Click(object sender, EventArgs e)
-        {
-            //Frm_Odeme frm = new Frm_Odeme("Keredi Karti", _satiskodu);
-            //frm.ShowDialog();
-        }
-
         private void Odenisler_Click(object sender, EventArgs e)
         {
             var btn = sender as SimpleButton;
