@@ -4,6 +4,7 @@ using CofeRestoranApp.WinForms.Urunler;
 using System;
 using System.Data.Entity;
 using System.Linq;
+using CofeRestoranApp.WinForms.Odenisler;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {
@@ -120,12 +121,14 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void Btn_Nagd_Satis_Click(object sender, EventArgs e)
         {
-
+            //Frm_Odeme frm = new Frm_Odeme("Nakit", _satiskodu);
+            //frm.ShowDialog();
         }
 
         private void Btn_Karla_Satis_Click(object sender, EventArgs e)
         {
-
+            //Frm_Odeme frm = new Frm_Odeme("Keredi Karti", _satiskodu);
+            //frm.ShowDialog();
         }
     }
 }

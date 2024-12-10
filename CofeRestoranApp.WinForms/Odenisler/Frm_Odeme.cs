@@ -10,6 +10,15 @@
             InitializeComponent();
             _satisKodu = satisKodu;
             _odemeTuru = odemeTuru;
+
+            if (_odemeTuru=="Nakit")
+            {
+                Lbn_Basliq.Text = "Nakit Odeme";
+            }
+            else if (_odemeTuru == "Keredi Karti")
+            {
+                Lbn_Basliq.Text = "Kredi karti ile Odeme";
+            }
         }
     }
 }
