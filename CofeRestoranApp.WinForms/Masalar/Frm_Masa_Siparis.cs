@@ -135,5 +135,10 @@ namespace CofeRestoranApp.WinForms.Masalar
                 }
             }
         }
+
+        private void gridViewOdenisler_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            hesabla();
+        }
     }
 }
