@@ -1,11 +1,11 @@
 ﻿using CafeRestoranApp.Entities.DAL;
 using CafeRestoranApp.Entities.Models;
+using CofeRestoranApp.WinForms.Odenisler;
 using CofeRestoranApp.WinForms.Urunler;
+using DevExpress.XtraEditors;
 using System;
 using System.Data.Entity;
 using System.Linq;
-using CofeRestoranApp.WinForms.Odenisler;
-using DevExpress.XtraEditors;
 
 namespace CofeRestoranApp.WinForms.Masalar
 {

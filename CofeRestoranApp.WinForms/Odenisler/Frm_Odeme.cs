@@ -1,5 +1,5 @@
-﻿using System;
-using CafeRestoranApp.Entities.Models;
+﻿using CafeRestoranApp.Entities.Models;
+using System;
 
 namespace CofeRestoranApp.WinForms.Odenisler
 {
@@ -10,13 +10,13 @@ namespace CofeRestoranApp.WinForms.Odenisler
         public OdenisTarixcesi OdemeHaraketleri;
         public bool kayedildi;
 
-        public Frm_Odeme(string odemeTuru,string satisKodu)
+        public Frm_Odeme(string odemeTuru, string satisKodu)
         {
             InitializeComponent();
             _satisKodu = satisKodu;
             _odemeTuru = odemeTuru;
 
-            if (_odemeTuru== "Nagd Satis")
+            if (_odemeTuru == "Nagd Satis")
             {
                 Lbn_Basliq.Text = "Nagd Satis";
             }
@@ -32,7 +32,7 @@ namespace CofeRestoranApp.WinForms.Odenisler
             {
                 SatisKodu = _satisKodu,
                 OdemeTuru = _odemeTuru,
-                Odenis =  Calc_OdenecekTutar.Value,
+                Odenis = Calc_OdenecekTutar.Value,
                 Aciklama = txtR_Aciklama.Text,
                 Tarix = Convert.ToDateTime(dateTarix.Text)
             };
