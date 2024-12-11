@@ -2,7 +2,6 @@
 
 namespace CafeRestoranApp.Entities.Models
 {
-    //[Table("Modlar")]
     public class Modlar : IEntity
     {
         public int Id { get; set; }

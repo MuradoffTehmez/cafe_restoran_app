@@ -49,7 +49,6 @@ namespace CafeRestoranApp.Entities.Models
             modelBuilder.Configurations.Add(new UrunMap());
             modelBuilder.Configurations.Add(new SatisKoduMap());
             modelBuilder.Configurations.Add(new MusterilerMap());
-            //base.OnModelCreating(modelBuilder);
         }
 
     }
