@@ -25,12 +25,5 @@ namespace CafeRestoranApp.Entities.Tools
 
             return result;
         }
-
-        //internal static bool Validates<Tvalidator, TEntity>(Tvalidator validator, TEntity entity)
-        //    where Tvalidator : IValidator, new()
-        //    where TEntity : class, new()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

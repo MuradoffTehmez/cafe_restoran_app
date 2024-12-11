@@ -39,6 +39,7 @@ namespace CofeRestoranApp.WinForms.Masalar
                 btn.Name = model[i].Id.ToString();
                 btn.Height = 150;
                 btn.Width = 125;
+                btn.Tag = model[i].SatisKodu;
                 flowLayoutPanel1.Controls.Add(btn);
                 if (model[i].Rezervasiya && !model[i].Durumu)
                 {
@@ -70,7 +71,7 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
             BtnSender = sender as CheckButton;
             _masaId = Convert.ToInt32(BtnSender.Name);
-            //_SatisKodu = BtnSender.Tag.ToString();
+            _SatisKodu = BtnSender.Tag?.ToString();
             DurumYenile();
             if (BtnSender.Appearance.BackColor == Color.Yellow)
             {
@@ -111,6 +112,7 @@ namespace CofeRestoranApp.WinForms.Masalar
             if (MessageBox.Show(BtnSender.Text + "  Acilsin ?", "Melumat", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 masalar = masalarDal.GetByFilter(context, m => m.Id == _masaId);
+                
                 masalar.SatisKodu = modelSatisKodu.SatisTanimi + modelSatisKodu.Sayi;
                 masalar.Durumu = true;
                 modelSatisKodu.Sayi++;
