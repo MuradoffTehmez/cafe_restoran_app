@@ -74,6 +74,7 @@
             this.Group_Emeliyyatlar.Size = new System.Drawing.Size(521, 81);
             this.Group_Emeliyyatlar.TabIndex = 9;
             this.Group_Emeliyyatlar.Text = "Əməliyyatlar";
+            //this.Group_Emeliyyatlar.Paint += new System.Windows.Forms.PaintEventHandler(this.Group_Emeliyyatlar_Paint);
             // 
             // btn_cisix_et
             // 

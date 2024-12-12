@@ -25,7 +25,6 @@ namespace CofeRestoranApp.WinForms.Odenisler
                 Lbn_Basliq.Text = "Kart ile Satis";
             }
         }
-
         private void Btn_Onay_Click(object sender, System.EventArgs e)
         {
             OdemeHaraketleri = new OdenisTarixcesi
