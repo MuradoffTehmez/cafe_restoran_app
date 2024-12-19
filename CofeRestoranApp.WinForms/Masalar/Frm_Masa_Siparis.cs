@@ -234,7 +234,14 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         private void Brn_Musteri_Resetle_Click(object sender, EventArgs e)
         {
-`
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Müşteri sıfırlama xətası: " + ex.Message, "Xəta", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+            }
         }
     }
 }
