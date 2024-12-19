@@ -214,10 +214,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnaMenu\Frm_Ana_Form.cs">
+    <Compile Include="AnaForm\Frm_Ana_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnaMenu\Frm_Ana_Form.Designer.cs">
+    <Compile Include="AnaForm\Frm_Ana_Form.Designer.cs">
       <DependentUpon>Frm_Ana_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -313,10 +313,10 @@
       <DependentUpon>frm_Urun_Qeydiyat.cs</DependentUpon>
     </Compile>
     <Compile Include="WinTools\IstifadeciAyarlari.cs" />
-    <EmbeddedResource Include="AnaMenu\Frm_Ana_Form.resx">
+    <EmbeddedResource Include="AnaForm\Frm_Ana_Form.resx">
       <DependentUpon>Frm_Ana_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AnaMenu\Frm_Ana_Form.tr-TR.resx">
+    <EmbeddedResource Include="AnaForm\Frm_Ana_Form.tr-TR.resx">
       <DependentUpon>Frm_Ana_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
