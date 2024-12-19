@@ -231,5 +231,10 @@ namespace CofeRestoranApp.WinForms.Masalar
                 XtraMessageBox.Show("Xəta baş verdi: " + ex.Message, "Xəta", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
         }
+
+        private void Brn_Musteri_Resetle_Click(object sender, EventArgs e)
+        {
+`
+        }
     }
 }
