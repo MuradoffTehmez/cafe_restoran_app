@@ -20,7 +20,6 @@ namespace CofeRestoranApp.WinForms.Masalar
 
         public Frm_Masa_Siparis(int? masaId = null, string masaadi = null, string satiskodu = null)
         {
-            InitializeComponent();
             _masaId = masaId;
             _satiskodu = satiskodu;
 
@@ -53,7 +52,7 @@ namespace CofeRestoranApp.WinForms.Masalar
                 Calc_Toplam.Value = Calc_EndirimToplam.Value + Calc_EndirimliToplam.Value;
                 CalcKalan.Value = Calc_EndirimliToplam.Value - Calc_Toplam.Value;
                 /************************************************************************************/
-                /// Endirim Orani
+                //
                 if (Calc_Toplam.Value != 0)
                 {
                     //Calc_Endirim_Orani.Value = 100 * Calc_EndirimToplam.Value / Calc_Toplam.Value;
@@ -166,7 +165,7 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
             try
             {
-                //Güncəlləmə ilə bağlı əməliyyatlar
+
             }
             catch (Exception ex)
             {
