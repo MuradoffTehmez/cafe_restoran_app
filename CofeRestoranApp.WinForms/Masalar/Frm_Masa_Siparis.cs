@@ -242,5 +242,10 @@ namespace CofeRestoranApp.WinForms.Masalar
                 XtraMessageBox.Show("Müşteri sıfırlama xətası: " + ex.Message, "Xəta", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
         }
+
+        private void Calc_EndirimToplam_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
