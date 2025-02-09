@@ -235,7 +235,7 @@ namespace CofeRestoranApp.WinForms.Masalar
         {
             try
             {
-                
+
             }
             catch (Exception ex)
             {
